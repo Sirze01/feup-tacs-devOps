@@ -1,3 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    name="devOpsModel" nsURI="http://www.example.org/devOpsModel" nsPrefix="devOpsModel"/>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="devOpsModel" nsURI="http://www.example.org/devOpsModel" nsPrefix="devOpsModel">
+  <eClassifiers xsi:type="ecore:EClass" name="Pipeline">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stage" upperBound="-1"
+        eType="#//Stage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="job" upperBound="-1" eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="triggered" lowerBound="1"
+        upperBound="-1" eType="#//Trigger"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" lowerBound="1" upperBound="-1"
+        eType="#//Task"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Environment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variables" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifacts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="secrets" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
+        transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Task">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="step" upperBound="-1" eType="#//Step"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowFailure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calls_job" upperBound="-1"
+        eType="#//Task"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Trigger"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryEvent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WebHook"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ManualTrigger"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Runner"/>
+</ecore:EPackage>
