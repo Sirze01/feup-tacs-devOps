@@ -1,44 +1,54 @@
-# DevOps Equalizer - Domain analysis and Modelling language design
+# DevOps Equalizer - Domain analysis and modelling language design
+
 ## Table of contents
 1. [Domain analysis](#domain-analysis)
-    1. [CI/CD systems inspiring the metamodel](#cicd-systems-inspiring-the-metamodel)
-        1. [GitHub actions](#github-actions)
-        2. [GitLab Pipelines](#gitlab-pipelines)
-        3. [CircleCI](#circleci)
-        4. [Jenkins](#jenkins)
-    2. [Extracted concepts](#extracted-concepts)
-2. [Modelling language design - Metamodel](#modelling-language-design---metamodel)
-    1. [Classes](#classes)
-    2. [The metamodel](#the-metamodel)
+    1. [GitHub Actions](#github-actions)
+    2. [GitLab Pipelines](#gitlab-pipelines)
+    3. [CircleCI](#circleci)
+    4. [Jenkins](#jenkins)
+2. [Metamodel](#metamodel)
 
 ## Domain analysis
-To be able to accuratly model the domain of CI/CD pipelines we choose to analyse popular systems and to extract the concepts that are either common to all of them or we find important or interesting to integrate into CI/CD systems. We tried to integrate only features that were supported directly by all the systems or that we knew we could replicate rather easily.
+To be able to accurately model the domain of CI/CD pipelines we choose to analyse popular systems and to extract the concepts that are either common to all of them or we find important or interesting to integrate into CI/CD systems. We tried to integrate only features that were supported directly by all the systems or that we knew we could replicate rather easily.
 
-### CI/CD systems inspiring the metamodel
-The most popular CI/CD tools are those that are integrated into SCM systems. Apart from tools integrated into such systems we also studied Jenkins which is a standalone CI/CD system.
+The most popular CI/CD tools are those that are integrated into SCM systems. Apart from tools integrated into such systems we also studied Jenkins and CircleCI which is a standalone CI/CD system.
 
-#### GitHub actions
-Being the system that we were more familiar with it was the easier to model and understand.
+### GitHub Actions
+GitHub Actions is a CI/CD system integrated into GitHub. It is a very popular system due to its ease of use and integration with GitHub.
 
 [<div style="height:auto;"><img src="./resources/analysis-GHActions.png"></div>](./resources/analysis-GHActions.png)
 
+Although GitHub Actions workflows are primarily meant to be triggered via GitHub repository events, they can also be triggered via web hooks. Another important feature is that reusable workflow pieces are typically encapsulated by the community in the so-called GitHub Actions, which can be used inside a workflow. These actions are usually written in JavaScript or Dockerfiles.
 
-#### GitLab Pipelines
-Another popular system studyied was GitLab Pipelines. It is a system popular in enterprise environments. 
+
+### GitLab Pipelines
+Popular in enterprise environments, GitLab Pipelines is a CI/CD system integrated into GitLab. It focuses more on self-hosted runners and is more complex than GitHub Actions. We plotted the most important concepts in the following diagram.
 
 [<div style="height:auto;"><img src="./resources/analysis-GitLabPipelines.png"></div>](./resources/analysis-GitLabPipelines.png)
 
+We found the concept of "stages" interesting as a basic unit of task parallelization. We also found the concept of "rules" interesting as a way to conditionally execute tasks. These can be emulated in GitHub Actions by using the `needs` and `if` keywords, respectively, in GitHub Actions workflows.
 
-#### CircleCI
+### CircleCI
+
+CircleCI is an independent, very cloud-focused CI/CD system. It is very popular in the open-source community due to its ease of use and integration with external SCM services.
+
+CircleCI has a single pipeline model and uses "orbs" as a unit of reusability. Orbs are similar to GitHub Actions in that they are reusable pieces of code that can be used in a pipeline. They are written in YAML and can be used in any pipeline. They are usually used to encapsulate common tasks such as building, testing and deploying.
+
 [<div style="height:auto;"><img src="./resources/analysis-CircleCI.png"></div>](./resources/analysis-CircleCI.png)
 
 
-#### Jenkins
-Being a standalone tool it is highly flexible and extensible at the cost of harder configuration and conceptual complexity.
+### Jenkins
+
+Being a standalone tool, Jenkins is highly flexible and extensible at the cost of harder configuration and conceptual complexity.
 
 [<div style="height:auto;"><img src="./resources/analysis-Jenkins.png"></div>](./resources/analysis-Jenkins.png)
 
-### Extracted concepts
+## Metamodel
+
+Based on the analysis of the systems above, we came up with a set of model classes. Our system should be able to model most of the common concepts, and compile to the different systems' configuration files in the futures, effectively allowing the user to use the same pipelines in different systems, with little to no changes.
+
+### Classes
+
 | Concept           | Description                                                                                                                               |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Trigger           | Metadata about the event that triggered the pipeline run                                                                                  |
@@ -52,9 +62,9 @@ Being a standalone tool it is highly flexible and extensible at the cost of hard
 | Runner            | Metadata about the execution environment where tasks will be performed                                                                    |
 | SelfHostedRunner  | Runner managed by the user on their own infrastructure, such as on their own servers or virtual machines                                  |
 | SSHRunner         | Runner provided by CI/CD platform to perform tasks                                                                                        |
-| IaaS              |                                                                                                                                           |
-| OperatingSystem   |                                                                                                                                           |
-| ContainerEngine   |                                                                                                                                           |
+| IaaS              |  Infrastructure as a service (cloud) runners.                                                                                                                                         |
+| OperatingSystem   |  A (virtual) machine with an operating system with resources directly exposed.                                                                                                                                          |
+| ContainerEngine   |  For example, a Docker runner.                                                                                                                                         |
 |                   |                                                                                                                                           |
 | Environment       | Variables available as both input and output of a pipeline or task.                                                                       |
 | Pipeline          | The highest level unit of the CI/CD system. It is trigerred by an event and is composed of several sequential stages.                     |
@@ -67,9 +77,12 @@ Being a standalone tool it is highly flexible and extensible at the cost of hard
 | Operand           | The evaluation of an environment variable or a conditional.                                                                               |
 | LogicOperator     | A logic operator, such as NOT, AND or OR, to be used in conditionals.                                                                     |
 
+### OCL Constraints
 
-## Modelling language design - Metamodel
-After compiling the generic concepts relevant for a CI/CD system we built a meta-model using the [EMF Moddeling Tools]() with [OCLinEcore](https://help.eclipse.org/latest/topic/org.eclipse.ocl.doc/help/OCLinEcore.html) tool, a superset of the Ecore language for modelling with support for OCL for constraints and invariants.
+Besides the cardinality constraints defined in the UML, we defined the following OCL constraints to enrich the metamodel:
 
-### Classes
-### The metamodel
+1. Pipeline: *UniqueName* - A pipeline's name must be unique. This is because pipelines are usually referenced by name in other parts of the system, such as in the configuration files of the SCM system. The name may also serve as an identifier for the generated webhooks.
+
+2. Pipeline: *UniqueTaskNames* - Tasks inside a pipeline must have unique names. 
+
+3. CronTrigger: *PositiveDuration* - The duration of a cron trigger must be positive, which means either hours, minutes or seconds must be greater than zero.
