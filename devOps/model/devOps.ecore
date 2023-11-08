@@ -13,29 +13,23 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Pipeline">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="UniqueName UniqueTrigger"/>
+      <details key="constraints" value="UniqueName UniqueTrigger UniqueTaskNames"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="UniqueName" value="Pipeline.allInstances()->isUnique(name)"/>
       <details key="UniqueTrigger" value="self.triggers->isUnique(t | t.toString())"/>
+      <details key="UniqueTaskNames" value="self.stages.tasks->isUnique(name)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stage" lowerBound="1" upperBound="-1"
-        eType="#//Stage" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="job" upperBound="-1" eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stages" lowerBound="1"
+        upperBound="-1" eType="#//Stage" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="triggers" lowerBound="1"
         upperBound="-1" eType="#//Trigger"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="runner" eType="#//Runner"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Stage">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="UniqueTaskNames"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="UniqueTaskNames" value="self.tasks->isUnique(name)"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" lowerBound="1" upperBound="-1"
         eType="#//Task"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditional" eType="#//Conditional"/>
@@ -53,8 +47,8 @@
         eType="#//StringToStringMapEntry"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Task">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="step" lowerBound="1" upperBound="-1"
-        eType="#//Step"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="steps" lowerBound="1" upperBound="-1"
+        eType="#//Step" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowFailure" lowerBound="1"
@@ -84,8 +78,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="IaaS" eSuperTypes="#//Runner"/>
   <eClassifiers xsi:type="ecore:EClass" name="ContainerEngine" eSuperTypes="#//IaaS">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arguments" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
-        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
+        eType="#//StringToStringMapEntry"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entryPoint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="command" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

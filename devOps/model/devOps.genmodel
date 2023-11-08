@@ -8,22 +8,25 @@
     <genClasses ecoreClass="devOps.ecore#//Pipeline">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//Pipeline/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOps.ecore#//Pipeline/environment"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOps.ecore#//Pipeline/stage"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Pipeline/job"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Pipeline/triggered"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOps.ecore#//Pipeline/stages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Pipeline/triggers"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Pipeline/runner"/>
     </genClasses>
     <genClasses ecoreClass="devOps.ecore#//Stage">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Stage/tasks"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Stage/conditional"/>
     </genClasses>
+    <genClasses ecoreClass="devOps.ecore#//StringToStringMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//StringToStringMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//StringToStringMapEntry/value"/>
+    </genClasses>
     <genClasses ecoreClass="devOps.ecore#//Environment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//Environment/variables"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//Environment/artifacts"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//Environment/secrets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference devOps.ecore#//Environment/variables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference devOps.ecore#//Environment/artifacts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference devOps.ecore#//Environment/secrets"/>
     </genClasses>
     <genClasses ecoreClass="devOps.ecore#//Task">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Task/step"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOps.ecore#//Task/steps"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOps.ecore#//Task/environment"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//Task/allowFailure"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Task/taskImports"/>
@@ -48,7 +51,7 @@
     <genClasses ecoreClass="devOps.ecore#//IaaS"/>
     <genClasses ecoreClass="devOps.ecore#//ContainerEngine">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//ContainerEngine/image"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//ContainerEngine/arguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference devOps.ecore#//ContainerEngine/arguments"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//ContainerEngine/entryPoint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//ContainerEngine/command"/>
     </genClasses>
@@ -69,12 +72,14 @@
     </genClasses>
     <genClasses ecoreClass="devOps.ecore#//BinaryConditional">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOps.ecore#//BinaryConditional/operand"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//BinaryConditional/logicoperator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//BinaryConditional/logicOperator"/>
     </genClasses>
     <genClasses ecoreClass="devOps.ecore#//Operand"/>
     <genClasses ecoreClass="devOps.ecore#//LogicOperator"/>
     <genClasses ecoreClass="devOps.ecore#//CronTrigger">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//CronTrigger/interval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//CronTrigger/hours"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//CronTrigger/minutes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//CronTrigger/seconds"/>
     </genClasses>
     <genClasses ecoreClass="devOps.ecore#//MergeRequest"/>
     <genClasses ecoreClass="devOps.ecore#//Push"/>
