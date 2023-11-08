@@ -445,7 +445,7 @@ public class DevOpsTables extends AbstractTables
 
 		public static final ExecutorProperty _Step__cmd = new EcoreExecutorProperty(DevOpsPackage.Literals.STEP__CMD, Types._Step, 0);
 		public static final ExecutorProperty _Step__conditional = new EcoreExecutorProperty(DevOpsPackage.Literals.STEP__CONDITIONAL, Types._Step, 1);
-		public static final ExecutorProperty _Step__Task__step = new ExecutorPropertyWithImplementation("Task", Types._Step, 2, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.TASK__STEP));
+		public static final ExecutorProperty _Step__Task__steps = new ExecutorPropertyWithImplementation("Task", Types._Step, 2, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.TASK__STEPS));
 
 		public static final ExecutorProperty _StringToStringMapEntry__key = new EcoreExecutorProperty(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY__KEY, Types._StringToStringMapEntry, 0);
 		public static final ExecutorProperty _StringToStringMapEntry__value = new EcoreExecutorProperty(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY__VALUE, Types._StringToStringMapEntry, 1);
@@ -455,7 +455,7 @@ public class DevOpsTables extends AbstractTables
 		public static final ExecutorProperty _Task__environment = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__ENVIRONMENT, Types._Task, 2);
 		public static final ExecutorProperty _Task__name = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__NAME, Types._Task, 3);
 		public static final ExecutorProperty _Task__runner = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__RUNNER, Types._Task, 4);
-		public static final ExecutorProperty _Task__step = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__STEP, Types._Task, 5);
+		public static final ExecutorProperty _Task__steps = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__STEPS, Types._Task, 5);
 		public static final ExecutorProperty _Task__taskImports = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__TASK_IMPORTS, Types._Task, 6);
 		public static final ExecutorProperty _Task__Stage__tasks = new ExecutorPropertyWithImplementation("Stage", Types._Task, 7, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.STAGE__TASKS));
 		public static final ExecutorProperty _Task__Task__taskImports = new ExecutorPropertyWithImplementation("Task", Types._Task, 8, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.TASK__TASK_IMPORTS));
@@ -1894,7 +1894,7 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			DevOpsTables.Properties._Task__runner,
-			DevOpsTables.Properties._Task__step,
+			DevOpsTables.Properties._Task__steps,
 			DevOpsTables.Properties._Task__taskImports
 		};
 

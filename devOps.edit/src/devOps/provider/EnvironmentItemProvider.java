@@ -4,7 +4,6 @@ package devOps.provider;
 
 
 import devOps.DevOpsPackage;
-import devOps.Environment;
 
 import java.util.Collection;
 import java.util.List;
@@ -22,7 +21,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link devOps.Environment} object.
@@ -82,7 +80,7 @@ public class EnvironmentItemProvider
 				 DevOpsPackage.Literals.ENVIRONMENT__VARIABLES,
 				 true,
 				 false,
-				 false,
+				 true,
 				 null,
 				 null,
 				 null));
@@ -104,7 +102,7 @@ public class EnvironmentItemProvider
 				 DevOpsPackage.Literals.ENVIRONMENT__ARTIFACTS,
 				 true,
 				 false,
-				 false,
+				 true,
 				 null,
 				 null,
 				 null));
@@ -126,7 +124,7 @@ public class EnvironmentItemProvider
 				 DevOpsPackage.Literals.ENVIRONMENT__SECRETS,
 				 true,
 				 false,
-				 false,
+				 true,
 				 null,
 				 null,
 				 null));
@@ -165,14 +163,6 @@ public class EnvironmentItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Environment.class)) {
-			case DevOpsPackage.ENVIRONMENT__VARIABLES:
-			case DevOpsPackage.ENVIRONMENT__ARTIFACTS:
-			case DevOpsPackage.ENVIRONMENT__SECRETS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

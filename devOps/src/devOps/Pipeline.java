@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see devOps.DevOpsPackage#getPipeline()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='UniqueTaskNames'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='UniqueName'"
  * @generated
  */
 public interface Pipeline extends EObject {
@@ -123,10 +123,10 @@ public interface Pipeline extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.triggers-&gt;isUnique(t | t.toString())'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.stages.tasks-&gt;isUnique(name)'"
 	 * @generated
 	 */
-	boolean UniqueTrigger(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean UniqueTaskNames(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,13 +135,5 @@ public interface Pipeline extends EObject {
 	 * @generated
 	 */
 	boolean UniqueName(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.stages.tasks-&gt;isUnique(name)'"
-	 * @generated
-	 */
-	boolean UniqueTaskNames(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Pipeline

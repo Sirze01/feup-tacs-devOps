@@ -16,9 +16,8 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link devOps.Pipeline#UniqueTrigger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Trigger</em>}</li>
- *   <li>{@link devOps.Pipeline#UniqueName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Name</em>}</li>
  *   <li>{@link devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Task Names</em>}</li>
+ *   <li>{@link devOps.Pipeline#UniqueName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Name</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -95,13 +94,13 @@ public class PipelineTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link devOps.Pipeline#UniqueTrigger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Trigger</em>}' operation.
+	 * Tests the '{@link devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Task Names</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see devOps.Pipeline#UniqueTrigger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	public void testUniqueTrigger__DiagnosticChain_Map() {
+	public void testUniqueTaskNames__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
@@ -115,19 +114,6 @@ public class PipelineTest extends TestCase {
 	 * @generated
 	 */
 	public void testUniqueName__DiagnosticChain_Map() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-	/**
-	 * Tests the '{@link devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Task Names</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	public void testUniqueTaskNames__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

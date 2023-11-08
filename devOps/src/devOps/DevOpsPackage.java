@@ -123,13 +123,13 @@ public interface DevOpsPackage extends EPackage {
 	int PIPELINE_FEATURE_COUNT = 5;
 
 	/**
-	 * The operation id for the '<em>Unique Trigger</em>' operation.
+	 * The operation id for the '<em>Unique Task Names</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPELINE___UNIQUE_TRIGGER__DIAGNOSTICCHAIN_MAP = 0;
+	int PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
 	 * The operation id for the '<em>Unique Name</em>' operation.
@@ -141,22 +141,13 @@ public interface DevOpsPackage extends EPackage {
 	int PIPELINE___UNIQUE_NAME__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
-	 * The operation id for the '<em>Unique Task Names</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP = 2;
-
-	/**
 	 * The number of operations of the '<em>Pipeline</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIPELINE_OPERATION_COUNT = 3;
+	int PIPELINE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link devOps.impl.StageImpl <em>Stage</em>}' class.
@@ -316,13 +307,13 @@ public interface DevOpsPackage extends EPackage {
 	int TASK = 4;
 
 	/**
-	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Steps</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__STEP = 0;
+	int TASK__STEPS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
@@ -1239,14 +1230,14 @@ public interface DevOpsPackage extends EPackage {
 	EReference getPipeline_Runner();
 
 	/**
-	 * Returns the meta object for the '{@link devOps.Pipeline#UniqueTrigger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Trigger</em>}' operation.
+	 * Returns the meta object for the '{@link devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Task Names</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Unique Trigger</em>' operation.
-	 * @see devOps.Pipeline#UniqueTrigger(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Unique Task Names</em>' operation.
+	 * @see devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getPipeline__UniqueTrigger__DiagnosticChain_Map();
+	EOperation getPipeline__UniqueTaskNames__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link devOps.Pipeline#UniqueName(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Name</em>}' operation.
@@ -1257,16 +1248,6 @@ public interface DevOpsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getPipeline__UniqueName__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unique Task Names</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Unique Task Names</em>' operation.
-	 * @see devOps.Pipeline#UniqueTaskNames(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getPipeline__UniqueTaskNames__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link devOps.Stage <em>Stage</em>}'.
@@ -1388,15 +1369,15 @@ public interface DevOpsPackage extends EPackage {
 	EClass getTask();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link devOps.Task#getStep <em>Step</em>}'.
+	 * Returns the meta object for the containment reference list '{@link devOps.Task#getSteps <em>Steps</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Step</em>'.
-	 * @see devOps.Task#getStep()
+	 * @return the meta object for the containment reference list '<em>Steps</em>'.
+	 * @see devOps.Task#getSteps()
 	 * @see #getTask()
 	 * @generated
 	 */
-	EReference getTask_Step();
+	EReference getTask_Steps();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link devOps.Task#getEnvironment <em>Environment</em>}'.
@@ -1957,12 +1938,12 @@ public interface DevOpsPackage extends EPackage {
 		EReference PIPELINE__RUNNER = eINSTANCE.getPipeline_Runner();
 
 		/**
-		 * The meta object literal for the '<em><b>Unique Trigger</b></em>' operation.
+		 * The meta object literal for the '<em><b>Unique Task Names</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PIPELINE___UNIQUE_TRIGGER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getPipeline__UniqueTrigger__DiagnosticChain_Map();
+		EOperation PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getPipeline__UniqueTaskNames__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>Unique Name</b></em>' operation.
@@ -1971,14 +1952,6 @@ public interface DevOpsPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation PIPELINE___UNIQUE_NAME__DIAGNOSTICCHAIN_MAP = eINSTANCE.getPipeline__UniqueName__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>Unique Task Names</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getPipeline__UniqueTaskNames__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link devOps.impl.StageImpl <em>Stage</em>}' class.
@@ -2077,12 +2050,12 @@ public interface DevOpsPackage extends EPackage {
 		EClass TASK = eINSTANCE.getTask();
 
 		/**
-		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Steps</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK__STEP = eINSTANCE.getTask_Step();
+		EReference TASK__STEPS = eINSTANCE.getTask_Steps();
 
 		/**
 		 * The meta object literal for the '<em><b>Environment</b></em>' containment reference feature.

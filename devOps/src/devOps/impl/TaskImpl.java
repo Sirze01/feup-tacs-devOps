@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link devOps.impl.TaskImpl#getStep <em>Step</em>}</li>
+ *   <li>{@link devOps.impl.TaskImpl#getSteps <em>Steps</em>}</li>
  *   <li>{@link devOps.impl.TaskImpl#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link devOps.impl.TaskImpl#isAllowFailure <em>Allow Failure</em>}</li>
  *   <li>{@link devOps.impl.TaskImpl#getTaskImports <em>Task Imports</em>}</li>
@@ -47,14 +47,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	/**
-	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
+	 * The cached value of the '{@link #getSteps() <em>Steps</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStep()
+	 * @see #getSteps()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Step> step;
+	protected EList<Step> steps;
 
 	/**
 	 * The cached value of the '{@link #getEnvironment() <em>Environment</em>}' containment reference.
@@ -161,11 +161,11 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * @generated
 	 */
 	@Override
-	public EList<Step> getStep() {
-		if (step == null) {
-			step = new EObjectContainmentEList<Step>(Step.class, this, DevOpsPackage.TASK__STEP);
+	public EList<Step> getSteps() {
+		if (steps == null) {
+			steps = new EObjectContainmentEList<Step>(Step.class, this, DevOpsPackage.TASK__STEPS);
 		}
-		return step;
+		return steps;
 	}
 
 	/**
@@ -360,8 +360,8 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case DevOpsPackage.TASK__STEP:
-				return ((InternalEList<?>)getStep()).basicRemove(otherEnd, msgs);
+			case DevOpsPackage.TASK__STEPS:
+				return ((InternalEList<?>)getSteps()).basicRemove(otherEnd, msgs);
 			case DevOpsPackage.TASK__ENVIRONMENT:
 				return basicSetEnvironment(null, msgs);
 		}
@@ -376,8 +376,8 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case DevOpsPackage.TASK__STEP:
-				return getStep();
+			case DevOpsPackage.TASK__STEPS:
+				return getSteps();
 			case DevOpsPackage.TASK__ENVIRONMENT:
 				return getEnvironment();
 			case DevOpsPackage.TASK__ALLOW_FAILURE:
@@ -405,9 +405,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case DevOpsPackage.TASK__STEP:
-				getStep().clear();
-				getStep().addAll((Collection<? extends Step>)newValue);
+			case DevOpsPackage.TASK__STEPS:
+				getSteps().clear();
+				getSteps().addAll((Collection<? extends Step>)newValue);
 				return;
 			case DevOpsPackage.TASK__ENVIRONMENT:
 				setEnvironment((Environment)newValue);
@@ -440,8 +440,8 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case DevOpsPackage.TASK__STEP:
-				getStep().clear();
+			case DevOpsPackage.TASK__STEPS:
+				getSteps().clear();
 				return;
 			case DevOpsPackage.TASK__ENVIRONMENT:
 				setEnvironment((Environment)null);
@@ -473,8 +473,8 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case DevOpsPackage.TASK__STEP:
-				return step != null && !step.isEmpty();
+			case DevOpsPackage.TASK__STEPS:
+				return steps != null && !steps.isEmpty();
 			case DevOpsPackage.TASK__ENVIRONMENT:
 				return environment != null;
 			case DevOpsPackage.TASK__ALLOW_FAILURE:

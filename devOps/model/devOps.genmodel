@@ -21,9 +21,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//StringToStringMapEntry/value"/>
     </genClasses>
     <genClasses ecoreClass="devOps.ecore#//Environment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference devOps.ecore#//Environment/variables"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference devOps.ecore#//Environment/artifacts"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference devOps.ecore#//Environment/secrets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Environment/variables"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Environment/artifacts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//Environment/secrets"/>
     </genClasses>
     <genClasses ecoreClass="devOps.ecore#//Task">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOps.ecore#//Task/steps"/>
@@ -51,7 +51,7 @@
     <genClasses ecoreClass="devOps.ecore#//IaaS"/>
     <genClasses ecoreClass="devOps.ecore#//ContainerEngine">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//ContainerEngine/image"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference devOps.ecore#//ContainerEngine/arguments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOps.ecore#//ContainerEngine/arguments"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//ContainerEngine/entryPoint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOps.ecore#//ContainerEngine/command"/>
     </genClasses>

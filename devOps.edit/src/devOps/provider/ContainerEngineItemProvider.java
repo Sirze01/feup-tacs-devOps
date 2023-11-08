@@ -91,7 +91,7 @@ public class ContainerEngineItemProvider extends IaaSItemProvider {
 				 DevOpsPackage.Literals.CONTAINER_ENGINE__ARGUMENTS,
 				 true,
 				 false,
-				 false,
+				 true,
 				 null,
 				 null,
 				 null));
@@ -180,7 +180,6 @@ public class ContainerEngineItemProvider extends IaaSItemProvider {
 
 		switch (notification.getFeatureID(ContainerEngine.class)) {
 			case DevOpsPackage.CONTAINER_ENGINE__IMAGE:
-			case DevOpsPackage.CONTAINER_ENGINE__ARGUMENTS:
 			case DevOpsPackage.CONTAINER_ENGINE__ENTRY_POINT:
 			case DevOpsPackage.CONTAINER_ENGINE__COMMAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

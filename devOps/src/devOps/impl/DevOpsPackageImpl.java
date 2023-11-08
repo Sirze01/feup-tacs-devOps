@@ -361,7 +361,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getPipeline__UniqueTrigger__DiagnosticChain_Map() {
+	public EOperation getPipeline__UniqueTaskNames__DiagnosticChain_Map() {
 		return pipelineEClass.getEOperations().get(0);
 	}
 
@@ -373,16 +373,6 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	@Override
 	public EOperation getPipeline__UniqueName__DiagnosticChain_Map() {
 		return pipelineEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getPipeline__UniqueTaskNames__DiagnosticChain_Map() {
-		return pipelineEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -501,7 +491,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getTask_Step() {
+	public EReference getTask_Steps() {
 		return (EReference)taskEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1000,9 +990,8 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		createEReference(pipelineEClass, PIPELINE__STAGES);
 		createEReference(pipelineEClass, PIPELINE__TRIGGERS);
 		createEReference(pipelineEClass, PIPELINE__RUNNER);
-		createEOperation(pipelineEClass, PIPELINE___UNIQUE_TRIGGER__DIAGNOSTICCHAIN_MAP);
-		createEOperation(pipelineEClass, PIPELINE___UNIQUE_NAME__DIAGNOSTICCHAIN_MAP);
 		createEOperation(pipelineEClass, PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP);
+		createEOperation(pipelineEClass, PIPELINE___UNIQUE_NAME__DIAGNOSTICCHAIN_MAP);
 
 		stageEClass = createEClass(STAGE);
 		createEReference(stageEClass, STAGE__TASKS);
@@ -1018,7 +1007,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		createEReference(environmentEClass, ENVIRONMENT__SECRETS);
 
 		taskEClass = createEClass(TASK);
-		createEReference(taskEClass, TASK__STEP);
+		createEReference(taskEClass, TASK__STEPS);
 		createEReference(taskEClass, TASK__ENVIRONMENT);
 		createEAttribute(taskEClass, TASK__ALLOW_FAILURE);
 		createEReference(taskEClass, TASK__TASK_IMPORTS);
@@ -1139,7 +1128,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		initEReference(getPipeline_Triggers(), this.getTrigger(), null, "triggers", null, 1, -1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPipeline_Runner(), this.getRunner(), null, "runner", null, 0, 1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getPipeline__UniqueTrigger__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UniqueTrigger", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getPipeline__UniqueTaskNames__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UniqueTaskNames", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
 		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1149,15 +1138,6 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPipeline__UniqueName__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UniqueName", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getPipeline__UniqueTaskNames__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UniqueTaskNames", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1180,7 +1160,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		initEReference(getEnvironment_Secrets(), this.getStringToStringMapEntry(), null, "secrets", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTask_Step(), this.getStep(), null, "step", null, 1, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_Steps(), this.getStep(), null, "steps", null, 1, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTask_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTask_AllowFailure(), ecorePackage.getEBoolean(), "allowFailure", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTask_TaskImports(), this.getTask(), null, "taskImports", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1283,7 +1263,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		  (pipelineEClass,
 		   source,
 		   new String[] {
-			   "constraints", "UniqueTaskNames"
+			   "constraints", "UniqueName"
 		   });
 		addAnnotation
 		  (cronTriggerEClass,
@@ -1302,22 +1282,16 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation
-		  (getPipeline__UniqueTrigger__DiagnosticChain_Map(),
+		  (getPipeline__UniqueTaskNames__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
-			   "body", "self.triggers->isUnique(t | t.toString())"
+			   "body", "self.stages.tasks->isUnique(name)"
 		   });
 		addAnnotation
 		  (getPipeline__UniqueName__DiagnosticChain_Map(),
 		   source,
 		   new String[] {
 			   "body", "Pipeline.allInstances()->isUnique(name)"
-		   });
-		addAnnotation
-		  (getPipeline__UniqueTaskNames__DiagnosticChain_Map(),
-		   source,
-		   new String[] {
-			   "body", "self.stages.tasks->isUnique(name)"
 		   });
 		addAnnotation
 		  (getCronTrigger__PositiveDuration__DiagnosticChain_Map(),

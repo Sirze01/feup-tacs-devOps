@@ -63,7 +63,6 @@ public class TaskItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addStepPropertyDescriptor(object);
 			addAllowFailurePropertyDescriptor(object);
 			addTaskImportsPropertyDescriptor(object);
 			addRunnerPropertyDescriptor(object);
@@ -71,28 +70,6 @@ public class TaskItemProvider
 			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Step feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStepPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_step_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_step_feature", "_UI_Task_type"),
-				 DevOpsPackage.Literals.TASK__STEP,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -217,6 +194,7 @@ public class TaskItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(DevOpsPackage.Literals.TASK__STEPS);
 			childrenFeatures.add(DevOpsPackage.Literals.TASK__ENVIRONMENT);
 		}
 		return childrenFeatures;
@@ -277,6 +255,7 @@ public class TaskItemProvider
 			case DevOpsPackage.TASK__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case DevOpsPackage.TASK__STEPS:
 			case DevOpsPackage.TASK__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -294,6 +273,11 @@ public class TaskItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.TASK__STEPS,
+				 DevOpsFactory.eINSTANCE.createStep()));
 
 		newChildDescriptors.add
 			(createChildParameter

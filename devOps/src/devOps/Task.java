@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link devOps.Task#getStep <em>Step</em>}</li>
+ *   <li>{@link devOps.Task#getSteps <em>Steps</em>}</li>
  *   <li>{@link devOps.Task#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link devOps.Task#isAllowFailure <em>Allow Failure</em>}</li>
  *   <li>{@link devOps.Task#getTaskImports <em>Task Imports</em>}</li>
@@ -30,16 +30,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Task extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Steps</b></em>' containment reference list.
 	 * The list contents are of type {@link devOps.Step}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Step</em>' containment reference list.
-	 * @see devOps.DevOpsPackage#getTask_Step()
+	 * @return the value of the '<em>Steps</em>' containment reference list.
+	 * @see devOps.DevOpsPackage#getTask_Steps()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Step> getStep();
+	EList<Step> getSteps();
 
 	/**
 	 * Returns the value of the '<em><b>Environment</b></em>' containment reference.

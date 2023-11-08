@@ -41,12 +41,12 @@ public class DevOpsValidator extends EObjectValidator {
 	public static final String DIAGNOSTIC_SOURCE = "devOps";
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Unique Trigger' of 'Pipeline'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Unique Task Names' of 'Pipeline'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int PIPELINE__UNIQUE_TRIGGER = 1;
+	public static final int PIPELINE__UNIQUE_TASK_NAMES = 1;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Unique Name' of 'Pipeline'.
@@ -57,20 +57,12 @@ public class DevOpsValidator extends EObjectValidator {
 	public static final int PIPELINE__UNIQUE_NAME = 2;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Unique Task Names' of 'Pipeline'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int PIPELINE__UNIQUE_TASK_NAMES = 3;
-
-	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Positive Duration' of 'Cron Trigger'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CRON_TRIGGER__POSITIVE_DURATION = 4;
+	public static final int CRON_TRIGGER__POSITIVE_DURATION = 3;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -78,7 +70,7 @@ public class DevOpsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 4;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 3;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -188,20 +180,9 @@ public class DevOpsValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(pipeline, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(pipeline, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(pipeline, diagnostics, context);
-		if (result || diagnostics != null) result &= validatePipeline_UniqueTaskNames(pipeline, diagnostics, context);
-		if (result || diagnostics != null) result &= validatePipeline_UniqueTrigger(pipeline, diagnostics, context);
 		if (result || diagnostics != null) result &= validatePipeline_UniqueName(pipeline, diagnostics, context);
+		if (result || diagnostics != null) result &= validatePipeline_UniqueTaskNames(pipeline, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * Validates the UniqueTaskNames constraint of '<em>Pipeline</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePipeline_UniqueTaskNames(Pipeline pipeline, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return pipeline.UniqueTaskNames(diagnostics, context);
 	}
 
 	/**
@@ -215,13 +196,13 @@ public class DevOpsValidator extends EObjectValidator {
 	}
 
 	/**
-	 * Validates the UniqueTrigger constraint of '<em>Pipeline</em>'.
+	 * Validates the UniqueTaskNames constraint of '<em>Pipeline</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePipeline_UniqueTrigger(Pipeline pipeline, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return pipeline.UniqueTrigger(diagnostics, context);
+	public boolean validatePipeline_UniqueTaskNames(Pipeline pipeline, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return pipeline.UniqueTaskNames(diagnostics, context);
 	}
 
 	/**

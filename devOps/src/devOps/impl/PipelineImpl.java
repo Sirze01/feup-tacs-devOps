@@ -41,7 +41,6 @@ import org.eclipse.ocl.pivot.ids.TypeId;
 
 import org.eclipse.ocl.pivot.library.classifier.ClassifierAllInstancesOperation;
 
-import org.eclipse.ocl.pivot.library.oclany.OclAnyToStringOperation;
 import org.eclipse.ocl.pivot.library.oclany.OclComparableLessThanEqualOperation;
 
 import org.eclipse.ocl.pivot.library.string.CGStringGetSeverityOperation;
@@ -53,9 +52,10 @@ import org.eclipse.ocl.pivot.utilities.ValueUtil;
 import org.eclipse.ocl.pivot.values.IntegerValue;
 import org.eclipse.ocl.pivot.values.OrderedSetValue;
 import org.eclipse.ocl.pivot.values.SequenceValue;
-import org.eclipse.ocl.pivot.values.SetValue;
 
-import org.eclipse.ocl.pivot.values.SetValue.Accumulator;
+import org.eclipse.ocl.pivot.values.SequenceValue.Accumulator;
+
+import org.eclipse.ocl.pivot.values.SetValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -294,54 +294,72 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 	 * @generated
 	 */
 	@Override
-	public boolean UniqueTrigger(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		final String constraintName = "Pipeline::UniqueTrigger";
+	public boolean UniqueTaskNames(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Pipeline::UniqueTaskNames";
 		try {
 			/**
 			 *
-			 * inv UniqueTrigger:
+			 * inv UniqueTaskNames:
 			 *   let severity : Integer[1] = constraintName.getSeverity()
 			 *   in
 			 *     if severity <= 0
 			 *     then true
 			 *     else
-			 *       let
-			 *         result : Boolean[1] = self.triggers->isUnique(t | t.toString())
+			 *       let result : Boolean[1] = self.stages.tasks->isUnique(name)
 			 *       in
 			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
 			 *     endif
 			 */
 			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
 			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, DevOpsPackage.Literals.PIPELINE___UNIQUE_TRIGGER__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, DevOpsPackage.Literals.PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP);
 			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, DevOpsTables.INT_0).booleanValue();
 			/*@NonInvalid*/ boolean IF_le;
 			if (le) {
 				IF_le = true;
 			}
 			else {
-				final /*@NonInvalid*/ List<Trigger> triggers = this.getTriggers();
-				final /*@NonInvalid*/ OrderedSetValue BOXED_triggers = idResolver.createOrderedSetOfAll(DevOpsTables.ORD_CLSSid_Trigger, triggers);
-				/*@Thrown*/ Accumulator accumulator = ValueUtil.createSetAccumulatorValue(DevOpsTables.ORD_CLSSid_Trigger);
-				Iterator<Object> ITERATOR_t = BOXED_triggers.iterator();
+				final /*@NonInvalid*/ List<Stage> stages = this.getStages();
+				final /*@NonInvalid*/ OrderedSetValue BOXED_stages = idResolver.createOrderedSetOfAll(DevOpsTables.ORD_CLSSid_Stage, stages);
+				/*@Thrown*/ Accumulator accumulator = ValueUtil.createSequenceAccumulatorValue(DevOpsTables.SEQ_CLSSid_Task);
+				Iterator<Object> ITERATOR__1 = BOXED_stages.iterator();
+				/*@NonInvalid*/ SequenceValue collect;
+				while (true) {
+					if (!ITERATOR__1.hasNext()) {
+						collect = accumulator;
+						break;
+					}
+					/*@NonInvalid*/ Stage _1 = (Stage)ITERATOR__1.next();
+					/**
+					 * tasks
+					 */
+					final /*@NonInvalid*/ List<Task> tasks = _1.getTasks();
+					final /*@NonInvalid*/ OrderedSetValue BOXED_tasks = idResolver.createOrderedSetOfAll(DevOpsTables.ORD_CLSSid_Task, tasks);
+					//
+					for (Object value : BOXED_tasks.flatten().getElements()) {
+						accumulator.add(value);
+					}
+				}
+				/*@Thrown*/ org.eclipse.ocl.pivot.values.SetValue.Accumulator accumulator_0 = ValueUtil.createSetAccumulatorValue(DevOpsTables.SEQ_CLSSid_Task);
+				Iterator<Object> ITERATOR__1_0 = collect.iterator();
 				/*@NonInvalid*/ boolean result;
 				while (true) {
-					if (!ITERATOR_t.hasNext()) {
+					if (!ITERATOR__1_0.hasNext()) {
 						result = true;
 						break;
 					}
-					/*@NonInvalid*/ Trigger t = (Trigger)ITERATOR_t.next();
+					/*@NonInvalid*/ Task _1_0 = (Task)ITERATOR__1_0.next();
 					/**
-					 * t.toString()
+					 * name
 					 */
-					final /*@NonInvalid*/ String toString = OclAnyToStringOperation.INSTANCE.evaluate(t);
+					final /*@NonInvalid*/ String name = _1_0.getName();
 					//
-					if (accumulator.includes(toString) == ValueUtil.TRUE_VALUE) {
+					if (accumulator_0.includes(name) == ValueUtil.TRUE_VALUE) {
 						result = false;
 						break;			// Abort after second find
 					}
 					else {
-						accumulator.add(toString);
+						accumulator_0.add(name);
 					}
 				}
 				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, DevOpsTables.INT_0).booleanValue();
@@ -387,7 +405,7 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 			else {
 				final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_devOps_c_c_Pipeline = idResolver.getClass(DevOpsTables.CLSSid_Pipeline, null);
 				final /*@NonInvalid*/ SetValue allInstances = ClassifierAllInstancesOperation.INSTANCE.evaluate(executor, DevOpsTables.SET_CLSSid_Pipeline, TYP_devOps_c_c_Pipeline);
-				/*@Thrown*/ Accumulator accumulator = ValueUtil.createSetAccumulatorValue(DevOpsTables.SET_CLSSid_Pipeline);
+				/*@Thrown*/ org.eclipse.ocl.pivot.values.SetValue.Accumulator accumulator = ValueUtil.createSetAccumulatorValue(DevOpsTables.SET_CLSSid_Pipeline);
 				Iterator<Object> ITERATOR__1 = allInstances.iterator();
 				/*@NonInvalid*/ boolean result;
 				while (true) {
@@ -407,90 +425,6 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 					}
 					else {
 						accumulator.add(name);
-					}
-				}
-				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, DevOpsTables.INT_0).booleanValue();
-				IF_le = logDiagnostic;
-			}
-			return IF_le;
-		}
-		catch (Throwable e) {
-			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean UniqueTaskNames(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		final String constraintName = "Pipeline::UniqueTaskNames";
-		try {
-			/**
-			 *
-			 * inv UniqueTaskNames:
-			 *   let severity : Integer[1] = constraintName.getSeverity()
-			 *   in
-			 *     if severity <= 0
-			 *     then true
-			 *     else
-			 *       let result : Boolean[1] = self.stages.tasks->isUnique(name)
-			 *       in
-			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
-			 *     endif
-			 */
-			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
-			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, DevOpsPackage.Literals.PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP);
-			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, DevOpsTables.INT_0).booleanValue();
-			/*@NonInvalid*/ boolean IF_le;
-			if (le) {
-				IF_le = true;
-			}
-			else {
-				final /*@NonInvalid*/ List<Stage> stages = this.getStages();
-				final /*@NonInvalid*/ OrderedSetValue BOXED_stages = idResolver.createOrderedSetOfAll(DevOpsTables.ORD_CLSSid_Stage, stages);
-				/*@Thrown*/ org.eclipse.ocl.pivot.values.SequenceValue.Accumulator accumulator = ValueUtil.createSequenceAccumulatorValue(DevOpsTables.SEQ_CLSSid_Task);
-				Iterator<Object> ITERATOR__1 = BOXED_stages.iterator();
-				/*@NonInvalid*/ SequenceValue collect;
-				while (true) {
-					if (!ITERATOR__1.hasNext()) {
-						collect = accumulator;
-						break;
-					}
-					/*@NonInvalid*/ Stage _1 = (Stage)ITERATOR__1.next();
-					/**
-					 * tasks
-					 */
-					final /*@NonInvalid*/ List<Task> tasks = _1.getTasks();
-					final /*@NonInvalid*/ OrderedSetValue BOXED_tasks = idResolver.createOrderedSetOfAll(DevOpsTables.ORD_CLSSid_Task, tasks);
-					//
-					for (Object value : BOXED_tasks.flatten().getElements()) {
-						accumulator.add(value);
-					}
-				}
-				/*@Thrown*/ Accumulator accumulator_0 = ValueUtil.createSetAccumulatorValue(DevOpsTables.SEQ_CLSSid_Task);
-				Iterator<Object> ITERATOR__1_0 = collect.iterator();
-				/*@NonInvalid*/ boolean result;
-				while (true) {
-					if (!ITERATOR__1_0.hasNext()) {
-						result = true;
-						break;
-					}
-					/*@NonInvalid*/ Task _1_0 = (Task)ITERATOR__1_0.next();
-					/**
-					 * name
-					 */
-					final /*@NonInvalid*/ String name = _1_0.getName();
-					//
-					if (accumulator_0.includes(name) == ValueUtil.TRUE_VALUE) {
-						result = false;
-						break;			// Abort after second find
-					}
-					else {
-						accumulator_0.add(name);
 					}
 				}
 				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, DevOpsTables.INT_0).booleanValue();
@@ -630,12 +564,10 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case DevOpsPackage.PIPELINE___UNIQUE_TRIGGER__DIAGNOSTICCHAIN_MAP:
-				return UniqueTrigger((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case DevOpsPackage.PIPELINE___UNIQUE_NAME__DIAGNOSTICCHAIN_MAP:
-				return UniqueName((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case DevOpsPackage.PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP:
 				return UniqueTaskNames((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case DevOpsPackage.PIPELINE___UNIQUE_NAME__DIAGNOSTICCHAIN_MAP:
+				return UniqueName((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
