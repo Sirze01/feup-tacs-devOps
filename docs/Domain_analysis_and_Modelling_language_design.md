@@ -9,43 +9,43 @@
 2. [Metamodel](#metamodel)
 
 ## Domain analysis
-To be able to accurately model the domain of CI/CD pipelines we choose to analyse popular systems and to extract the concepts that are either common to all of them or we find important or interesting to integrate into CI/CD systems. We tried to integrate only features that were supported directly by all the systems or that we knew we could replicate rather easily.
+To accurately model the domain of CI/CD pipelines, we choose to analyze popular systems and extract the concepts that are either common to all of them or interesting to integrate into CI/CD systems. We tried to incorporate only features supported directly by all the systems or that we knew we could replicate relatively easily.
 
-The most popular CI/CD tools are those that are integrated into SCM systems. Apart from tools integrated into such systems we also studied Jenkins and CircleCI which is a standalone CI/CD system.
+The most popular CI/CD tools are those that are integrated into SCM systems. Apart from tools integrated into such systems, we also studied Jenkins and CircleCI, which is a standalone CI/CD system.
 
 ### GitHub Actions
 GitHub Actions is a CI/CD system integrated into GitHub. It is a very popular system due to its ease of use and integration with GitHub.
 
 [<div style="height:auto;"><img src="./resources/analysis-GHActions.png"></div>](./resources/analysis-GHActions.png)
 
-Although GitHub Actions workflows are primarily meant to be triggered via GitHub repository events, they can also be triggered via web hooks. Another important feature is that reusable workflow pieces are typically encapsulated by the community in the so-called GitHub Actions, which can be used inside a workflow. These actions are usually written in JavaScript or Dockerfiles.
+Although GitHub Actions workflows are primarily meant to be triggered via GitHub repository events, they can also be triggered via webhooks. Another essential feature is the community typically encapsulates that reusable workflow pieces in the so-called GitHub Actions, which can be used inside a workflow. These actions are usually written in JavaScript or Dockerfiles.
 
 
 ### GitLab Pipelines
-Popular in enterprise environments, GitLab Pipelines is a CI/CD system integrated into GitLab. It focuses more on self-hosted runners and is more complex than GitHub Actions. We plotted the most important concepts in the following diagram.
+Popular in enterprise environments, GitLab Pipelines is a CI/CD system integrated into GitLab. It focuses more on self-hosted runners and is more complex than GitHub Actions. We plotted the most essential concepts in the following diagram.
 
 [<div style="height:auto;"><img src="./resources/analysis-GitLabPipelines.png"></div>](./resources/analysis-GitLabPipelines.png)
 
-We found the concept of "stages" interesting as a basic unit of task parallelization. We also found the concept of "rules" interesting as a way to conditionally execute tasks. These can be emulated in GitHub Actions by using the `needs` and `if` keywords, respectively, in GitHub Actions workflows.
+We found the concept of "stages" interesting as a basic unit of task parallelization. We also found the concept of "rules" interesting as a way to execute tasks conditionally. These can be emulated in GitHub Actions using the `needs` and `if` keywords in GitHub Actions workflows.
 
 ### CircleCI
 
-CircleCI is an independent, very cloud-focused CI/CD system. It is very popular in the open-source community due to its ease of use and integration with external SCM services.
+CircleCI is an independent, very cloud-focused CI/CD system. It is prevalent in the open-source community due to its ease of use, integration with external SCM services, and friendly free tier.
 
-CircleCI has a single pipeline model and uses "orbs" as a unit of reusability. Orbs are similar to GitHub Actions in that they are reusable pieces of code that can be used in a pipeline. They are written in YAML and can be used in any pipeline. They are usually used to encapsulate common tasks such as building, testing and deploying.
+CircleCI has a single pipeline model and uses "orbs" as a unit of reusability. Orbs are similar to GitHub Actions in that they are reusable pieces of code that can be used in a pipeline. They are written in YAML and can be used in any pipeline. They are usually used to encapsulate common tasks such as building, testing, and deploying.
 
 [<div style="height:auto;"><img src="./resources/analysis-CircleCI.png"></div>](./resources/analysis-CircleCI.png)
 
 
 ### Jenkins
 
-Being a standalone tool, Jenkins is highly flexible and extensible at the cost of harder configuration and conceptual complexity.
+Being a standalone tool, Jenkins is highly flexible and extensible at the cost of more complex configuration and conceptual complexity.
 
 [<div style="height:auto;"><img src="./resources/analysis-Jenkins.png"></div>](./resources/analysis-Jenkins.png)
 
 ## Metamodel
 
-Based on the analysis of the systems above, we came up with a set of model classes. Our system should be able to model most of the common concepts, and compile to the different systems' configuration files in the futures, effectively allowing the user to use the same pipelines in different systems, with little to no changes.
+Based on the analysis of the systems above, we came up with a set of model classes. Our system should be able to model most of the common concepts and compile them to the different systems' configuration files in the future, effectively allowing users to use the same pipelines in different systems with little to no changes.
 
 ### Classes
 
@@ -85,4 +85,4 @@ Besides the cardinality constraints defined in the UML, we defined the following
 
 2. Pipeline: *UniqueTaskNames* - Tasks inside a pipeline must have unique names. 
 
-3. CronTrigger: *PositiveDuration* - The duration of a cron trigger must be positive, which means either hours, minutes or seconds must be greater than zero.
+3. CronTrigger: *PositiveDuration* - The duration of a cron trigger must be positive, which means either hours, minutes, or seconds must be greater than zero.
