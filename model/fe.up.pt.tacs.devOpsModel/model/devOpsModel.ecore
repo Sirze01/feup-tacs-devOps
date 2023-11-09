@@ -1,3 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    name="devOpsModel" nsURI="http://www.example.org/devOpsModel" nsPrefix="devOpsModel"/>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="devOpsModel" nsURI="http://www.example.org/devOpsModel" nsPrefix="devOpsModel">
+  <eClassifiers xsi:type="ecore:EClass" name="Pipeline">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stage" lowerBound="1" upperBound="-1"
+        eType="#//Stage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="job" upperBound="-1" eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="triggered" lowerBound="1"
+        upperBound="-1" eType="#//Trigger"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runner" eType="#//Runner"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" lowerBound="1" upperBound="-1"
+        eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditional" eType="#//Conditional"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Environment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variables" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artifacts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="secrets" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
+        transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Task">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="step" lowerBound="1" upperBound="-1"
+        eType="#//Step"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowFailure" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes_job" upperBound="-1"
+        eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runner" eType="#//Runner"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditional" eType="#//Conditional"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditional" eType="#//Conditional"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cmd" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trigger"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryEvent" eSuperTypes="#//Trigger">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="repository" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="branch" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebHook" eSuperTypes="#//Trigger">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="APITrigger" eSuperTypes="#//Trigger"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Runner"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IaaS" eSuperTypes="#//Runner"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerEngine" eSuperTypes="#//IaaS">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arguments" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entryPoint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="command" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperatingSystem" eSuperTypes="#//IaaS">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shell" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelfHostedRunner" eSuperTypes="#//Runner"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SSHRunner" eSuperTypes="#//SelfHostedRunner">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sshCredentials" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhoneHomeRunner" eSuperTypes="#//SelfHostedRunner">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="runnerToken" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conditional" eSuperTypes="#//Operand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnaryConditional" eSuperTypes="#//Conditional">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operand" lowerBound="1"
+        eType="#//Operand" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="negated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BinaryConditional" eSuperTypes="#//Conditional">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operand" lowerBound="2"
+        upperBound="2" eType="#//Operand" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicoperator" lowerBound="1"
+        eType="#//LogicOperator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CronTrigger" eSuperTypes="#//Trigger">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interval" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Duration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergeRequest" eSuperTypes="#//RepositoryEvent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Push" eSuperTypes="#//RepositoryEvent"/>
+</ecore:EPackage>

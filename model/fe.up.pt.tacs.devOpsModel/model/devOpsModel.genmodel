@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fe.up.pt.tacs.devOpsModel/src-gen" creationIcons="false"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fe.up.pt.tacs.devOpsModel/src-gen" creationIcons="false"
     editDirectory="/fe.up.pt.tacs.devOpsModel.edit/src-gen" editorDirectory="/fe.up.pt.tacs.devOpsModel.editor/src-gen"
     modelPluginID="fe.up.pt.tacs.devOpsModel" modelName="DevOpsModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0"
@@ -8,5 +9,78 @@
   <foreignModel>devOpsModel.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="DevOpsModel" basePackage="fe.up.pt.tacs" disposableProviderFactory="true"
-      ecorePackage="devOpsModel.ecore#/"/>
+      ecorePackage="devOpsModel.ecore#/">
+    <genClasses ecoreClass="devOpsModel.ecore#//Pipeline">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//Pipeline/name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Pipeline/environment"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Pipeline/stage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Pipeline/job"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Pipeline/triggered"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Pipeline/runner"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//Stage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Stage/tasks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Stage/conditional"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//Environment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//Environment/variables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//Environment/artifacts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//Environment/secrets"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//Task">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Task/step"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Task/environment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//Task/allowFailure"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Task/includes_job"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Task/runner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Task/conditional"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//Step">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//Step/conditional"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//Step/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//Trigger"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//RepositoryEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//RepositoryEvent/repository"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//RepositoryEvent/branch"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//WebHook">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//WebHook/url"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//APITrigger"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//Runner"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//IaaS"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//ContainerEngine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//ContainerEngine/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//ContainerEngine/arguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//ContainerEngine/entryPoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//ContainerEngine/command"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//OperatingSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//OperatingSystem/shell"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//SelfHostedRunner"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//SSHRunner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//SSHRunner/sshCredentials"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//PhoneHomeRunner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//PhoneHomeRunner/runnerToken"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//Conditional"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//UnaryConditional">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//UnaryConditional/operand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//UnaryConditional/negated"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//BinaryConditional">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//BinaryConditional/operand"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference devOpsModel.ecore#//BinaryConditional/logicoperator"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//Operand"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//LogicOperator"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//CronTrigger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute devOpsModel.ecore#//CronTrigger/interval"/>
+    </genClasses>
+    <genClasses ecoreClass="devOpsModel.ecore#//MergeRequest"/>
+    <genClasses ecoreClass="devOpsModel.ecore#//Push"/>
+  </genPackages>
 </genmodel:GenModel>
