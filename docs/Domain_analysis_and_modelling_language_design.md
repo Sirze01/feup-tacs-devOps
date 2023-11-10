@@ -49,8 +49,10 @@ Being a standalone tool, Jenkins is highly flexible and extensible at the cost o
 
 Based on the analysis of the systems above, we came up with a set of model classes. Our system should be able to model most of the common concepts and compile them to the different systems' configuration files in the future, effectively allowing users to use the same pipelines in different systems with little to no changes.
 
-### Classes
+[<div style="height:auto;"><img src="./resources/model-class diagram.jpg"></div>](./resources/model-class%20diagram.jpg)
 
+
+### Classes
 | Concept           | Description                                                                                                                               |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Trigger           | Metadata about the event that triggered the pipeline run                                                                                  |
