@@ -142,22 +142,6 @@ public class DevOpsAdapterFactory extends AdapterFactoryImpl {
 				return createConditionalAdapter();
 			}
 			@Override
-			public Adapter caseUnaryConditional(UnaryConditional object) {
-				return createUnaryConditionalAdapter();
-			}
-			@Override
-			public Adapter caseBinaryConditional(BinaryConditional object) {
-				return createBinaryConditionalAdapter();
-			}
-			@Override
-			public Adapter caseOperand(Operand object) {
-				return createOperandAdapter();
-			}
-			@Override
-			public Adapter caseLogicOperator(LogicOperator object) {
-				return createLogicOperatorAdapter();
-			}
-			@Override
 			public Adapter caseCronTrigger(CronTrigger object) {
 				return createCronTriggerAdapter();
 			}
@@ -168,6 +152,22 @@ public class DevOpsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePush(Push object) {
 				return createPushAdapter();
+			}
+			@Override
+			public Adapter caseRegistryTask(RegistryTask object) {
+				return createRegistryTaskAdapter();
+			}
+			@Override
+			public Adapter caseDevOpsTask(DevOpsTask object) {
+				return createDevOpsTaskAdapter();
+			}
+			@Override
+			public Adapter caseCommand(Command object) {
+				return createCommandAdapter();
+			}
+			@Override
+			public Adapter caseImportedTask(ImportedTask object) {
+				return createImportedTaskAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -442,62 +442,6 @@ public class DevOpsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link devOps.UnaryConditional <em>Unary Conditional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see devOps.UnaryConditional
-	 * @generated
-	 */
-	public Adapter createUnaryConditionalAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link devOps.BinaryConditional <em>Binary Conditional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see devOps.BinaryConditional
-	 * @generated
-	 */
-	public Adapter createBinaryConditionalAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link devOps.Operand <em>Operand</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see devOps.Operand
-	 * @generated
-	 */
-	public Adapter createOperandAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link devOps.LogicOperator <em>Logic Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see devOps.LogicOperator
-	 * @generated
-	 */
-	public Adapter createLogicOperatorAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link devOps.CronTrigger <em>Cron Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -536,6 +480,62 @@ public class DevOpsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPushAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link devOps.RegistryTask <em>Registry Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see devOps.RegistryTask
+	 * @generated
+	 */
+	public Adapter createRegistryTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link devOps.DevOpsTask <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see devOps.DevOpsTask
+	 * @generated
+	 */
+	public Adapter createDevOpsTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link devOps.Command <em>Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see devOps.Command
+	 * @generated
+	 */
+	public Adapter createCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link devOps.ImportedTask <em>Imported Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see devOps.ImportedTask
+	 * @generated
+	 */
+	public Adapter createImportedTaskAdapter() {
 		return null;
 	}
 

@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see devOps.DevOpsPackage#getTrigger()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Trigger extends EObject {

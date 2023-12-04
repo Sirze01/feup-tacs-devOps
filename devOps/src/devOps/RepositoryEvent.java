@@ -17,7 +17,7 @@ package devOps;
  * </ul>
  *
  * @see devOps.DevOpsPackage#getRepositoryEvent()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface RepositoryEvent extends Trigger {

@@ -95,6 +95,7 @@ public class DevOpsSwitch<T> extends Switch<T> {
 			case DevOpsPackage.TASK: {
 				Task task = (Task)theEObject;
 				T result = caseTask(task);
+				if (result == null) result = caseDevOpsTask(task);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -186,35 +187,6 @@ public class DevOpsSwitch<T> extends Switch<T> {
 			case DevOpsPackage.CONDITIONAL: {
 				Conditional conditional = (Conditional)theEObject;
 				T result = caseConditional(conditional);
-				if (result == null) result = caseOperand(conditional);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DevOpsPackage.UNARY_CONDITIONAL: {
-				UnaryConditional unaryConditional = (UnaryConditional)theEObject;
-				T result = caseUnaryConditional(unaryConditional);
-				if (result == null) result = caseConditional(unaryConditional);
-				if (result == null) result = caseOperand(unaryConditional);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DevOpsPackage.BINARY_CONDITIONAL: {
-				BinaryConditional binaryConditional = (BinaryConditional)theEObject;
-				T result = caseBinaryConditional(binaryConditional);
-				if (result == null) result = caseConditional(binaryConditional);
-				if (result == null) result = caseOperand(binaryConditional);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DevOpsPackage.OPERAND: {
-				Operand operand = (Operand)theEObject;
-				T result = caseOperand(operand);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DevOpsPackage.LOGIC_OPERATOR: {
-				LogicOperator logicOperator = (LogicOperator)theEObject;
-				T result = caseLogicOperator(logicOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -238,6 +210,34 @@ public class DevOpsSwitch<T> extends Switch<T> {
 				T result = casePush(push);
 				if (result == null) result = caseRepositoryEvent(push);
 				if (result == null) result = caseTrigger(push);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DevOpsPackage.REGISTRY_TASK: {
+				RegistryTask registryTask = (RegistryTask)theEObject;
+				T result = caseRegistryTask(registryTask);
+				if (result == null) result = caseDevOpsTask(registryTask);
+				if (result == null) result = caseStep(registryTask);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DevOpsPackage.DEV_OPS_TASK: {
+				DevOpsTask devOpsTask = (DevOpsTask)theEObject;
+				T result = caseDevOpsTask(devOpsTask);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DevOpsPackage.COMMAND: {
+				Command command = (Command)theEObject;
+				T result = caseCommand(command);
+				if (result == null) result = caseStep(command);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DevOpsPackage.IMPORTED_TASK: {
+				ImportedTask importedTask = (ImportedTask)theEObject;
+				T result = caseImportedTask(importedTask);
+				if (result == null) result = caseStep(importedTask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -516,66 +516,6 @@ public class DevOpsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Unary Conditional</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Unary Conditional</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUnaryConditional(UnaryConditional object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Binary Conditional</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Binary Conditional</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBinaryConditional(BinaryConditional object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Operand</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Operand</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOperand(Operand object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Logic Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Logic Operator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLogicOperator(LogicOperator object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Cron Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -617,6 +557,66 @@ public class DevOpsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePush(Push object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Registry Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Registry Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRegistryTask(RegistryTask object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDevOpsTask(DevOpsTask object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCommand(Command object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Imported Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Imported Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImportedTask(ImportedTask object) {
 		return null;
 	}
 

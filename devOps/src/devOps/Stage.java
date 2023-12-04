@@ -37,22 +37,22 @@ public interface Stage extends EObject {
 	EList<Task> getTasks();
 
 	/**
-	 * Returns the value of the '<em><b>Conditional</b></em>' reference.
+	 * Returns the value of the '<em><b>Conditional</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conditional</em>' reference.
+	 * @return the value of the '<em>Conditional</em>' containment reference.
 	 * @see #setConditional(Conditional)
 	 * @see devOps.DevOpsPackage#getStage_Conditional()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Conditional getConditional();
 
 	/**
-	 * Sets the value of the '{@link devOps.Stage#getConditional <em>Conditional</em>}' reference.
+	 * Sets the value of the '{@link devOps.Stage#getConditional <em>Conditional</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Conditional</em>' reference.
+	 * @param value the new value of the '<em>Conditional</em>' containment reference.
 	 * @see #getConditional()
 	 * @generated
 	 */

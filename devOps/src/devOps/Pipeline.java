@@ -87,34 +87,34 @@ public interface Pipeline extends EObject {
 	EList<Stage> getStages();
 
 	/**
-	 * Returns the value of the '<em><b>Triggers</b></em>' reference list.
+	 * Returns the value of the '<em><b>Triggers</b></em>' containment reference list.
 	 * The list contents are of type {@link devOps.Trigger}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Triggers</em>' reference list.
+	 * @return the value of the '<em>Triggers</em>' containment reference list.
 	 * @see devOps.DevOpsPackage#getPipeline_Triggers()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Trigger> getTriggers();
 
 	/**
-	 * Returns the value of the '<em><b>Runner</b></em>' reference.
+	 * Returns the value of the '<em><b>Runner</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Runner</em>' reference.
+	 * @return the value of the '<em>Runner</em>' containment reference.
 	 * @see #setRunner(Runner)
 	 * @see devOps.DevOpsPackage#getPipeline_Runner()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Runner getRunner();
 
 	/**
-	 * Sets the value of the '{@link devOps.Pipeline#getRunner <em>Runner</em>}' reference.
+	 * Sets the value of the '{@link devOps.Pipeline#getRunner <em>Runner</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Runner</em>' reference.
+	 * @param value the new value of the '<em>Runner</em>' containment reference.
 	 * @see #getRunner()
 	 * @generated
 	 */

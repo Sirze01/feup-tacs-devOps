@@ -58,33 +58,6 @@ public interface DevOpsFactory extends EFactory {
 	Task createTask();
 
 	/**
-	 * Returns a new object of class '<em>Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Step</em>'.
-	 * @generated
-	 */
-	Step createStep();
-
-	/**
-	 * Returns a new object of class '<em>Trigger</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Trigger</em>'.
-	 * @generated
-	 */
-	Trigger createTrigger();
-
-	/**
-	 * Returns a new object of class '<em>Repository Event</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Repository Event</em>'.
-	 * @generated
-	 */
-	RepositoryEvent createRepositoryEvent();
-
-	/**
 	 * Returns a new object of class '<em>Web Hook</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,24 +76,6 @@ public interface DevOpsFactory extends EFactory {
 	APITrigger createAPITrigger();
 
 	/**
-	 * Returns a new object of class '<em>Runner</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Runner</em>'.
-	 * @generated
-	 */
-	Runner createRunner();
-
-	/**
-	 * Returns a new object of class '<em>Iaa S</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Iaa S</em>'.
-	 * @generated
-	 */
-	IaaS createIaaS();
-
-	/**
 	 * Returns a new object of class '<em>Container Engine</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,15 +92,6 @@ public interface DevOpsFactory extends EFactory {
 	 * @generated
 	 */
 	OperatingSystem createOperatingSystem();
-
-	/**
-	 * Returns a new object of class '<em>Self Hosted Runner</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Self Hosted Runner</em>'.
-	 * @generated
-	 */
-	SelfHostedRunner createSelfHostedRunner();
 
 	/**
 	 * Returns a new object of class '<em>SSH Runner</em>'.
@@ -175,42 +121,6 @@ public interface DevOpsFactory extends EFactory {
 	Conditional createConditional();
 
 	/**
-	 * Returns a new object of class '<em>Unary Conditional</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Unary Conditional</em>'.
-	 * @generated
-	 */
-	UnaryConditional createUnaryConditional();
-
-	/**
-	 * Returns a new object of class '<em>Binary Conditional</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Binary Conditional</em>'.
-	 * @generated
-	 */
-	BinaryConditional createBinaryConditional();
-
-	/**
-	 * Returns a new object of class '<em>Operand</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Operand</em>'.
-	 * @generated
-	 */
-	Operand createOperand();
-
-	/**
-	 * Returns a new object of class '<em>Logic Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Logic Operator</em>'.
-	 * @generated
-	 */
-	LogicOperator createLogicOperator();
-
-	/**
 	 * Returns a new object of class '<em>Cron Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,6 +146,33 @@ public interface DevOpsFactory extends EFactory {
 	 * @generated
 	 */
 	Push createPush();
+
+	/**
+	 * Returns a new object of class '<em>Registry Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Registry Task</em>'.
+	 * @generated
+	 */
+	RegistryTask createRegistryTask();
+
+	/**
+	 * Returns a new object of class '<em>Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Command</em>'.
+	 * @generated
+	 */
+	Command createCommand();
+
+	/**
+	 * Returns a new object of class '<em>Imported Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Imported Task</em>'.
+	 * @generated
+	 */
+	ImportedTask createImportedTask();
 
 	/**
 	 * Returns the package supported by this factory.

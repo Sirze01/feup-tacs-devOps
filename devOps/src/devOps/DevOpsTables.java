@@ -32,6 +32,7 @@ import org.eclipse.ocl.pivot.internal.library.executor.ExecutorOperation;
 import org.eclipse.ocl.pivot.internal.library.executor.ExecutorProperty;
 import org.eclipse.ocl.pivot.internal.library.executor.ExecutorPropertyWithImplementation;
 import org.eclipse.ocl.pivot.internal.library.executor.ExecutorStandardLibrary;
+import org.eclipse.ocl.pivot.internal.library.executor.ExecutorType;
 import org.eclipse.ocl.pivot.oclstdlib.OCLstdlibTables;
 import org.eclipse.ocl.pivot.utilities.AbstractTables;
 import org.eclipse.ocl.pivot.utilities.ValueUtil;
@@ -65,33 +66,25 @@ public class DevOpsTables extends AbstractTables
 	public static final /*@NonInvalid*/ RootPackageId PACKid_$metamodel$ = IdManager.getRootPackageId("$metamodel$");
 	public static final /*@NonInvalid*/ NsURIPackageId PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore = IdManager.getNsURIPackageId("http://www.eclipse.org/emf/2002/Ecore", null, EcorePackage.eINSTANCE);
 	public static final /*@NonInvalid*/ NsURIPackageId PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore = IdManager.getNsURIPackageId("http://www.example.org/examples/devops.ecore", null, DevOpsPackage.eINSTANCE);
-	public static final /*@NonInvalid*/ ClassId CLSSid_BinaryConditional = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("BinaryConditional", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Class = DevOpsTables.PACKid_$metamodel$.getClassId("Class", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Conditional = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Conditional", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_CronTrigger = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("CronTrigger", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Environment = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Environment", 0);
-	public static final /*@NonInvalid*/ ClassId CLSSid_LogicOperator = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("LogicOperator", 0);
-	public static final /*@NonInvalid*/ ClassId CLSSid_Operand = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Operand", 0);
+	public static final /*@NonInvalid*/ ClassId CLSSid_ImportedTask = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("ImportedTask", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Pipeline = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Pipeline", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Runner = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Runner", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Stage = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Stage", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Step = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Step", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Task = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Task", 0);
 	public static final /*@NonInvalid*/ ClassId CLSSid_Trigger = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("Trigger", 0);
-	public static final /*@NonInvalid*/ ClassId CLSSid_UnaryConditional = DevOpsTables.PACKid_http_c_s_s_www_example_org_s_examples_s_devops_ecore.getClassId("UnaryConditional", 0);
 	public static final /*@NonInvalid*/ DataTypeId DATAid_EInt = DevOpsTables.PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore.getDataTypeId("EInt", 0);
 	public static final /*@NonInvalid*/ IntegerValue INT_0 = ValueUtil.integerValueOf("0");
 	public static final /*@NonInvalid*/ MapTypeId MAP_PRIMid_String_PRIMid_String = TypeId.MAP.getSpecializedId(TypeId.STRING, TypeId.STRING, false, false);
-	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_BinaryConditional = TypeId.BAG.getSpecializedId(DevOpsTables.CLSSid_BinaryConditional, false, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
-	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Pipeline = TypeId.BAG.getSpecializedId(DevOpsTables.CLSSid_Pipeline, false, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
+	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_ImportedTask = TypeId.BAG.getSpecializedId(DevOpsTables.CLSSid_ImportedTask, false, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
 	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Stage = TypeId.BAG.getSpecializedId(DevOpsTables.CLSSid_Stage, false, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
-	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Step = TypeId.BAG.getSpecializedId(DevOpsTables.CLSSid_Step, false, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
-	public static final /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Task = TypeId.BAG.getSpecializedId(DevOpsTables.CLSSid_Task, false, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
-	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Operand = TypeId.ORDERED_SET.getSpecializedId(DevOpsTables.CLSSid_Operand, true, ValueUtil.integerValueOf(2), ValueUtil.integerValueOf(2));
 	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Stage = TypeId.ORDERED_SET.getSpecializedId(DevOpsTables.CLSSid_Stage, true, ValueUtil.ONE_VALUE, ValueUtil.UNLIMITED_VALUE);
 	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Step = TypeId.ORDERED_SET.getSpecializedId(DevOpsTables.CLSSid_Step, true, ValueUtil.ONE_VALUE, ValueUtil.UNLIMITED_VALUE);
 	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Task = TypeId.ORDERED_SET.getSpecializedId(DevOpsTables.CLSSid_Task, true, ValueUtil.ONE_VALUE, ValueUtil.UNLIMITED_VALUE);
-	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Task_0 = TypeId.ORDERED_SET.getSpecializedId(DevOpsTables.CLSSid_Task, true, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
 	public static final /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Trigger = TypeId.ORDERED_SET.getSpecializedId(DevOpsTables.CLSSid_Trigger, true, ValueUtil.ONE_VALUE, ValueUtil.UNLIMITED_VALUE);
 	public static final /*@NonInvalid*/ CollectionTypeId SEQ_CLSSid_Task = TypeId.SEQUENCE.getSpecializedId(DevOpsTables.CLSSid_Task, true, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
 	public static final /*@NonInvalid*/ CollectionTypeId SET_CLSSid_Pipeline = TypeId.SET.getSpecializedId(DevOpsTables.CLSSid_Pipeline, true, ValueUtil.ZERO_VALUE, ValueUtil.UNLIMITED_VALUE);
@@ -125,46 +118,47 @@ public class DevOpsTables extends AbstractTables
 		}
 
 		public static final EcoreExecutorType _APITrigger = new EcoreExecutorType(DevOpsPackage.Literals.API_TRIGGER, PACKAGE, 0);
-		public static final EcoreExecutorType _BinaryConditional = new EcoreExecutorType(DevOpsPackage.Literals.BINARY_CONDITIONAL, PACKAGE, 0);
+		public static final EcoreExecutorType _Command = new EcoreExecutorType(DevOpsPackage.Literals.COMMAND, PACKAGE, 0);
 		public static final EcoreExecutorType _Conditional = new EcoreExecutorType(DevOpsPackage.Literals.CONDITIONAL, PACKAGE, 0);
 		public static final EcoreExecutorType _ContainerEngine = new EcoreExecutorType(DevOpsPackage.Literals.CONTAINER_ENGINE, PACKAGE, 0);
 		public static final EcoreExecutorType _CronTrigger = new EcoreExecutorType(DevOpsPackage.Literals.CRON_TRIGGER, PACKAGE, 0);
+		public static final EcoreExecutorType _DevOpsTask = new EcoreExecutorType(DevOpsPackage.Literals.DEV_OPS_TASK, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final EcoreExecutorType _Environment = new EcoreExecutorType(DevOpsPackage.Literals.ENVIRONMENT, PACKAGE, 0);
-		public static final EcoreExecutorType _IaaS = new EcoreExecutorType(DevOpsPackage.Literals.IAA_S, PACKAGE, 0);
-		public static final EcoreExecutorType _LogicOperator = new EcoreExecutorType(DevOpsPackage.Literals.LOGIC_OPERATOR, PACKAGE, 0);
+		public static final EcoreExecutorType _IaaS = new EcoreExecutorType(DevOpsPackage.Literals.IAA_S, PACKAGE, 0 | ExecutorType.ABSTRACT);
+		public static final EcoreExecutorType _ImportedTask = new EcoreExecutorType(DevOpsPackage.Literals.IMPORTED_TASK, PACKAGE, 0);
 		public static final EcoreExecutorType _MergeRequest = new EcoreExecutorType(DevOpsPackage.Literals.MERGE_REQUEST, PACKAGE, 0);
-		public static final EcoreExecutorType _Operand = new EcoreExecutorType(DevOpsPackage.Literals.OPERAND, PACKAGE, 0);
 		public static final EcoreExecutorType _OperatingSystem = new EcoreExecutorType(DevOpsPackage.Literals.OPERATING_SYSTEM, PACKAGE, 0);
 		public static final EcoreExecutorType _PhoneHomeRunner = new EcoreExecutorType(DevOpsPackage.Literals.PHONE_HOME_RUNNER, PACKAGE, 0);
 		public static final EcoreExecutorType _Pipeline = new EcoreExecutorType(DevOpsPackage.Literals.PIPELINE, PACKAGE, 0);
 		public static final EcoreExecutorType _Push = new EcoreExecutorType(DevOpsPackage.Literals.PUSH, PACKAGE, 0);
-		public static final EcoreExecutorType _RepositoryEvent = new EcoreExecutorType(DevOpsPackage.Literals.REPOSITORY_EVENT, PACKAGE, 0);
-		public static final EcoreExecutorType _Runner = new EcoreExecutorType(DevOpsPackage.Literals.RUNNER, PACKAGE, 0);
+		public static final EcoreExecutorType _RegistryTask = new EcoreExecutorType(DevOpsPackage.Literals.REGISTRY_TASK, PACKAGE, 0);
+		public static final EcoreExecutorType _RepositoryEvent = new EcoreExecutorType(DevOpsPackage.Literals.REPOSITORY_EVENT, PACKAGE, 0 | ExecutorType.ABSTRACT);
+		public static final EcoreExecutorType _Runner = new EcoreExecutorType(DevOpsPackage.Literals.RUNNER, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final EcoreExecutorType _SSHRunner = new EcoreExecutorType(DevOpsPackage.Literals.SSH_RUNNER, PACKAGE, 0);
-		public static final EcoreExecutorType _SelfHostedRunner = new EcoreExecutorType(DevOpsPackage.Literals.SELF_HOSTED_RUNNER, PACKAGE, 0);
+		public static final EcoreExecutorType _SelfHostedRunner = new EcoreExecutorType(DevOpsPackage.Literals.SELF_HOSTED_RUNNER, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final EcoreExecutorType _Stage = new EcoreExecutorType(DevOpsPackage.Literals.STAGE, PACKAGE, 0);
-		public static final EcoreExecutorType _Step = new EcoreExecutorType(DevOpsPackage.Literals.STEP, PACKAGE, 0);
+		public static final EcoreExecutorType _Step = new EcoreExecutorType(DevOpsPackage.Literals.STEP, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final EcoreExecutorType _StringToStringMapEntry = new EcoreExecutorType(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY, PACKAGE, 0);
 		public static final EcoreExecutorType _Task = new EcoreExecutorType(DevOpsPackage.Literals.TASK, PACKAGE, 0);
-		public static final EcoreExecutorType _Trigger = new EcoreExecutorType(DevOpsPackage.Literals.TRIGGER, PACKAGE, 0);
-		public static final EcoreExecutorType _UnaryConditional = new EcoreExecutorType(DevOpsPackage.Literals.UNARY_CONDITIONAL, PACKAGE, 0);
+		public static final EcoreExecutorType _Trigger = new EcoreExecutorType(DevOpsPackage.Literals.TRIGGER, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final EcoreExecutorType _WebHook = new EcoreExecutorType(DevOpsPackage.Literals.WEB_HOOK, PACKAGE, 0);
 
 		private static final EcoreExecutorType /*@NonNull*/ [] types = {
 			_APITrigger,
-			_BinaryConditional,
+			_Command,
 			_Conditional,
 			_ContainerEngine,
 			_CronTrigger,
+			_DevOpsTask,
 			_Environment,
 			_IaaS,
-			_LogicOperator,
+			_ImportedTask,
 			_MergeRequest,
-			_Operand,
 			_OperatingSystem,
 			_PhoneHomeRunner,
 			_Pipeline,
 			_Push,
+			_RegistryTask,
 			_RepositoryEvent,
 			_Runner,
 			_SSHRunner,
@@ -174,7 +168,6 @@ public class DevOpsTables extends AbstractTables
 			_StringToStringMapEntry,
 			_Task,
 			_Trigger,
-			_UnaryConditional,
 			_WebHook
 		};
 
@@ -206,16 +199,14 @@ public class DevOpsTables extends AbstractTables
 		private static final ExecutorFragment _APITrigger__OclElement = new ExecutorFragment(Types._APITrigger, OCLstdlibTables.Types._OclElement);
 		private static final ExecutorFragment _APITrigger__Trigger = new ExecutorFragment(Types._APITrigger, DevOpsTables.Types._Trigger);
 
-		private static final ExecutorFragment _BinaryConditional__BinaryConditional = new ExecutorFragment(Types._BinaryConditional, DevOpsTables.Types._BinaryConditional);
-		private static final ExecutorFragment _BinaryConditional__Conditional = new ExecutorFragment(Types._BinaryConditional, DevOpsTables.Types._Conditional);
-		private static final ExecutorFragment _BinaryConditional__OclAny = new ExecutorFragment(Types._BinaryConditional, OCLstdlibTables.Types._OclAny);
-		private static final ExecutorFragment _BinaryConditional__OclElement = new ExecutorFragment(Types._BinaryConditional, OCLstdlibTables.Types._OclElement);
-		private static final ExecutorFragment _BinaryConditional__Operand = new ExecutorFragment(Types._BinaryConditional, DevOpsTables.Types._Operand);
+		private static final ExecutorFragment _Command__Command = new ExecutorFragment(Types._Command, DevOpsTables.Types._Command);
+		private static final ExecutorFragment _Command__OclAny = new ExecutorFragment(Types._Command, OCLstdlibTables.Types._OclAny);
+		private static final ExecutorFragment _Command__OclElement = new ExecutorFragment(Types._Command, OCLstdlibTables.Types._OclElement);
+		private static final ExecutorFragment _Command__Step = new ExecutorFragment(Types._Command, DevOpsTables.Types._Step);
 
 		private static final ExecutorFragment _Conditional__Conditional = new ExecutorFragment(Types._Conditional, DevOpsTables.Types._Conditional);
 		private static final ExecutorFragment _Conditional__OclAny = new ExecutorFragment(Types._Conditional, OCLstdlibTables.Types._OclAny);
 		private static final ExecutorFragment _Conditional__OclElement = new ExecutorFragment(Types._Conditional, OCLstdlibTables.Types._OclElement);
-		private static final ExecutorFragment _Conditional__Operand = new ExecutorFragment(Types._Conditional, DevOpsTables.Types._Operand);
 
 		private static final ExecutorFragment _ContainerEngine__ContainerEngine = new ExecutorFragment(Types._ContainerEngine, DevOpsTables.Types._ContainerEngine);
 		private static final ExecutorFragment _ContainerEngine__IaaS = new ExecutorFragment(Types._ContainerEngine, DevOpsTables.Types._IaaS);
@@ -228,6 +219,10 @@ public class DevOpsTables extends AbstractTables
 		private static final ExecutorFragment _CronTrigger__OclElement = new ExecutorFragment(Types._CronTrigger, OCLstdlibTables.Types._OclElement);
 		private static final ExecutorFragment _CronTrigger__Trigger = new ExecutorFragment(Types._CronTrigger, DevOpsTables.Types._Trigger);
 
+		private static final ExecutorFragment _DevOpsTask__DevOpsTask = new ExecutorFragment(Types._DevOpsTask, DevOpsTables.Types._DevOpsTask);
+		private static final ExecutorFragment _DevOpsTask__OclAny = new ExecutorFragment(Types._DevOpsTask, OCLstdlibTables.Types._OclAny);
+		private static final ExecutorFragment _DevOpsTask__OclElement = new ExecutorFragment(Types._DevOpsTask, OCLstdlibTables.Types._OclElement);
+
 		private static final ExecutorFragment _Environment__Environment = new ExecutorFragment(Types._Environment, DevOpsTables.Types._Environment);
 		private static final ExecutorFragment _Environment__OclAny = new ExecutorFragment(Types._Environment, OCLstdlibTables.Types._OclAny);
 		private static final ExecutorFragment _Environment__OclElement = new ExecutorFragment(Types._Environment, OCLstdlibTables.Types._OclElement);
@@ -237,19 +232,16 @@ public class DevOpsTables extends AbstractTables
 		private static final ExecutorFragment _IaaS__OclElement = new ExecutorFragment(Types._IaaS, OCLstdlibTables.Types._OclElement);
 		private static final ExecutorFragment _IaaS__Runner = new ExecutorFragment(Types._IaaS, DevOpsTables.Types._Runner);
 
-		private static final ExecutorFragment _LogicOperator__LogicOperator = new ExecutorFragment(Types._LogicOperator, DevOpsTables.Types._LogicOperator);
-		private static final ExecutorFragment _LogicOperator__OclAny = new ExecutorFragment(Types._LogicOperator, OCLstdlibTables.Types._OclAny);
-		private static final ExecutorFragment _LogicOperator__OclElement = new ExecutorFragment(Types._LogicOperator, OCLstdlibTables.Types._OclElement);
+		private static final ExecutorFragment _ImportedTask__ImportedTask = new ExecutorFragment(Types._ImportedTask, DevOpsTables.Types._ImportedTask);
+		private static final ExecutorFragment _ImportedTask__OclAny = new ExecutorFragment(Types._ImportedTask, OCLstdlibTables.Types._OclAny);
+		private static final ExecutorFragment _ImportedTask__OclElement = new ExecutorFragment(Types._ImportedTask, OCLstdlibTables.Types._OclElement);
+		private static final ExecutorFragment _ImportedTask__Step = new ExecutorFragment(Types._ImportedTask, DevOpsTables.Types._Step);
 
 		private static final ExecutorFragment _MergeRequest__MergeRequest = new ExecutorFragment(Types._MergeRequest, DevOpsTables.Types._MergeRequest);
 		private static final ExecutorFragment _MergeRequest__OclAny = new ExecutorFragment(Types._MergeRequest, OCLstdlibTables.Types._OclAny);
 		private static final ExecutorFragment _MergeRequest__OclElement = new ExecutorFragment(Types._MergeRequest, OCLstdlibTables.Types._OclElement);
 		private static final ExecutorFragment _MergeRequest__RepositoryEvent = new ExecutorFragment(Types._MergeRequest, DevOpsTables.Types._RepositoryEvent);
 		private static final ExecutorFragment _MergeRequest__Trigger = new ExecutorFragment(Types._MergeRequest, DevOpsTables.Types._Trigger);
-
-		private static final ExecutorFragment _Operand__OclAny = new ExecutorFragment(Types._Operand, OCLstdlibTables.Types._OclAny);
-		private static final ExecutorFragment _Operand__OclElement = new ExecutorFragment(Types._Operand, OCLstdlibTables.Types._OclElement);
-		private static final ExecutorFragment _Operand__Operand = new ExecutorFragment(Types._Operand, DevOpsTables.Types._Operand);
 
 		private static final ExecutorFragment _OperatingSystem__IaaS = new ExecutorFragment(Types._OperatingSystem, DevOpsTables.Types._IaaS);
 		private static final ExecutorFragment _OperatingSystem__OclAny = new ExecutorFragment(Types._OperatingSystem, OCLstdlibTables.Types._OclAny);
@@ -272,6 +264,12 @@ public class DevOpsTables extends AbstractTables
 		private static final ExecutorFragment _Push__Push = new ExecutorFragment(Types._Push, DevOpsTables.Types._Push);
 		private static final ExecutorFragment _Push__RepositoryEvent = new ExecutorFragment(Types._Push, DevOpsTables.Types._RepositoryEvent);
 		private static final ExecutorFragment _Push__Trigger = new ExecutorFragment(Types._Push, DevOpsTables.Types._Trigger);
+
+		private static final ExecutorFragment _RegistryTask__DevOpsTask = new ExecutorFragment(Types._RegistryTask, DevOpsTables.Types._DevOpsTask);
+		private static final ExecutorFragment _RegistryTask__OclAny = new ExecutorFragment(Types._RegistryTask, OCLstdlibTables.Types._OclAny);
+		private static final ExecutorFragment _RegistryTask__OclElement = new ExecutorFragment(Types._RegistryTask, OCLstdlibTables.Types._OclElement);
+		private static final ExecutorFragment _RegistryTask__RegistryTask = new ExecutorFragment(Types._RegistryTask, DevOpsTables.Types._RegistryTask);
+		private static final ExecutorFragment _RegistryTask__Step = new ExecutorFragment(Types._RegistryTask, DevOpsTables.Types._Step);
 
 		private static final ExecutorFragment _RepositoryEvent__OclAny = new ExecutorFragment(Types._RepositoryEvent, OCLstdlibTables.Types._OclAny);
 		private static final ExecutorFragment _RepositoryEvent__OclElement = new ExecutorFragment(Types._RepositoryEvent, OCLstdlibTables.Types._OclElement);
@@ -305,6 +303,7 @@ public class DevOpsTables extends AbstractTables
 		private static final ExecutorFragment _StringToStringMapEntry__OclElement = new ExecutorFragment(Types._StringToStringMapEntry, OCLstdlibTables.Types._OclElement);
 		private static final ExecutorFragment _StringToStringMapEntry__StringToStringMapEntry = new ExecutorFragment(Types._StringToStringMapEntry, DevOpsTables.Types._StringToStringMapEntry);
 
+		private static final ExecutorFragment _Task__DevOpsTask = new ExecutorFragment(Types._Task, DevOpsTables.Types._DevOpsTask);
 		private static final ExecutorFragment _Task__OclAny = new ExecutorFragment(Types._Task, OCLstdlibTables.Types._OclAny);
 		private static final ExecutorFragment _Task__OclElement = new ExecutorFragment(Types._Task, OCLstdlibTables.Types._OclElement);
 		private static final ExecutorFragment _Task__Task = new ExecutorFragment(Types._Task, DevOpsTables.Types._Task);
@@ -312,12 +311,6 @@ public class DevOpsTables extends AbstractTables
 		private static final ExecutorFragment _Trigger__OclAny = new ExecutorFragment(Types._Trigger, OCLstdlibTables.Types._OclAny);
 		private static final ExecutorFragment _Trigger__OclElement = new ExecutorFragment(Types._Trigger, OCLstdlibTables.Types._OclElement);
 		private static final ExecutorFragment _Trigger__Trigger = new ExecutorFragment(Types._Trigger, DevOpsTables.Types._Trigger);
-
-		private static final ExecutorFragment _UnaryConditional__Conditional = new ExecutorFragment(Types._UnaryConditional, DevOpsTables.Types._Conditional);
-		private static final ExecutorFragment _UnaryConditional__OclAny = new ExecutorFragment(Types._UnaryConditional, OCLstdlibTables.Types._OclAny);
-		private static final ExecutorFragment _UnaryConditional__OclElement = new ExecutorFragment(Types._UnaryConditional, OCLstdlibTables.Types._OclElement);
-		private static final ExecutorFragment _UnaryConditional__Operand = new ExecutorFragment(Types._UnaryConditional, DevOpsTables.Types._Operand);
-		private static final ExecutorFragment _UnaryConditional__UnaryConditional = new ExecutorFragment(Types._UnaryConditional, DevOpsTables.Types._UnaryConditional);
 
 		private static final ExecutorFragment _WebHook__OclAny = new ExecutorFragment(Types._WebHook, OCLstdlibTables.Types._OclAny);
 		private static final ExecutorFragment _WebHook__OclElement = new ExecutorFragment(Types._WebHook, OCLstdlibTables.Types._OclElement);
@@ -394,12 +387,11 @@ public class DevOpsTables extends AbstractTables
 		}
 
 
-		public static final ExecutorProperty _BinaryConditional__logicOperator = new EcoreExecutorProperty(DevOpsPackage.Literals.BINARY_CONDITIONAL__LOGIC_OPERATOR, Types._BinaryConditional, 0);
-		public static final ExecutorProperty _BinaryConditional__operand = new EcoreExecutorProperty(DevOpsPackage.Literals.BINARY_CONDITIONAL__OPERAND, Types._BinaryConditional, 1);
+		public static final ExecutorProperty _Command__cmd = new EcoreExecutorProperty(DevOpsPackage.Literals.COMMAND__CMD, Types._Command, 0);
 
-		public static final ExecutorProperty _Conditional__Stage__conditional = new ExecutorPropertyWithImplementation("Stage", Types._Conditional, 0, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.STAGE__CONDITIONAL));
-		public static final ExecutorProperty _Conditional__Step__conditional = new ExecutorPropertyWithImplementation("Step", Types._Conditional, 1, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.STEP__CONDITIONAL));
-		public static final ExecutorProperty _Conditional__Task__conditional = new ExecutorPropertyWithImplementation("Task", Types._Conditional, 2, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.TASK__CONDITIONAL));
+		public static final ExecutorProperty _Conditional__condition = new EcoreExecutorProperty(DevOpsPackage.Literals.CONDITIONAL__CONDITION, Types._Conditional, 0);
+		public static final ExecutorProperty _Conditional__Stage__conditional = new ExecutorPropertyWithImplementation("Stage", Types._Conditional, 1, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.STAGE__CONDITIONAL));
+		public static final ExecutorProperty _Conditional__Step__conditional = new ExecutorPropertyWithImplementation("Step", Types._Conditional, 2, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.STEP__CONDITIONAL));
 
 		public static final ExecutorProperty _ContainerEngine__arguments = new EcoreExecutorProperty(DevOpsPackage.Literals.CONTAINER_ENGINE__ARGUMENTS, Types._ContainerEngine, 0);
 		public static final ExecutorProperty _ContainerEngine__command = new EcoreExecutorProperty(DevOpsPackage.Literals.CONTAINER_ENGINE__COMMAND, Types._ContainerEngine, 1);
@@ -410,18 +402,19 @@ public class DevOpsTables extends AbstractTables
 		public static final ExecutorProperty _CronTrigger__minutes = new EcoreExecutorProperty(DevOpsPackage.Literals.CRON_TRIGGER__MINUTES, Types._CronTrigger, 1);
 		public static final ExecutorProperty _CronTrigger__seconds = new EcoreExecutorProperty(DevOpsPackage.Literals.CRON_TRIGGER__SECONDS, Types._CronTrigger, 2);
 
+		public static final ExecutorProperty _DevOpsTask__allowFailure = new EcoreExecutorProperty(DevOpsPackage.Literals.DEV_OPS_TASK__ALLOW_FAILURE, Types._DevOpsTask, 0);
+		public static final ExecutorProperty _DevOpsTask__name = new EcoreExecutorProperty(DevOpsPackage.Literals.DEV_OPS_TASK__NAME, Types._DevOpsTask, 1);
+
 		public static final ExecutorProperty _Environment__artifacts = new EcoreExecutorProperty(DevOpsPackage.Literals.ENVIRONMENT__ARTIFACTS, Types._Environment, 0);
 		public static final ExecutorProperty _Environment__secrets = new EcoreExecutorProperty(DevOpsPackage.Literals.ENVIRONMENT__SECRETS, Types._Environment, 1);
 		public static final ExecutorProperty _Environment__variables = new EcoreExecutorProperty(DevOpsPackage.Literals.ENVIRONMENT__VARIABLES, Types._Environment, 2);
 		public static final ExecutorProperty _Environment__Pipeline__environment = new ExecutorPropertyWithImplementation("Pipeline", Types._Environment, 3, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.PIPELINE__ENVIRONMENT));
 		public static final ExecutorProperty _Environment__Task__environment = new ExecutorPropertyWithImplementation("Task", Types._Environment, 4, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.TASK__ENVIRONMENT));
 
-		public static final ExecutorProperty _LogicOperator__BinaryConditional__logicOperator = new ExecutorPropertyWithImplementation("BinaryConditional", Types._LogicOperator, 0, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.BINARY_CONDITIONAL__LOGIC_OPERATOR));
+		public static final ExecutorProperty _ImportedTask__task = new EcoreExecutorProperty(DevOpsPackage.Literals.IMPORTED_TASK__TASK, Types._ImportedTask, 0);
 
-		public static final ExecutorProperty _Operand__BinaryConditional__operand = new ExecutorPropertyWithImplementation("BinaryConditional", Types._Operand, 0, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.BINARY_CONDITIONAL__OPERAND));
-		public static final ExecutorProperty _Operand__UnaryConditional__operand = new ExecutorPropertyWithImplementation("UnaryConditional", Types._Operand, 1, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.UNARY_CONDITIONAL__OPERAND));
-
-		public static final ExecutorProperty _OperatingSystem__shell = new EcoreExecutorProperty(DevOpsPackage.Literals.OPERATING_SYSTEM__SHELL, Types._OperatingSystem, 0);
+		public static final ExecutorProperty _OperatingSystem__osName = new EcoreExecutorProperty(DevOpsPackage.Literals.OPERATING_SYSTEM__OS_NAME, Types._OperatingSystem, 0);
+		public static final ExecutorProperty _OperatingSystem__shell = new EcoreExecutorProperty(DevOpsPackage.Literals.OPERATING_SYSTEM__SHELL, Types._OperatingSystem, 1);
 
 		public static final ExecutorProperty _PhoneHomeRunner__runnerToken = new EcoreExecutorProperty(DevOpsPackage.Literals.PHONE_HOME_RUNNER__RUNNER_TOKEN, Types._PhoneHomeRunner, 0);
 
@@ -430,6 +423,9 @@ public class DevOpsTables extends AbstractTables
 		public static final ExecutorProperty _Pipeline__runner = new EcoreExecutorProperty(DevOpsPackage.Literals.PIPELINE__RUNNER, Types._Pipeline, 2);
 		public static final ExecutorProperty _Pipeline__stages = new EcoreExecutorProperty(DevOpsPackage.Literals.PIPELINE__STAGES, Types._Pipeline, 3);
 		public static final ExecutorProperty _Pipeline__triggers = new EcoreExecutorProperty(DevOpsPackage.Literals.PIPELINE__TRIGGERS, Types._Pipeline, 4);
+
+		public static final ExecutorProperty _RegistryTask__arguments = new EcoreExecutorProperty(DevOpsPackage.Literals.REGISTRY_TASK__ARGUMENTS, Types._RegistryTask, 0);
+		public static final ExecutorProperty _RegistryTask__cmd = new EcoreExecutorProperty(DevOpsPackage.Literals.REGISTRY_TASK__CMD, Types._RegistryTask, 1);
 
 		public static final ExecutorProperty _RepositoryEvent__branch = new EcoreExecutorProperty(DevOpsPackage.Literals.REPOSITORY_EVENT__BRANCH, Types._RepositoryEvent, 0);
 		public static final ExecutorProperty _RepositoryEvent__repository = new EcoreExecutorProperty(DevOpsPackage.Literals.REPOSITORY_EVENT__REPOSITORY, Types._RepositoryEvent, 1);
@@ -443,27 +439,19 @@ public class DevOpsTables extends AbstractTables
 		public static final ExecutorProperty _Stage__tasks = new EcoreExecutorProperty(DevOpsPackage.Literals.STAGE__TASKS, Types._Stage, 1);
 		public static final ExecutorProperty _Stage__Pipeline__stages = new ExecutorPropertyWithImplementation("Pipeline", Types._Stage, 2, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.PIPELINE__STAGES));
 
-		public static final ExecutorProperty _Step__cmd = new EcoreExecutorProperty(DevOpsPackage.Literals.STEP__CMD, Types._Step, 0);
-		public static final ExecutorProperty _Step__conditional = new EcoreExecutorProperty(DevOpsPackage.Literals.STEP__CONDITIONAL, Types._Step, 1);
-		public static final ExecutorProperty _Step__Task__steps = new ExecutorPropertyWithImplementation("Task", Types._Step, 2, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.TASK__STEPS));
+		public static final ExecutorProperty _Step__conditional = new EcoreExecutorProperty(DevOpsPackage.Literals.STEP__CONDITIONAL, Types._Step, 0);
+		public static final ExecutorProperty _Step__Task__steps = new ExecutorPropertyWithImplementation("Task", Types._Step, 1, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.TASK__STEPS));
 
 		public static final ExecutorProperty _StringToStringMapEntry__key = new EcoreExecutorProperty(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY__KEY, Types._StringToStringMapEntry, 0);
 		public static final ExecutorProperty _StringToStringMapEntry__value = new EcoreExecutorProperty(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY__VALUE, Types._StringToStringMapEntry, 1);
 
-		public static final ExecutorProperty _Task__allowFailure = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__ALLOW_FAILURE, Types._Task, 0);
-		public static final ExecutorProperty _Task__conditional = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__CONDITIONAL, Types._Task, 1);
-		public static final ExecutorProperty _Task__environment = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__ENVIRONMENT, Types._Task, 2);
-		public static final ExecutorProperty _Task__name = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__NAME, Types._Task, 3);
-		public static final ExecutorProperty _Task__runner = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__RUNNER, Types._Task, 4);
-		public static final ExecutorProperty _Task__steps = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__STEPS, Types._Task, 5);
-		public static final ExecutorProperty _Task__taskImports = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__TASK_IMPORTS, Types._Task, 6);
-		public static final ExecutorProperty _Task__Stage__tasks = new ExecutorPropertyWithImplementation("Stage", Types._Task, 7, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.STAGE__TASKS));
-		public static final ExecutorProperty _Task__Task__taskImports = new ExecutorPropertyWithImplementation("Task", Types._Task, 8, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.TASK__TASK_IMPORTS));
+		public static final ExecutorProperty _Task__environment = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__ENVIRONMENT, Types._Task, 0);
+		public static final ExecutorProperty _Task__runner = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__RUNNER, Types._Task, 1);
+		public static final ExecutorProperty _Task__steps = new EcoreExecutorProperty(DevOpsPackage.Literals.TASK__STEPS, Types._Task, 2);
+		public static final ExecutorProperty _Task__ImportedTask__task = new ExecutorPropertyWithImplementation("ImportedTask", Types._Task, 3, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.IMPORTED_TASK__TASK));
+		public static final ExecutorProperty _Task__Stage__tasks = new ExecutorPropertyWithImplementation("Stage", Types._Task, 4, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.STAGE__TASKS));
 
 		public static final ExecutorProperty _Trigger__Pipeline__triggers = new ExecutorPropertyWithImplementation("Pipeline", Types._Trigger, 0, new EcoreLibraryOppositeProperty(DevOpsPackage.Literals.PIPELINE__TRIGGERS));
-
-		public static final ExecutorProperty _UnaryConditional__negated = new EcoreExecutorProperty(DevOpsPackage.Literals.UNARY_CONDITIONAL__NEGATED, Types._UnaryConditional, 0);
-		public static final ExecutorProperty _UnaryConditional__operand = new EcoreExecutorProperty(DevOpsPackage.Literals.UNARY_CONDITIONAL__OPERAND, Types._UnaryConditional, 1);
 
 		public static final ExecutorProperty _WebHook__body = new EcoreExecutorProperty(DevOpsPackage.Literals.WEB_HOOK__BODY, Types._WebHook, 0);
 		static {
@@ -494,24 +482,22 @@ public class DevOpsTables extends AbstractTables
 			};
 		private static final int /*@NonNull*/ [] __APITrigger = { 1,1,1,1 };
 
-		private static final ExecutorFragment /*@NonNull*/ [] _BinaryConditional =
+		private static final ExecutorFragment /*@NonNull*/ [] _Command =
 			{
-				Fragments._BinaryConditional__OclAny /* 0 */,
-				Fragments._BinaryConditional__OclElement /* 1 */,
-				Fragments._BinaryConditional__Operand /* 2 */,
-				Fragments._BinaryConditional__Conditional /* 3 */,
-				Fragments._BinaryConditional__BinaryConditional /* 4 */
+				Fragments._Command__OclAny /* 0 */,
+				Fragments._Command__OclElement /* 1 */,
+				Fragments._Command__Step /* 2 */,
+				Fragments._Command__Command /* 3 */
 			};
-		private static final int /*@NonNull*/ [] __BinaryConditional = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Command = { 1,1,1,1 };
 
 		private static final ExecutorFragment /*@NonNull*/ [] _Conditional =
 			{
 				Fragments._Conditional__OclAny /* 0 */,
 				Fragments._Conditional__OclElement /* 1 */,
-				Fragments._Conditional__Operand /* 2 */,
-				Fragments._Conditional__Conditional /* 3 */
+				Fragments._Conditional__Conditional /* 2 */
 			};
-		private static final int /*@NonNull*/ [] __Conditional = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Conditional = { 1,1,1 };
 
 		private static final ExecutorFragment /*@NonNull*/ [] _ContainerEngine =
 			{
@@ -532,6 +518,14 @@ public class DevOpsTables extends AbstractTables
 			};
 		private static final int /*@NonNull*/ [] __CronTrigger = { 1,1,1,1 };
 
+		private static final ExecutorFragment /*@NonNull*/ [] _DevOpsTask =
+			{
+				Fragments._DevOpsTask__OclAny /* 0 */,
+				Fragments._DevOpsTask__OclElement /* 1 */,
+				Fragments._DevOpsTask__DevOpsTask /* 2 */
+			};
+		private static final int /*@NonNull*/ [] __DevOpsTask = { 1,1,1 };
+
 		private static final ExecutorFragment /*@NonNull*/ [] _Environment =
 			{
 				Fragments._Environment__OclAny /* 0 */,
@@ -549,13 +543,14 @@ public class DevOpsTables extends AbstractTables
 			};
 		private static final int /*@NonNull*/ [] __IaaS = { 1,1,1,1 };
 
-		private static final ExecutorFragment /*@NonNull*/ [] _LogicOperator =
+		private static final ExecutorFragment /*@NonNull*/ [] _ImportedTask =
 			{
-				Fragments._LogicOperator__OclAny /* 0 */,
-				Fragments._LogicOperator__OclElement /* 1 */,
-				Fragments._LogicOperator__LogicOperator /* 2 */
+				Fragments._ImportedTask__OclAny /* 0 */,
+				Fragments._ImportedTask__OclElement /* 1 */,
+				Fragments._ImportedTask__Step /* 2 */,
+				Fragments._ImportedTask__ImportedTask /* 3 */
 			};
-		private static final int /*@NonNull*/ [] __LogicOperator = { 1,1,1 };
+		private static final int /*@NonNull*/ [] __ImportedTask = { 1,1,1,1 };
 
 		private static final ExecutorFragment /*@NonNull*/ [] _MergeRequest =
 			{
@@ -566,14 +561,6 @@ public class DevOpsTables extends AbstractTables
 				Fragments._MergeRequest__MergeRequest /* 4 */
 			};
 		private static final int /*@NonNull*/ [] __MergeRequest = { 1,1,1,1,1 };
-
-		private static final ExecutorFragment /*@NonNull*/ [] _Operand =
-			{
-				Fragments._Operand__OclAny /* 0 */,
-				Fragments._Operand__OclElement /* 1 */,
-				Fragments._Operand__Operand /* 2 */
-			};
-		private static final int /*@NonNull*/ [] __Operand = { 1,1,1 };
 
 		private static final ExecutorFragment /*@NonNull*/ [] _OperatingSystem =
 			{
@@ -612,6 +599,16 @@ public class DevOpsTables extends AbstractTables
 				Fragments._Push__Push /* 4 */
 			};
 		private static final int /*@NonNull*/ [] __Push = { 1,1,1,1,1 };
+
+		private static final ExecutorFragment /*@NonNull*/ [] _RegistryTask =
+			{
+				Fragments._RegistryTask__OclAny /* 0 */,
+				Fragments._RegistryTask__OclElement /* 1 */,
+				Fragments._RegistryTask__DevOpsTask /* 2 */,
+				Fragments._RegistryTask__Step /* 2 */,
+				Fragments._RegistryTask__RegistryTask /* 3 */
+			};
+		private static final int /*@NonNull*/ [] __RegistryTask = { 1,1,2,1 };
 
 		private static final ExecutorFragment /*@NonNull*/ [] _RepositoryEvent =
 			{
@@ -677,9 +674,10 @@ public class DevOpsTables extends AbstractTables
 			{
 				Fragments._Task__OclAny /* 0 */,
 				Fragments._Task__OclElement /* 1 */,
-				Fragments._Task__Task /* 2 */
+				Fragments._Task__DevOpsTask /* 2 */,
+				Fragments._Task__Task /* 3 */
 			};
-		private static final int /*@NonNull*/ [] __Task = { 1,1,1 };
+		private static final int /*@NonNull*/ [] __Task = { 1,1,1,1 };
 
 		private static final ExecutorFragment /*@NonNull*/ [] _Trigger =
 			{
@@ -688,16 +686,6 @@ public class DevOpsTables extends AbstractTables
 				Fragments._Trigger__Trigger /* 2 */
 			};
 		private static final int /*@NonNull*/ [] __Trigger = { 1,1,1 };
-
-		private static final ExecutorFragment /*@NonNull*/ [] _UnaryConditional =
-			{
-				Fragments._UnaryConditional__OclAny /* 0 */,
-				Fragments._UnaryConditional__OclElement /* 1 */,
-				Fragments._UnaryConditional__Operand /* 2 */,
-				Fragments._UnaryConditional__Conditional /* 3 */,
-				Fragments._UnaryConditional__UnaryConditional /* 4 */
-			};
-		private static final int /*@NonNull*/ [] __UnaryConditional = { 1,1,1,1,1 };
 
 		private static final ExecutorFragment /*@NonNull*/ [] _WebHook =
 			{
@@ -713,19 +701,20 @@ public class DevOpsTables extends AbstractTables
 		 */
 		static {
 			Types._APITrigger.initFragments(_APITrigger, __APITrigger);
-			Types._BinaryConditional.initFragments(_BinaryConditional, __BinaryConditional);
+			Types._Command.initFragments(_Command, __Command);
 			Types._Conditional.initFragments(_Conditional, __Conditional);
 			Types._ContainerEngine.initFragments(_ContainerEngine, __ContainerEngine);
 			Types._CronTrigger.initFragments(_CronTrigger, __CronTrigger);
+			Types._DevOpsTask.initFragments(_DevOpsTask, __DevOpsTask);
 			Types._Environment.initFragments(_Environment, __Environment);
 			Types._IaaS.initFragments(_IaaS, __IaaS);
-			Types._LogicOperator.initFragments(_LogicOperator, __LogicOperator);
+			Types._ImportedTask.initFragments(_ImportedTask, __ImportedTask);
 			Types._MergeRequest.initFragments(_MergeRequest, __MergeRequest);
-			Types._Operand.initFragments(_Operand, __Operand);
 			Types._OperatingSystem.initFragments(_OperatingSystem, __OperatingSystem);
 			Types._PhoneHomeRunner.initFragments(_PhoneHomeRunner, __PhoneHomeRunner);
 			Types._Pipeline.initFragments(_Pipeline, __Pipeline);
 			Types._Push.initFragments(_Push, __Push);
+			Types._RegistryTask.initFragments(_RegistryTask, __RegistryTask);
 			Types._RepositoryEvent.initFragments(_RepositoryEvent, __RepositoryEvent);
 			Types._Runner.initFragments(_Runner, __Runner);
 			Types._SSHRunner.initFragments(_SSHRunner, __SSHRunner);
@@ -735,7 +724,6 @@ public class DevOpsTables extends AbstractTables
 			Types._StringToStringMapEntry.initFragments(_StringToStringMapEntry, __StringToStringMapEntry);
 			Types._Task.initFragments(_Task, __Task);
 			Types._Trigger.initFragments(_Trigger, __Trigger);
-			Types._UnaryConditional.initFragments(_UnaryConditional, __UnaryConditional);
 			Types._WebHook.initFragments(_WebHook, __WebHook);
 
 			Init.initEnd();
@@ -790,9 +778,8 @@ public class DevOpsTables extends AbstractTables
 		};
 		private static final ExecutorOperation /*@NonNull*/ [] _APITrigger__Trigger = {};
 
-		private static final ExecutorOperation /*@NonNull*/ [] _BinaryConditional__BinaryConditional = {};
-		private static final ExecutorOperation /*@NonNull*/ [] _BinaryConditional__Conditional = {};
-		private static final ExecutorOperation /*@NonNull*/ [] _BinaryConditional__OclAny = {
+		private static final ExecutorOperation /*@NonNull*/ [] _Command__Command = {};
+		private static final ExecutorOperation /*@NonNull*/ [] _Command__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -809,7 +796,7 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final ExecutorOperation /*@NonNull*/ [] _BinaryConditional__OclElement = {
+		private static final ExecutorOperation /*@NonNull*/ [] _Command__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances(Integer[1]) */,
 			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[1]) */,
 			OCLstdlibTables.Operations._OclElement__0_oclBase /* oclBase() */,
@@ -823,7 +810,7 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
 			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final ExecutorOperation /*@NonNull*/ [] _BinaryConditional__Operand = {};
+		private static final ExecutorOperation /*@NonNull*/ [] _Command__Step = {};
 
 		private static final ExecutorOperation /*@NonNull*/ [] _Conditional__Conditional = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _Conditional__OclAny = {
@@ -857,7 +844,6 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
 			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final ExecutorOperation /*@NonNull*/ [] _Conditional__Operand = {};
 
 		private static final ExecutorOperation /*@NonNull*/ [] _ContainerEngine__ContainerEngine = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _ContainerEngine__IaaS = {};
@@ -928,6 +914,39 @@ public class DevOpsTables extends AbstractTables
 		};
 		private static final ExecutorOperation /*@NonNull*/ [] _CronTrigger__Trigger = {};
 
+		private static final ExecutorOperation /*@NonNull*/ [] _DevOpsTask__DevOpsTask = {};
+		private static final ExecutorOperation /*@NonNull*/ [] _DevOpsTask__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[1]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[1]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[1]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[1]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final ExecutorOperation /*@NonNull*/ [] _DevOpsTask__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances(Integer[1]) */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[1]) */,
+			OCLstdlibTables.Operations._OclElement__0_oclBase /* oclBase() */,
+			OCLstdlibTables.Operations._OclElement__1_oclBase /* oclBase(OclType[1]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclExtension /* oclExtension(OclStereotype[1]) */,
+			OCLstdlibTables.Operations._OclElement__0_oclExtensions /* oclExtensions() */,
+			OCLstdlibTables.Operations._OclElement__1_oclExtensions /* oclExtensions(OclStereotype[1]) */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[1]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+
 		private static final ExecutorOperation /*@NonNull*/ [] _Environment__Environment = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _Environment__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -995,8 +1014,8 @@ public class DevOpsTables extends AbstractTables
 		};
 		private static final ExecutorOperation /*@NonNull*/ [] _IaaS__Runner = {};
 
-		private static final ExecutorOperation /*@NonNull*/ [] _LogicOperator__LogicOperator = {};
-		private static final ExecutorOperation /*@NonNull*/ [] _LogicOperator__OclAny = {
+		private static final ExecutorOperation /*@NonNull*/ [] _ImportedTask__ImportedTask = {};
+		private static final ExecutorOperation /*@NonNull*/ [] _ImportedTask__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1013,7 +1032,7 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final ExecutorOperation /*@NonNull*/ [] _LogicOperator__OclElement = {
+		private static final ExecutorOperation /*@NonNull*/ [] _ImportedTask__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances(Integer[1]) */,
 			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[1]) */,
 			OCLstdlibTables.Operations._OclElement__0_oclBase /* oclBase() */,
@@ -1027,6 +1046,7 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
 			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
+		private static final ExecutorOperation /*@NonNull*/ [] _ImportedTask__Step = {};
 
 		private static final ExecutorOperation /*@NonNull*/ [] _MergeRequest__MergeRequest = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _MergeRequest__OclAny = {
@@ -1062,39 +1082,6 @@ public class DevOpsTables extends AbstractTables
 		};
 		private static final ExecutorOperation /*@NonNull*/ [] _MergeRequest__RepositoryEvent = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _MergeRequest__Trigger = {};
-
-		private static final ExecutorOperation /*@NonNull*/ [] _Operand__Operand = {};
-		private static final ExecutorOperation /*@NonNull*/ [] _Operand__OclAny = {
-			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
-			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
-			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[1]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
-			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[1]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
-			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[1]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
-			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
-			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[1]) */,
-			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
-			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
-			OCLstdlibTables.Operations._OclAny__toString /* toString() */
-		};
-		private static final ExecutorOperation /*@NonNull*/ [] _Operand__OclElement = {
-			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances(Integer[1]) */,
-			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[1]) */,
-			OCLstdlibTables.Operations._OclElement__0_oclBase /* oclBase() */,
-			OCLstdlibTables.Operations._OclElement__1_oclBase /* oclBase(OclType[1]) */,
-			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
-			OCLstdlibTables.Operations._OclElement__oclExtension /* oclExtension(OclStereotype[1]) */,
-			OCLstdlibTables.Operations._OclElement__0_oclExtensions /* oclExtensions() */,
-			OCLstdlibTables.Operations._OclElement__1_oclExtensions /* oclExtensions(OclStereotype[1]) */,
-			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[1]) */,
-			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
-			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
-		};
 
 		private static final ExecutorOperation /*@NonNull*/ [] _OperatingSystem__OperatingSystem = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _OperatingSystem__IaaS = {};
@@ -1233,6 +1220,41 @@ public class DevOpsTables extends AbstractTables
 		};
 		private static final ExecutorOperation /*@NonNull*/ [] _Push__RepositoryEvent = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _Push__Trigger = {};
+
+		private static final ExecutorOperation /*@NonNull*/ [] _RegistryTask__RegistryTask = {};
+		private static final ExecutorOperation /*@NonNull*/ [] _RegistryTask__DevOpsTask = {};
+		private static final ExecutorOperation /*@NonNull*/ [] _RegistryTask__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[1]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[1]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[1]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[1]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final ExecutorOperation /*@NonNull*/ [] _RegistryTask__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances(Integer[1]) */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[1]) */,
+			OCLstdlibTables.Operations._OclElement__0_oclBase /* oclBase() */,
+			OCLstdlibTables.Operations._OclElement__1_oclBase /* oclBase(OclType[1]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclExtension /* oclExtension(OclStereotype[1]) */,
+			OCLstdlibTables.Operations._OclElement__0_oclExtensions /* oclExtensions() */,
+			OCLstdlibTables.Operations._OclElement__1_oclExtensions /* oclExtensions(OclStereotype[1]) */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[1]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final ExecutorOperation /*@NonNull*/ [] _RegistryTask__Step = {};
 
 		private static final ExecutorOperation /*@NonNull*/ [] _RepositoryEvent__RepositoryEvent = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _RepositoryEvent__OclAny = {
@@ -1470,6 +1492,7 @@ public class DevOpsTables extends AbstractTables
 		};
 
 		private static final ExecutorOperation /*@NonNull*/ [] _Task__Task = {};
+		private static final ExecutorOperation /*@NonNull*/ [] _Task__DevOpsTask = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _Task__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
@@ -1535,41 +1558,6 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final ExecutorOperation /*@NonNull*/ [] _UnaryConditional__UnaryConditional = {};
-		private static final ExecutorOperation /*@NonNull*/ [] _UnaryConditional__Conditional = {};
-		private static final ExecutorOperation /*@NonNull*/ [] _UnaryConditional__OclAny = {
-			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
-			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
-			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[1]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
-			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[1]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
-			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[1]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
-			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
-			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[1]) */,
-			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
-			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
-			OCLstdlibTables.Operations._OclAny__toString /* toString() */
-		};
-		private static final ExecutorOperation /*@NonNull*/ [] _UnaryConditional__OclElement = {
-			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances(Integer[1]) */,
-			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[1]) */,
-			OCLstdlibTables.Operations._OclElement__0_oclBase /* oclBase() */,
-			OCLstdlibTables.Operations._OclElement__1_oclBase /* oclBase(OclType[1]) */,
-			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
-			OCLstdlibTables.Operations._OclElement__oclExtension /* oclExtension(OclStereotype[1]) */,
-			OCLstdlibTables.Operations._OclElement__0_oclExtensions /* oclExtensions() */,
-			OCLstdlibTables.Operations._OclElement__1_oclExtensions /* oclExtensions(OclStereotype[1]) */,
-			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[1]) */,
-			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
-			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
-		};
-		private static final ExecutorOperation /*@NonNull*/ [] _UnaryConditional__Operand = {};
-
 		private static final ExecutorOperation /*@NonNull*/ [] _WebHook__WebHook = {};
 		private static final ExecutorOperation /*@NonNull*/ [] _WebHook__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -1613,16 +1601,14 @@ public class DevOpsTables extends AbstractTables
 			Fragments._APITrigger__OclElement.initOperations(_APITrigger__OclElement);
 			Fragments._APITrigger__Trigger.initOperations(_APITrigger__Trigger);
 
-			Fragments._BinaryConditional__BinaryConditional.initOperations(_BinaryConditional__BinaryConditional);
-			Fragments._BinaryConditional__Conditional.initOperations(_BinaryConditional__Conditional);
-			Fragments._BinaryConditional__OclAny.initOperations(_BinaryConditional__OclAny);
-			Fragments._BinaryConditional__OclElement.initOperations(_BinaryConditional__OclElement);
-			Fragments._BinaryConditional__Operand.initOperations(_BinaryConditional__Operand);
+			Fragments._Command__Command.initOperations(_Command__Command);
+			Fragments._Command__OclAny.initOperations(_Command__OclAny);
+			Fragments._Command__OclElement.initOperations(_Command__OclElement);
+			Fragments._Command__Step.initOperations(_Command__Step);
 
 			Fragments._Conditional__Conditional.initOperations(_Conditional__Conditional);
 			Fragments._Conditional__OclAny.initOperations(_Conditional__OclAny);
 			Fragments._Conditional__OclElement.initOperations(_Conditional__OclElement);
-			Fragments._Conditional__Operand.initOperations(_Conditional__Operand);
 
 			Fragments._ContainerEngine__ContainerEngine.initOperations(_ContainerEngine__ContainerEngine);
 			Fragments._ContainerEngine__IaaS.initOperations(_ContainerEngine__IaaS);
@@ -1635,6 +1621,10 @@ public class DevOpsTables extends AbstractTables
 			Fragments._CronTrigger__OclElement.initOperations(_CronTrigger__OclElement);
 			Fragments._CronTrigger__Trigger.initOperations(_CronTrigger__Trigger);
 
+			Fragments._DevOpsTask__DevOpsTask.initOperations(_DevOpsTask__DevOpsTask);
+			Fragments._DevOpsTask__OclAny.initOperations(_DevOpsTask__OclAny);
+			Fragments._DevOpsTask__OclElement.initOperations(_DevOpsTask__OclElement);
+
 			Fragments._Environment__Environment.initOperations(_Environment__Environment);
 			Fragments._Environment__OclAny.initOperations(_Environment__OclAny);
 			Fragments._Environment__OclElement.initOperations(_Environment__OclElement);
@@ -1644,19 +1634,16 @@ public class DevOpsTables extends AbstractTables
 			Fragments._IaaS__OclElement.initOperations(_IaaS__OclElement);
 			Fragments._IaaS__Runner.initOperations(_IaaS__Runner);
 
-			Fragments._LogicOperator__LogicOperator.initOperations(_LogicOperator__LogicOperator);
-			Fragments._LogicOperator__OclAny.initOperations(_LogicOperator__OclAny);
-			Fragments._LogicOperator__OclElement.initOperations(_LogicOperator__OclElement);
+			Fragments._ImportedTask__ImportedTask.initOperations(_ImportedTask__ImportedTask);
+			Fragments._ImportedTask__OclAny.initOperations(_ImportedTask__OclAny);
+			Fragments._ImportedTask__OclElement.initOperations(_ImportedTask__OclElement);
+			Fragments._ImportedTask__Step.initOperations(_ImportedTask__Step);
 
 			Fragments._MergeRequest__MergeRequest.initOperations(_MergeRequest__MergeRequest);
 			Fragments._MergeRequest__OclAny.initOperations(_MergeRequest__OclAny);
 			Fragments._MergeRequest__OclElement.initOperations(_MergeRequest__OclElement);
 			Fragments._MergeRequest__RepositoryEvent.initOperations(_MergeRequest__RepositoryEvent);
 			Fragments._MergeRequest__Trigger.initOperations(_MergeRequest__Trigger);
-
-			Fragments._Operand__OclAny.initOperations(_Operand__OclAny);
-			Fragments._Operand__OclElement.initOperations(_Operand__OclElement);
-			Fragments._Operand__Operand.initOperations(_Operand__Operand);
 
 			Fragments._OperatingSystem__IaaS.initOperations(_OperatingSystem__IaaS);
 			Fragments._OperatingSystem__OclAny.initOperations(_OperatingSystem__OclAny);
@@ -1679,6 +1666,12 @@ public class DevOpsTables extends AbstractTables
 			Fragments._Push__Push.initOperations(_Push__Push);
 			Fragments._Push__RepositoryEvent.initOperations(_Push__RepositoryEvent);
 			Fragments._Push__Trigger.initOperations(_Push__Trigger);
+
+			Fragments._RegistryTask__DevOpsTask.initOperations(_RegistryTask__DevOpsTask);
+			Fragments._RegistryTask__OclAny.initOperations(_RegistryTask__OclAny);
+			Fragments._RegistryTask__OclElement.initOperations(_RegistryTask__OclElement);
+			Fragments._RegistryTask__RegistryTask.initOperations(_RegistryTask__RegistryTask);
+			Fragments._RegistryTask__Step.initOperations(_RegistryTask__Step);
 
 			Fragments._RepositoryEvent__OclAny.initOperations(_RepositoryEvent__OclAny);
 			Fragments._RepositoryEvent__OclElement.initOperations(_RepositoryEvent__OclElement);
@@ -1712,6 +1705,7 @@ public class DevOpsTables extends AbstractTables
 			Fragments._StringToStringMapEntry__OclElement.initOperations(_StringToStringMapEntry__OclElement);
 			Fragments._StringToStringMapEntry__StringToStringMapEntry.initOperations(_StringToStringMapEntry__StringToStringMapEntry);
 
+			Fragments._Task__DevOpsTask.initOperations(_Task__DevOpsTask);
 			Fragments._Task__OclAny.initOperations(_Task__OclAny);
 			Fragments._Task__OclElement.initOperations(_Task__OclElement);
 			Fragments._Task__Task.initOperations(_Task__Task);
@@ -1719,12 +1713,6 @@ public class DevOpsTables extends AbstractTables
 			Fragments._Trigger__OclAny.initOperations(_Trigger__OclAny);
 			Fragments._Trigger__OclElement.initOperations(_Trigger__OclElement);
 			Fragments._Trigger__Trigger.initOperations(_Trigger__Trigger);
-
-			Fragments._UnaryConditional__Conditional.initOperations(_UnaryConditional__Conditional);
-			Fragments._UnaryConditional__OclAny.initOperations(_UnaryConditional__OclAny);
-			Fragments._UnaryConditional__OclElement.initOperations(_UnaryConditional__OclElement);
-			Fragments._UnaryConditional__Operand.initOperations(_UnaryConditional__Operand);
-			Fragments._UnaryConditional__UnaryConditional.initOperations(_UnaryConditional__UnaryConditional);
 
 			Fragments._WebHook__OclAny.initOperations(_WebHook__OclAny);
 			Fragments._WebHook__OclElement.initOperations(_WebHook__OclElement);
@@ -1754,14 +1742,15 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContents
 		};
 
-		private static final ExecutorProperty /*@NonNull*/ [] _BinaryConditional = {
-			DevOpsTables.Properties._BinaryConditional__logicOperator,
+		private static final ExecutorProperty /*@NonNull*/ [] _Command = {
+			DevOpsTables.Properties._Command__cmd,
+			DevOpsTables.Properties._Step__conditional,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
-			OCLstdlibTables.Properties._OclElement__oclContents,
-			DevOpsTables.Properties._BinaryConditional__operand
+			OCLstdlibTables.Properties._OclElement__oclContents
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Conditional = {
+			DevOpsTables.Properties._Conditional__condition,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents
 		};
@@ -1783,6 +1772,13 @@ public class DevOpsTables extends AbstractTables
 			DevOpsTables.Properties._CronTrigger__seconds
 		};
 
+		private static final ExecutorProperty /*@NonNull*/ [] _DevOpsTask = {
+			DevOpsTables.Properties._DevOpsTask__allowFailure,
+			DevOpsTables.Properties._DevOpsTask__name,
+			OCLstdlibTables.Properties._OclElement__oclContainer,
+			OCLstdlibTables.Properties._OclElement__oclContents
+		};
+
 		private static final ExecutorProperty /*@NonNull*/ [] _Environment = {
 			DevOpsTables.Properties._Environment__artifacts,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
@@ -1796,9 +1792,11 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContents
 		};
 
-		private static final ExecutorProperty /*@NonNull*/ [] _LogicOperator = {
+		private static final ExecutorProperty /*@NonNull*/ [] _ImportedTask = {
+			DevOpsTables.Properties._Step__conditional,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
-			OCLstdlibTables.Properties._OclElement__oclContents
+			OCLstdlibTables.Properties._OclElement__oclContents,
+			DevOpsTables.Properties._ImportedTask__task
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _MergeRequest = {
@@ -1808,14 +1806,10 @@ public class DevOpsTables extends AbstractTables
 			DevOpsTables.Properties._RepositoryEvent__repository
 		};
 
-		private static final ExecutorProperty /*@NonNull*/ [] _Operand = {
-			OCLstdlibTables.Properties._OclElement__oclContainer,
-			OCLstdlibTables.Properties._OclElement__oclContents
-		};
-
 		private static final ExecutorProperty /*@NonNull*/ [] _OperatingSystem = {
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
+			DevOpsTables.Properties._OperatingSystem__osName,
 			DevOpsTables.Properties._OperatingSystem__shell
 		};
 
@@ -1840,6 +1834,16 @@ public class DevOpsTables extends AbstractTables
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			DevOpsTables.Properties._RepositoryEvent__repository
+		};
+
+		private static final ExecutorProperty /*@NonNull*/ [] _RegistryTask = {
+			DevOpsTables.Properties._DevOpsTask__allowFailure,
+			DevOpsTables.Properties._RegistryTask__arguments,
+			DevOpsTables.Properties._RegistryTask__cmd,
+			DevOpsTables.Properties._Step__conditional,
+			DevOpsTables.Properties._DevOpsTask__name,
+			OCLstdlibTables.Properties._OclElement__oclContainer,
+			OCLstdlibTables.Properties._OclElement__oclContents
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _RepositoryEvent = {
@@ -1873,7 +1877,6 @@ public class DevOpsTables extends AbstractTables
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Step = {
-			DevOpsTables.Properties._Step__cmd,
 			DevOpsTables.Properties._Step__conditional,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents
@@ -1887,27 +1890,18 @@ public class DevOpsTables extends AbstractTables
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Task = {
-			DevOpsTables.Properties._Task__allowFailure,
-			DevOpsTables.Properties._Task__conditional,
+			DevOpsTables.Properties._DevOpsTask__allowFailure,
 			DevOpsTables.Properties._Task__environment,
-			DevOpsTables.Properties._Task__name,
+			DevOpsTables.Properties._DevOpsTask__name,
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents,
 			DevOpsTables.Properties._Task__runner,
-			DevOpsTables.Properties._Task__steps,
-			DevOpsTables.Properties._Task__taskImports
+			DevOpsTables.Properties._Task__steps
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _Trigger = {
 			OCLstdlibTables.Properties._OclElement__oclContainer,
 			OCLstdlibTables.Properties._OclElement__oclContents
-		};
-
-		private static final ExecutorProperty /*@NonNull*/ [] _UnaryConditional = {
-			DevOpsTables.Properties._UnaryConditional__negated,
-			OCLstdlibTables.Properties._OclElement__oclContainer,
-			OCLstdlibTables.Properties._OclElement__oclContents,
-			DevOpsTables.Properties._UnaryConditional__operand
 		};
 
 		private static final ExecutorProperty /*@NonNull*/ [] _WebHook = {
@@ -1921,19 +1915,20 @@ public class DevOpsTables extends AbstractTables
 		 */
 		static {
 			Fragments._APITrigger__APITrigger.initProperties(_APITrigger);
-			Fragments._BinaryConditional__BinaryConditional.initProperties(_BinaryConditional);
+			Fragments._Command__Command.initProperties(_Command);
 			Fragments._Conditional__Conditional.initProperties(_Conditional);
 			Fragments._ContainerEngine__ContainerEngine.initProperties(_ContainerEngine);
 			Fragments._CronTrigger__CronTrigger.initProperties(_CronTrigger);
+			Fragments._DevOpsTask__DevOpsTask.initProperties(_DevOpsTask);
 			Fragments._Environment__Environment.initProperties(_Environment);
 			Fragments._IaaS__IaaS.initProperties(_IaaS);
-			Fragments._LogicOperator__LogicOperator.initProperties(_LogicOperator);
+			Fragments._ImportedTask__ImportedTask.initProperties(_ImportedTask);
 			Fragments._MergeRequest__MergeRequest.initProperties(_MergeRequest);
-			Fragments._Operand__Operand.initProperties(_Operand);
 			Fragments._OperatingSystem__OperatingSystem.initProperties(_OperatingSystem);
 			Fragments._PhoneHomeRunner__PhoneHomeRunner.initProperties(_PhoneHomeRunner);
 			Fragments._Pipeline__Pipeline.initProperties(_Pipeline);
 			Fragments._Push__Push.initProperties(_Push);
+			Fragments._RegistryTask__RegistryTask.initProperties(_RegistryTask);
 			Fragments._RepositoryEvent__RepositoryEvent.initProperties(_RepositoryEvent);
 			Fragments._Runner__Runner.initProperties(_Runner);
 			Fragments._SSHRunner__SSHRunner.initProperties(_SSHRunner);
@@ -1943,7 +1938,6 @@ public class DevOpsTables extends AbstractTables
 			Fragments._StringToStringMapEntry__StringToStringMapEntry.initProperties(_StringToStringMapEntry);
 			Fragments._Task__Task.initProperties(_Task);
 			Fragments._Trigger__Trigger.initProperties(_Trigger);
-			Fragments._UnaryConditional__UnaryConditional.initProperties(_UnaryConditional);
 			Fragments._WebHook__WebHook.initProperties(_WebHook);
 
 			Init.initEnd();

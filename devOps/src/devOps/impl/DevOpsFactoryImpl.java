@@ -63,26 +63,19 @@ public class DevOpsFactoryImpl extends EFactoryImpl implements DevOpsFactory {
 			case DevOpsPackage.STRING_TO_STRING_MAP_ENTRY: return (EObject)createStringToStringMapEntry();
 			case DevOpsPackage.ENVIRONMENT: return createEnvironment();
 			case DevOpsPackage.TASK: return createTask();
-			case DevOpsPackage.STEP: return createStep();
-			case DevOpsPackage.TRIGGER: return createTrigger();
-			case DevOpsPackage.REPOSITORY_EVENT: return createRepositoryEvent();
 			case DevOpsPackage.WEB_HOOK: return createWebHook();
 			case DevOpsPackage.API_TRIGGER: return createAPITrigger();
-			case DevOpsPackage.RUNNER: return createRunner();
-			case DevOpsPackage.IAA_S: return createIaaS();
 			case DevOpsPackage.CONTAINER_ENGINE: return createContainerEngine();
 			case DevOpsPackage.OPERATING_SYSTEM: return createOperatingSystem();
-			case DevOpsPackage.SELF_HOSTED_RUNNER: return createSelfHostedRunner();
 			case DevOpsPackage.SSH_RUNNER: return createSSHRunner();
 			case DevOpsPackage.PHONE_HOME_RUNNER: return createPhoneHomeRunner();
 			case DevOpsPackage.CONDITIONAL: return createConditional();
-			case DevOpsPackage.UNARY_CONDITIONAL: return createUnaryConditional();
-			case DevOpsPackage.BINARY_CONDITIONAL: return createBinaryConditional();
-			case DevOpsPackage.OPERAND: return createOperand();
-			case DevOpsPackage.LOGIC_OPERATOR: return createLogicOperator();
 			case DevOpsPackage.CRON_TRIGGER: return createCronTrigger();
 			case DevOpsPackage.MERGE_REQUEST: return createMergeRequest();
 			case DevOpsPackage.PUSH: return createPush();
+			case DevOpsPackage.REGISTRY_TASK: return createRegistryTask();
+			case DevOpsPackage.COMMAND: return createCommand();
+			case DevOpsPackage.IMPORTED_TASK: return createImportedTask();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -148,39 +141,6 @@ public class DevOpsFactoryImpl extends EFactoryImpl implements DevOpsFactory {
 	 * @generated
 	 */
 	@Override
-	public Step createStep() {
-		StepImpl step = new StepImpl();
-		return step;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Trigger createTrigger() {
-		TriggerImpl trigger = new TriggerImpl();
-		return trigger;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public RepositoryEvent createRepositoryEvent() {
-		RepositoryEventImpl repositoryEvent = new RepositoryEventImpl();
-		return repositoryEvent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public WebHook createWebHook() {
 		WebHookImpl webHook = new WebHookImpl();
 		return webHook;
@@ -203,28 +163,6 @@ public class DevOpsFactoryImpl extends EFactoryImpl implements DevOpsFactory {
 	 * @generated
 	 */
 	@Override
-	public Runner createRunner() {
-		RunnerImpl runner = new RunnerImpl();
-		return runner;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public IaaS createIaaS() {
-		IaaSImpl iaaS = new IaaSImpl();
-		return iaaS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public ContainerEngine createContainerEngine() {
 		ContainerEngineImpl containerEngine = new ContainerEngineImpl();
 		return containerEngine;
@@ -239,17 +177,6 @@ public class DevOpsFactoryImpl extends EFactoryImpl implements DevOpsFactory {
 	public OperatingSystem createOperatingSystem() {
 		OperatingSystemImpl operatingSystem = new OperatingSystemImpl();
 		return operatingSystem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SelfHostedRunner createSelfHostedRunner() {
-		SelfHostedRunnerImpl selfHostedRunner = new SelfHostedRunnerImpl();
-		return selfHostedRunner;
 	}
 
 	/**
@@ -291,50 +218,6 @@ public class DevOpsFactoryImpl extends EFactoryImpl implements DevOpsFactory {
 	 * @generated
 	 */
 	@Override
-	public UnaryConditional createUnaryConditional() {
-		UnaryConditionalImpl unaryConditional = new UnaryConditionalImpl();
-		return unaryConditional;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public BinaryConditional createBinaryConditional() {
-		BinaryConditionalImpl binaryConditional = new BinaryConditionalImpl();
-		return binaryConditional;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Operand createOperand() {
-		OperandImpl operand = new OperandImpl();
-		return operand;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public LogicOperator createLogicOperator() {
-		LogicOperatorImpl logicOperator = new LogicOperatorImpl();
-		return logicOperator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public CronTrigger createCronTrigger() {
 		CronTriggerImpl cronTrigger = new CronTriggerImpl();
 		return cronTrigger;
@@ -360,6 +243,39 @@ public class DevOpsFactoryImpl extends EFactoryImpl implements DevOpsFactory {
 	public Push createPush() {
 		PushImpl push = new PushImpl();
 		return push;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RegistryTask createRegistryTask() {
+		RegistryTaskImpl registryTask = new RegistryTaskImpl();
+		return registryTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Command createCommand() {
+		CommandImpl command = new CommandImpl();
+		return command;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ImportedTask createImportedTask() {
+		ImportedTaskImpl importedTask = new ImportedTaskImpl();
+		return importedTask;
 	}
 
 	/**

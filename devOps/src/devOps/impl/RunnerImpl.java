@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class RunnerImpl extends MinimalEObjectImpl.Container implements Runner {
+public abstract class RunnerImpl extends MinimalEObjectImpl.Container implements Runner {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

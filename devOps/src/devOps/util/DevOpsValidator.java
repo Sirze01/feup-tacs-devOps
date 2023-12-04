@@ -146,20 +146,20 @@ public class DevOpsValidator extends EObjectValidator {
 				return validatePhoneHomeRunner((PhoneHomeRunner)value, diagnostics, context);
 			case DevOpsPackage.CONDITIONAL:
 				return validateConditional((Conditional)value, diagnostics, context);
-			case DevOpsPackage.UNARY_CONDITIONAL:
-				return validateUnaryConditional((UnaryConditional)value, diagnostics, context);
-			case DevOpsPackage.BINARY_CONDITIONAL:
-				return validateBinaryConditional((BinaryConditional)value, diagnostics, context);
-			case DevOpsPackage.OPERAND:
-				return validateOperand((Operand)value, diagnostics, context);
-			case DevOpsPackage.LOGIC_OPERATOR:
-				return validateLogicOperator((LogicOperator)value, diagnostics, context);
 			case DevOpsPackage.CRON_TRIGGER:
 				return validateCronTrigger((CronTrigger)value, diagnostics, context);
 			case DevOpsPackage.MERGE_REQUEST:
 				return validateMergeRequest((MergeRequest)value, diagnostics, context);
 			case DevOpsPackage.PUSH:
 				return validatePush((Push)value, diagnostics, context);
+			case DevOpsPackage.REGISTRY_TASK:
+				return validateRegistryTask((RegistryTask)value, diagnostics, context);
+			case DevOpsPackage.DEV_OPS_TASK:
+				return validateDevOpsTask((DevOpsTask)value, diagnostics, context);
+			case DevOpsPackage.COMMAND:
+				return validateCommand((Command)value, diagnostics, context);
+			case DevOpsPackage.IMPORTED_TASK:
+				return validateImportedTask((ImportedTask)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -363,42 +363,6 @@ public class DevOpsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateUnaryConditional(UnaryConditional unaryConditional, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(unaryConditional, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateBinaryConditional(BinaryConditional binaryConditional, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(binaryConditional, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateOperand(Operand operand, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(operand, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLogicOperator(LogicOperator logicOperator, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(logicOperator, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateCronTrigger(CronTrigger cronTrigger, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(cronTrigger, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(cronTrigger, diagnostics, context);
@@ -439,6 +403,42 @@ public class DevOpsValidator extends EObjectValidator {
 	 */
 	public boolean validatePush(Push push, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(push, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRegistryTask(RegistryTask registryTask, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(registryTask, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDevOpsTask(DevOpsTask devOpsTask, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(devOpsTask, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCommand(Command command, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(command, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateImportedTask(ImportedTask importedTask, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(importedTask, diagnostics, context);
 	}
 
 	/**

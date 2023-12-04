@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger {
+public abstract class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

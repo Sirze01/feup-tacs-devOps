@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.ocl.pivot.evaluation.Executor;
@@ -116,7 +115,7 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 	protected EList<Stage> stages;
 
 	/**
-	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' reference list.
+	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTriggers()
@@ -126,7 +125,7 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 	protected EList<Trigger> triggers;
 
 	/**
-	 * The cached value of the '{@link #getRunner() <em>Runner</em>}' reference.
+	 * The cached value of the '{@link #getRunner() <em>Runner</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRunner()
@@ -243,7 +242,7 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 	@Override
 	public EList<Trigger> getTriggers() {
 		if (triggers == null) {
-			triggers = new EObjectResolvingEList<Trigger>(Trigger.class, this, DevOpsPackage.PIPELINE__TRIGGERS);
+			triggers = new EObjectContainmentEList<Trigger>(Trigger.class, this, DevOpsPackage.PIPELINE__TRIGGERS);
 		}
 		return triggers;
 	}
@@ -255,14 +254,6 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 	 */
 	@Override
 	public Runner getRunner() {
-		if (runner != null && runner.eIsProxy()) {
-			InternalEObject oldRunner = (InternalEObject)runner;
-			runner = (Runner)eResolveProxy(oldRunner);
-			if (runner != oldRunner) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DevOpsPackage.PIPELINE__RUNNER, oldRunner, runner));
-			}
-		}
 		return runner;
 	}
 
@@ -271,8 +262,14 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Runner basicGetRunner() {
-		return runner;
+	public NotificationChain basicSetRunner(Runner newRunner, NotificationChain msgs) {
+		Runner oldRunner = runner;
+		runner = newRunner;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DevOpsPackage.PIPELINE__RUNNER, oldRunner, newRunner);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -282,10 +279,17 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 	 */
 	@Override
 	public void setRunner(Runner newRunner) {
-		Runner oldRunner = runner;
-		runner = newRunner;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DevOpsPackage.PIPELINE__RUNNER, oldRunner, runner));
+		if (newRunner != runner) {
+			NotificationChain msgs = null;
+			if (runner != null)
+				msgs = ((InternalEObject)runner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DevOpsPackage.PIPELINE__RUNNER, null, msgs);
+			if (newRunner != null)
+				msgs = ((InternalEObject)newRunner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DevOpsPackage.PIPELINE__RUNNER, null, msgs);
+			msgs = basicSetRunner(newRunner, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DevOpsPackage.PIPELINE__RUNNER, newRunner, newRunner));
 	}
 
 	/**
@@ -449,6 +453,10 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 				return basicSetEnvironment(null, msgs);
 			case DevOpsPackage.PIPELINE__STAGES:
 				return ((InternalEList<?>)getStages()).basicRemove(otherEnd, msgs);
+			case DevOpsPackage.PIPELINE__TRIGGERS:
+				return ((InternalEList<?>)getTriggers()).basicRemove(otherEnd, msgs);
+			case DevOpsPackage.PIPELINE__RUNNER:
+				return basicSetRunner(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -470,8 +478,7 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 			case DevOpsPackage.PIPELINE__TRIGGERS:
 				return getTriggers();
 			case DevOpsPackage.PIPELINE__RUNNER:
-				if (resolve) return getRunner();
-				return basicGetRunner();
+				return getRunner();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

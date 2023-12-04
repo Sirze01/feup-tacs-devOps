@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RepositoryEventImpl extends TriggerImpl implements RepositoryEvent {
+public abstract class RepositoryEventImpl extends TriggerImpl implements RepositoryEvent {
 	/**
 	 * The default value of the '{@link #getRepository() <em>Repository</em>}' attribute.
 	 * <!-- begin-user-doc -->

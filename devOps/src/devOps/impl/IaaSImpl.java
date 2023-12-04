@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IaaSImpl extends RunnerImpl implements IaaS {
+public abstract class IaaSImpl extends RunnerImpl implements IaaS {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

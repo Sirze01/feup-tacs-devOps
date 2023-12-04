@@ -2,9 +2,7 @@
  */
 package devOps;
 
-import java.util.Map;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,16 +47,17 @@ public interface ContainerEngine extends IaaS {
 	void setImage(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Arguments</b></em>' reference list.
-	 * The list contents are of type {@link java.util.Map.Entry}<code>&lt;java.lang.String, java.lang.String&gt;</code>.
+	 * Returns the value of the '<em><b>Arguments</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.String},
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Arguments</em>' reference list.
+	 * @return the value of the '<em>Arguments</em>' map.
 	 * @see devOps.DevOpsPackage#getContainerEngine_Arguments()
 	 * @model mapType="devOps.StringToStringMapEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
 	 * @generated
 	 */
-	EList<Map.Entry<String, String>> getArguments();
+	EMap<String, String> getArguments();
 
 	/**
 	 * Returns the value of the '<em><b>Entry Point</b></em>' attribute.

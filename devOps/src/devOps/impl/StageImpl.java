@@ -10,6 +10,7 @@ import devOps.Task;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -18,7 +19,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -47,7 +47,7 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage {
 	protected EList<Task> tasks;
 
 	/**
-	 * The cached value of the '{@link #getConditional() <em>Conditional</em>}' reference.
+	 * The cached value of the '{@link #getConditional() <em>Conditional</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConditional()
@@ -95,14 +95,6 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage {
 	 */
 	@Override
 	public Conditional getConditional() {
-		if (conditional != null && conditional.eIsProxy()) {
-			InternalEObject oldConditional = (InternalEObject)conditional;
-			conditional = (Conditional)eResolveProxy(oldConditional);
-			if (conditional != oldConditional) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DevOpsPackage.STAGE__CONDITIONAL, oldConditional, conditional));
-			}
-		}
 		return conditional;
 	}
 
@@ -111,8 +103,14 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Conditional basicGetConditional() {
-		return conditional;
+	public NotificationChain basicSetConditional(Conditional newConditional, NotificationChain msgs) {
+		Conditional oldConditional = conditional;
+		conditional = newConditional;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DevOpsPackage.STAGE__CONDITIONAL, oldConditional, newConditional);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -122,10 +120,31 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage {
 	 */
 	@Override
 	public void setConditional(Conditional newConditional) {
-		Conditional oldConditional = conditional;
-		conditional = newConditional;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DevOpsPackage.STAGE__CONDITIONAL, oldConditional, conditional));
+		if (newConditional != conditional) {
+			NotificationChain msgs = null;
+			if (conditional != null)
+				msgs = ((InternalEObject)conditional).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DevOpsPackage.STAGE__CONDITIONAL, null, msgs);
+			if (newConditional != null)
+				msgs = ((InternalEObject)newConditional).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DevOpsPackage.STAGE__CONDITIONAL, null, msgs);
+			msgs = basicSetConditional(newConditional, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DevOpsPackage.STAGE__CONDITIONAL, newConditional, newConditional));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DevOpsPackage.STAGE__CONDITIONAL:
+				return basicSetConditional(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -139,8 +158,7 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage {
 			case DevOpsPackage.STAGE__TASKS:
 				return getTasks();
 			case DevOpsPackage.STAGE__CONDITIONAL:
-				if (resolve) return getConditional();
-				return basicGetConditional();
+				return getConditional();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

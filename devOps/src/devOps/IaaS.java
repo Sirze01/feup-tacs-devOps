@@ -10,7 +10,7 @@ package devOps;
  *
  *
  * @see devOps.DevOpsPackage#getIaaS()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface IaaS extends Runner {

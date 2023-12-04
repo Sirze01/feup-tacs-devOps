@@ -5,20 +5,19 @@ package devOps.impl;
 import devOps.ContainerEngine;
 import devOps.DevOpsPackage;
 
-import java.util.Collection;
-import java.util.Map;
-
-import java.util.Map.Entry;
-
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,14 +57,14 @@ public class ContainerEngineImpl extends IaaSImpl implements ContainerEngine {
 	protected String image = IMAGE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' reference list.
+	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArguments()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Map.Entry<String, String>> arguments;
+	protected EMap<String, String> arguments;
 
 	/**
 	 * The default value of the '{@link #getEntryPoint() <em>Entry Point</em>}' attribute.
@@ -155,9 +154,9 @@ public class ContainerEngineImpl extends IaaSImpl implements ContainerEngine {
 	 * @generated
 	 */
 	@Override
-	public EList<Map.Entry<String, String>> getArguments() {
+	public EMap<String, String> getArguments() {
 		if (arguments == null) {
-			arguments = new EObjectResolvingEList<Map.Entry<String, String>>(Entry.class, this, DevOpsPackage.CONTAINER_ENGINE__ARGUMENTS);
+			arguments = new EcoreEMap<String,String>(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY, StringToStringMapEntryImpl.class, this, DevOpsPackage.CONTAINER_ENGINE__ARGUMENTS);
 		}
 		return arguments;
 	}
@@ -214,12 +213,27 @@ public class ContainerEngineImpl extends IaaSImpl implements ContainerEngine {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DevOpsPackage.CONTAINER_ENGINE__ARGUMENTS:
+				return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case DevOpsPackage.CONTAINER_ENGINE__IMAGE:
 				return getImage();
 			case DevOpsPackage.CONTAINER_ENGINE__ARGUMENTS:
-				return getArguments();
+				if (coreType) return getArguments();
+				else return getArguments().map();
 			case DevOpsPackage.CONTAINER_ENGINE__ENTRY_POINT:
 				return getEntryPoint();
 			case DevOpsPackage.CONTAINER_ENGINE__COMMAND:
@@ -233,7 +247,6 @@ public class ContainerEngineImpl extends IaaSImpl implements ContainerEngine {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -241,8 +254,7 @@ public class ContainerEngineImpl extends IaaSImpl implements ContainerEngine {
 				setImage((String)newValue);
 				return;
 			case DevOpsPackage.CONTAINER_ENGINE__ARGUMENTS:
-				getArguments().clear();
-				getArguments().addAll((Collection<? extends Map.Entry<String, String>>)newValue);
+				((EStructuralFeature.Setting)getArguments()).set(newValue);
 				return;
 			case DevOpsPackage.CONTAINER_ENGINE__ENTRY_POINT:
 				setEntryPoint((String)newValue);

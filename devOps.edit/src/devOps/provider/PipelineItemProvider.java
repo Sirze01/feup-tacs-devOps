@@ -64,8 +64,6 @@ public class PipelineItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addTriggersPropertyDescriptor(object);
-			addRunnerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,50 +91,6 @@ public class PipelineItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Triggers feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTriggersPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Pipeline_triggers_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Pipeline_triggers_feature", "_UI_Pipeline_type"),
-				 DevOpsPackage.Literals.PIPELINE__TRIGGERS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Runner feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRunnerPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Pipeline_runner_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Pipeline_runner_feature", "_UI_Pipeline_type"),
-				 DevOpsPackage.Literals.PIPELINE__RUNNER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -150,6 +104,8 @@ public class PipelineItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(DevOpsPackage.Literals.PIPELINE__ENVIRONMENT);
 			childrenFeatures.add(DevOpsPackage.Literals.PIPELINE__STAGES);
+			childrenFeatures.add(DevOpsPackage.Literals.PIPELINE__TRIGGERS);
+			childrenFeatures.add(DevOpsPackage.Literals.PIPELINE__RUNNER);
 		}
 		return childrenFeatures;
 	}
@@ -210,6 +166,8 @@ public class PipelineItemProvider
 				return;
 			case DevOpsPackage.PIPELINE__ENVIRONMENT:
 			case DevOpsPackage.PIPELINE__STAGES:
+			case DevOpsPackage.PIPELINE__TRIGGERS:
+			case DevOpsPackage.PIPELINE__RUNNER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -236,6 +194,51 @@ public class PipelineItemProvider
 			(createChildParameter
 				(DevOpsPackage.Literals.PIPELINE__STAGES,
 				 DevOpsFactory.eINSTANCE.createStage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__TRIGGERS,
+				 DevOpsFactory.eINSTANCE.createWebHook()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__TRIGGERS,
+				 DevOpsFactory.eINSTANCE.createAPITrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__TRIGGERS,
+				 DevOpsFactory.eINSTANCE.createCronTrigger()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__TRIGGERS,
+				 DevOpsFactory.eINSTANCE.createMergeRequest()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__TRIGGERS,
+				 DevOpsFactory.eINSTANCE.createPush()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__RUNNER,
+				 DevOpsFactory.eINSTANCE.createContainerEngine()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__RUNNER,
+				 DevOpsFactory.eINSTANCE.createOperatingSystem()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__RUNNER,
+				 DevOpsFactory.eINSTANCE.createSSHRunner()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.PIPELINE__RUNNER,
+				 DevOpsFactory.eINSTANCE.createPhoneHomeRunner()));
 	}
 
 	/**

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devOps:Task xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:devOps="http://www.example.org/examples/devops.ecore" name="format">
+  <steps xsi:type="devOps:RegistryTask" name="actions/checkout@v3"/>
+  <steps xsi:type="devOps:Command" cmd="cargo fmt --check"/>
+  <steps xsi:type="devOps:Command" cmd="sudo apt-get install shfmt; shfmt -i 4 -d ."/>
+</devOps:Task>

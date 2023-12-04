@@ -187,75 +187,6 @@ public class DevOpsItemProviderAdapterFactory extends DevOpsAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link devOps.Step} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StepItemProvider stepItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.Step}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createStepAdapter() {
-		if (stepItemProvider == null) {
-			stepItemProvider = new StepItemProvider(this);
-		}
-
-		return stepItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link devOps.Trigger} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TriggerItemProvider triggerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.Trigger}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTriggerAdapter() {
-		if (triggerItemProvider == null) {
-			triggerItemProvider = new TriggerItemProvider(this);
-		}
-
-		return triggerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link devOps.RepositoryEvent} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RepositoryEventItemProvider repositoryEventItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.RepositoryEvent}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRepositoryEventAdapter() {
-		if (repositoryEventItemProvider == null) {
-			repositoryEventItemProvider = new RepositoryEventItemProvider(this);
-		}
-
-		return repositoryEventItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link devOps.WebHook} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -302,52 +233,6 @@ public class DevOpsItemProviderAdapterFactory extends DevOpsAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link devOps.Runner} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RunnerItemProvider runnerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.Runner}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRunnerAdapter() {
-		if (runnerItemProvider == null) {
-			runnerItemProvider = new RunnerItemProvider(this);
-		}
-
-		return runnerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link devOps.IaaS} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IaaSItemProvider iaaSItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.IaaS}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIaaSAdapter() {
-		if (iaaSItemProvider == null) {
-			iaaSItemProvider = new IaaSItemProvider(this);
-		}
-
-		return iaaSItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link devOps.ContainerEngine} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -391,29 +276,6 @@ public class DevOpsItemProviderAdapterFactory extends DevOpsAdapterFactory imple
 		}
 
 		return operatingSystemItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link devOps.SelfHostedRunner} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SelfHostedRunnerItemProvider selfHostedRunnerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.SelfHostedRunner}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSelfHostedRunnerAdapter() {
-		if (selfHostedRunnerItemProvider == null) {
-			selfHostedRunnerItemProvider = new SelfHostedRunnerItemProvider(this);
-		}
-
-		return selfHostedRunnerItemProvider;
 	}
 
 	/**
@@ -486,98 +348,6 @@ public class DevOpsItemProviderAdapterFactory extends DevOpsAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link devOps.UnaryConditional} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UnaryConditionalItemProvider unaryConditionalItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.UnaryConditional}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUnaryConditionalAdapter() {
-		if (unaryConditionalItemProvider == null) {
-			unaryConditionalItemProvider = new UnaryConditionalItemProvider(this);
-		}
-
-		return unaryConditionalItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link devOps.BinaryConditional} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BinaryConditionalItemProvider binaryConditionalItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.BinaryConditional}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBinaryConditionalAdapter() {
-		if (binaryConditionalItemProvider == null) {
-			binaryConditionalItemProvider = new BinaryConditionalItemProvider(this);
-		}
-
-		return binaryConditionalItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link devOps.Operand} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OperandItemProvider operandItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.Operand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOperandAdapter() {
-		if (operandItemProvider == null) {
-			operandItemProvider = new OperandItemProvider(this);
-		}
-
-		return operandItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link devOps.LogicOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LogicOperatorItemProvider logicOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link devOps.LogicOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLogicOperatorAdapter() {
-		if (logicOperatorItemProvider == null) {
-			logicOperatorItemProvider = new LogicOperatorItemProvider(this);
-		}
-
-		return logicOperatorItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link devOps.CronTrigger} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -644,6 +414,75 @@ public class DevOpsItemProviderAdapterFactory extends DevOpsAdapterFactory imple
 		}
 
 		return pushItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link devOps.RegistryTask} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RegistryTaskItemProvider registryTaskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link devOps.RegistryTask}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRegistryTaskAdapter() {
+		if (registryTaskItemProvider == null) {
+			registryTaskItemProvider = new RegistryTaskItemProvider(this);
+		}
+
+		return registryTaskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link devOps.Command} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CommandItemProvider commandItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link devOps.Command}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCommandAdapter() {
+		if (commandItemProvider == null) {
+			commandItemProvider = new CommandItemProvider(this);
+		}
+
+		return commandItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link devOps.ImportedTask} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ImportedTaskItemProvider importedTaskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link devOps.ImportedTask}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createImportedTaskAdapter() {
+		if (importedTaskItemProvider == null) {
+			importedTaskItemProvider = new ImportedTaskItemProvider(this);
+		}
+
+		return importedTaskItemProvider;
 	}
 
 	/**
@@ -756,26 +595,19 @@ public class DevOpsItemProviderAdapterFactory extends DevOpsAdapterFactory imple
 		if (stringToStringMapEntryItemProvider != null) stringToStringMapEntryItemProvider.dispose();
 		if (environmentItemProvider != null) environmentItemProvider.dispose();
 		if (taskItemProvider != null) taskItemProvider.dispose();
-		if (stepItemProvider != null) stepItemProvider.dispose();
-		if (triggerItemProvider != null) triggerItemProvider.dispose();
-		if (repositoryEventItemProvider != null) repositoryEventItemProvider.dispose();
 		if (webHookItemProvider != null) webHookItemProvider.dispose();
 		if (apiTriggerItemProvider != null) apiTriggerItemProvider.dispose();
-		if (runnerItemProvider != null) runnerItemProvider.dispose();
-		if (iaaSItemProvider != null) iaaSItemProvider.dispose();
 		if (containerEngineItemProvider != null) containerEngineItemProvider.dispose();
 		if (operatingSystemItemProvider != null) operatingSystemItemProvider.dispose();
-		if (selfHostedRunnerItemProvider != null) selfHostedRunnerItemProvider.dispose();
 		if (sshRunnerItemProvider != null) sshRunnerItemProvider.dispose();
 		if (phoneHomeRunnerItemProvider != null) phoneHomeRunnerItemProvider.dispose();
 		if (conditionalItemProvider != null) conditionalItemProvider.dispose();
-		if (unaryConditionalItemProvider != null) unaryConditionalItemProvider.dispose();
-		if (binaryConditionalItemProvider != null) binaryConditionalItemProvider.dispose();
-		if (operandItemProvider != null) operandItemProvider.dispose();
-		if (logicOperatorItemProvider != null) logicOperatorItemProvider.dispose();
 		if (cronTriggerItemProvider != null) cronTriggerItemProvider.dispose();
 		if (mergeRequestItemProvider != null) mergeRequestItemProvider.dispose();
 		if (pushItemProvider != null) pushItemProvider.dispose();
+		if (registryTaskItemProvider != null) registryTaskItemProvider.dispose();
+		if (commandItemProvider != null) commandItemProvider.dispose();
+		if (importedTaskItemProvider != null) importedTaskItemProvider.dispose();
 	}
 
 }
