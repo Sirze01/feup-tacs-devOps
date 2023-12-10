@@ -1,0 +1,22 @@
+name: Validate Actions
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - uses: actions/setup-node@v4
+          
+          - name: Install action-validator
+            run: sudo npm install -g @action-validator/core @action-validator/cli --save-dev
+
+          - name: Validate Actions
+            run: |
+              chmod +x ./validate_ghactions.bash
+              ./validate_ghactions.bash

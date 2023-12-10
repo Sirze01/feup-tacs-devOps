@@ -6,7 +6,6 @@
   </environment>
   <stages>
     <tasks href="format.devops#/"/>
-    <conditional condition="{{env.FORMAT == true}}"/>
   </stages>
   <stages>
     <tasks href="lint.devops#/"/>
