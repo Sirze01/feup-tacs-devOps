@@ -3,21 +3,22 @@
 package devOps.impl;
 
 import devOps.APITrigger;
-import devOps.BinaryConditional;
+import devOps.Command;
 import devOps.Conditional;
 import devOps.ContainerEngine;
 import devOps.CronTrigger;
 import devOps.DevOpsFactory;
 import devOps.DevOpsPackage;
+import devOps.DevOpsTask;
 import devOps.Environment;
 import devOps.IaaS;
-import devOps.LogicOperator;
+import devOps.ImportedTask;
 import devOps.MergeRequest;
-import devOps.Operand;
 import devOps.OperatingSystem;
 import devOps.PhoneHomeRunner;
 import devOps.Pipeline;
 import devOps.Push;
+import devOps.RegistryTask;
 import devOps.RepositoryEvent;
 import devOps.Runner;
 import devOps.SSHRunner;
@@ -26,7 +27,6 @@ import devOps.Stage;
 import devOps.Step;
 import devOps.Task;
 import devOps.Trigger;
-import devOps.UnaryConditional;
 import devOps.WebHook;
 
 import devOps.util.DevOpsValidator;
@@ -181,34 +181,6 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass unaryConditionalEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass binaryConditionalEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass operandEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass logicOperatorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass cronTriggerEClass = null;
 
 	/**
@@ -224,6 +196,34 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	 * @generated
 	 */
 	private EClass pushEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass registryTaskEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass devOpsTaskEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass commandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass importedTaskEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -511,48 +511,8 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTask_AllowFailure() {
-		return (EAttribute)taskEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTask_TaskImports() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getTask_Runner() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTask_Conditional() {
-		return (EReference)taskEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getTask_Name() {
-		return (EAttribute)taskEClass.getEStructuralFeatures().get(6);
+		return (EReference)taskEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -573,16 +533,6 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	@Override
 	public EReference getStep_Conditional() {
 		return (EReference)stepEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getStep_Cmd() {
-		return (EAttribute)stepEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -751,6 +701,16 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getOperatingSystem_OsName() {
+		return (EAttribute)operatingSystemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSelfHostedRunner() {
 		return selfHostedRunnerEClass;
 	}
@@ -811,78 +771,8 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getUnaryConditional() {
-		return unaryConditionalEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getUnaryConditional_Operand() {
-		return (EReference)unaryConditionalEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getUnaryConditional_Negated() {
-		return (EAttribute)unaryConditionalEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getBinaryConditional() {
-		return binaryConditionalEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getBinaryConditional_Operand() {
-		return (EReference)binaryConditionalEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getBinaryConditional_LogicOperator() {
-		return (EReference)binaryConditionalEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getOperand() {
-		return operandEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getLogicOperator() {
-		return logicOperatorEClass;
+	public EAttribute getConditional_Condition() {
+		return (EAttribute)conditionalEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -961,6 +851,106 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getRegistryTask() {
+		return registryTaskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRegistryTask_Cmd() {
+		return (EAttribute)registryTaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRegistryTask_Arguments() {
+		return (EReference)registryTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDevOpsTask() {
+		return devOpsTaskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDevOpsTask_AllowFailure() {
+		return (EAttribute)devOpsTaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDevOpsTask_Name() {
+		return (EAttribute)devOpsTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCommand() {
+		return commandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCommand_Cmd() {
+		return (EAttribute)commandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getImportedTask() {
+		return importedTaskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImportedTask_Task() {
+		return (EReference)importedTaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public DevOpsFactory getDevOpsFactory() {
 		return (DevOpsFactory)getEFactoryInstance();
 	}
@@ -1009,15 +999,10 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		taskEClass = createEClass(TASK);
 		createEReference(taskEClass, TASK__STEPS);
 		createEReference(taskEClass, TASK__ENVIRONMENT);
-		createEAttribute(taskEClass, TASK__ALLOW_FAILURE);
-		createEReference(taskEClass, TASK__TASK_IMPORTS);
 		createEReference(taskEClass, TASK__RUNNER);
-		createEReference(taskEClass, TASK__CONDITIONAL);
-		createEAttribute(taskEClass, TASK__NAME);
 
 		stepEClass = createEClass(STEP);
 		createEReference(stepEClass, STEP__CONDITIONAL);
-		createEAttribute(stepEClass, STEP__CMD);
 
 		triggerEClass = createEClass(TRIGGER);
 
@@ -1042,6 +1027,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 
 		operatingSystemEClass = createEClass(OPERATING_SYSTEM);
 		createEAttribute(operatingSystemEClass, OPERATING_SYSTEM__SHELL);
+		createEAttribute(operatingSystemEClass, OPERATING_SYSTEM__OS_NAME);
 
 		selfHostedRunnerEClass = createEClass(SELF_HOSTED_RUNNER);
 
@@ -1052,18 +1038,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		createEAttribute(phoneHomeRunnerEClass, PHONE_HOME_RUNNER__RUNNER_TOKEN);
 
 		conditionalEClass = createEClass(CONDITIONAL);
-
-		unaryConditionalEClass = createEClass(UNARY_CONDITIONAL);
-		createEReference(unaryConditionalEClass, UNARY_CONDITIONAL__OPERAND);
-		createEAttribute(unaryConditionalEClass, UNARY_CONDITIONAL__NEGATED);
-
-		binaryConditionalEClass = createEClass(BINARY_CONDITIONAL);
-		createEReference(binaryConditionalEClass, BINARY_CONDITIONAL__OPERAND);
-		createEReference(binaryConditionalEClass, BINARY_CONDITIONAL__LOGIC_OPERATOR);
-
-		operandEClass = createEClass(OPERAND);
-
-		logicOperatorEClass = createEClass(LOGIC_OPERATOR);
+		createEAttribute(conditionalEClass, CONDITIONAL__CONDITION);
 
 		cronTriggerEClass = createEClass(CRON_TRIGGER);
 		createEAttribute(cronTriggerEClass, CRON_TRIGGER__HOURS);
@@ -1074,6 +1049,20 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		mergeRequestEClass = createEClass(MERGE_REQUEST);
 
 		pushEClass = createEClass(PUSH);
+
+		registryTaskEClass = createEClass(REGISTRY_TASK);
+		createEAttribute(registryTaskEClass, REGISTRY_TASK__CMD);
+		createEReference(registryTaskEClass, REGISTRY_TASK__ARGUMENTS);
+
+		devOpsTaskEClass = createEClass(DEV_OPS_TASK);
+		createEAttribute(devOpsTaskEClass, DEV_OPS_TASK__ALLOW_FAILURE);
+		createEAttribute(devOpsTaskEClass, DEV_OPS_TASK__NAME);
+
+		commandEClass = createEClass(COMMAND);
+		createEAttribute(commandEClass, COMMAND__CMD);
+
+		importedTaskEClass = createEClass(IMPORTED_TASK);
+		createEReference(importedTaskEClass, IMPORTED_TASK__TASK);
 	}
 
 	/**
@@ -1104,6 +1093,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		taskEClass.getESuperTypes().add(this.getDevOpsTask());
 		repositoryEventEClass.getESuperTypes().add(this.getTrigger());
 		webHookEClass.getESuperTypes().add(this.getTrigger());
 		apiTriggerEClass.getESuperTypes().add(this.getTrigger());
@@ -1113,20 +1103,21 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		selfHostedRunnerEClass.getESuperTypes().add(this.getRunner());
 		sshRunnerEClass.getESuperTypes().add(this.getSelfHostedRunner());
 		phoneHomeRunnerEClass.getESuperTypes().add(this.getSelfHostedRunner());
-		conditionalEClass.getESuperTypes().add(this.getOperand());
-		unaryConditionalEClass.getESuperTypes().add(this.getConditional());
-		binaryConditionalEClass.getESuperTypes().add(this.getConditional());
 		cronTriggerEClass.getESuperTypes().add(this.getTrigger());
 		mergeRequestEClass.getESuperTypes().add(this.getRepositoryEvent());
 		pushEClass.getESuperTypes().add(this.getRepositoryEvent());
+		registryTaskEClass.getESuperTypes().add(this.getDevOpsTask());
+		registryTaskEClass.getESuperTypes().add(this.getStep());
+		commandEClass.getESuperTypes().add(this.getStep());
+		importedTaskEClass.getESuperTypes().add(this.getStep());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pipelineEClass, Pipeline.class, "Pipeline", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPipeline_Name(), ecorePackage.getEString(), "name", null, 1, 1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPipeline_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPipeline_Stages(), this.getStage(), null, "stages", null, 1, -1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPipeline_Triggers(), this.getTrigger(), null, "triggers", null, 1, -1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPipeline_Runner(), this.getRunner(), null, "runner", null, 0, 1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPipeline_Triggers(), this.getTrigger(), null, "triggers", null, 1, -1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPipeline_Runner(), this.getRunner(), null, "runner", null, 0, 1, Pipeline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getPipeline__UniqueTaskNames__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UniqueTaskNames", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1148,33 +1139,28 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 
 		initEClass(stageEClass, Stage.class, "Stage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStage_Tasks(), this.getTask(), null, "tasks", null, 1, -1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStage_Conditional(), this.getConditional(), null, "conditional", null, 0, 1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStage_Conditional(), this.getConditional(), null, "conditional", null, 0, 1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stringToStringMapEntryEClass, Map.Entry.class, "StringToStringMapEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToStringMapEntry_Key(), ecorePackage.getEString(), "key", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStringToStringMapEntry_Value(), ecorePackage.getEString(), "value", null, 0, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(environmentEClass, Environment.class, "Environment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEnvironment_Variables(), this.getStringToStringMapEntry(), null, "variables", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEnvironment_Artifacts(), this.getStringToStringMapEntry(), null, "artifacts", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEnvironment_Secrets(), this.getStringToStringMapEntry(), null, "secrets", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnvironment_Variables(), this.getStringToStringMapEntry(), null, "variables", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnvironment_Artifacts(), this.getStringToStringMapEntry(), null, "artifacts", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnvironment_Secrets(), this.getStringToStringMapEntry(), null, "secrets", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTask_Steps(), this.getStep(), null, "steps", null, 1, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTask_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTask_AllowFailure(), ecorePackage.getEBoolean(), "allowFailure", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_TaskImports(), this.getTask(), null, "taskImports", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_Runner(), this.getRunner(), null, "runner", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_Conditional(), this.getConditional(), null, "conditional", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTask_Name(), ecorePackage.getEString(), "name", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_Runner(), this.getRunner(), null, "runner", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(stepEClass, Step.class, "Step", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStep_Conditional(), this.getConditional(), null, "conditional", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_Cmd(), ecorePackage.getEString(), "cmd", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(stepEClass, Step.class, "Step", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStep_Conditional(), this.getConditional(), null, "conditional", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(triggerEClass, Trigger.class, "Trigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(triggerEClass, Trigger.class, "Trigger", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(repositoryEventEClass, RepositoryEvent.class, "RepositoryEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(repositoryEventEClass, RepositoryEvent.class, "RepositoryEvent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRepositoryEvent_Repository(), ecorePackage.getEString(), "repository", null, 1, 1, RepositoryEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRepositoryEvent_Branch(), ecorePackage.getEString(), "branch", null, 1, 1, RepositoryEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1183,20 +1169,21 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 
 		initEClass(apiTriggerEClass, APITrigger.class, "APITrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(runnerEClass, Runner.class, "Runner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(runnerEClass, Runner.class, "Runner", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iaaSEClass, IaaS.class, "IaaS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(iaaSEClass, IaaS.class, "IaaS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(containerEngineEClass, ContainerEngine.class, "ContainerEngine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContainerEngine_Image(), ecorePackage.getEString(), "image", null, 1, 1, ContainerEngine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainerEngine_Arguments(), this.getStringToStringMapEntry(), null, "arguments", null, 0, -1, ContainerEngine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContainerEngine_Arguments(), this.getStringToStringMapEntry(), null, "arguments", null, 0, -1, ContainerEngine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContainerEngine_EntryPoint(), ecorePackage.getEString(), "entryPoint", null, 0, 1, ContainerEngine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContainerEngine_Command(), ecorePackage.getEString(), "command", null, 0, 1, ContainerEngine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatingSystemEClass, OperatingSystem.class, "OperatingSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperatingSystem_Shell(), ecorePackage.getEString(), "shell", null, 0, 1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOperatingSystem_OsName(), ecorePackage.getEString(), "osName", null, 0, 1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(selfHostedRunnerEClass, SelfHostedRunner.class, "SelfHostedRunner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(selfHostedRunnerEClass, SelfHostedRunner.class, "SelfHostedRunner", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(sshRunnerEClass, SSHRunner.class, "SSHRunner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSSHRunner_SshCredentials(), ecorePackage.getEString(), "sshCredentials", null, 1, 1, SSHRunner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1205,18 +1192,7 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		initEAttribute(getPhoneHomeRunner_RunnerToken(), ecorePackage.getEString(), "runnerToken", null, 1, 1, PhoneHomeRunner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conditionalEClass, Conditional.class, "Conditional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(unaryConditionalEClass, UnaryConditional.class, "UnaryConditional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUnaryConditional_Operand(), this.getOperand(), null, "operand", null, 1, 1, UnaryConditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUnaryConditional_Negated(), ecorePackage.getEBoolean(), "negated", null, 1, 1, UnaryConditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(binaryConditionalEClass, BinaryConditional.class, "BinaryConditional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBinaryConditional_Operand(), this.getOperand(), null, "operand", null, 2, 2, BinaryConditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBinaryConditional_LogicOperator(), this.getLogicOperator(), null, "logicOperator", null, 1, 1, BinaryConditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(operandEClass, Operand.class, "Operand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(logicOperatorEClass, LogicOperator.class, "LogicOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getConditional_Condition(), ecorePackage.getEString(), "condition", null, 1, 1, Conditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cronTriggerEClass, CronTrigger.class, "CronTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCronTrigger_Hours(), ecorePackage.getEInt(), "hours", null, 1, 1, CronTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1235,6 +1211,20 @@ public class DevOpsPackageImpl extends EPackageImpl implements DevOpsPackage {
 		initEClass(mergeRequestEClass, MergeRequest.class, "MergeRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(pushEClass, Push.class, "Push", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(registryTaskEClass, RegistryTask.class, "RegistryTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRegistryTask_Cmd(), ecorePackage.getEString(), "cmd", null, 0, 1, RegistryTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRegistryTask_Arguments(), this.getStringToStringMapEntry(), null, "arguments", null, 0, -1, RegistryTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(devOpsTaskEClass, DevOpsTask.class, "DevOpsTask", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDevOpsTask_AllowFailure(), ecorePackage.getEBoolean(), "allowFailure", null, 1, 1, DevOpsTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDevOpsTask_Name(), ecorePackage.getEString(), "name", null, 1, 1, DevOpsTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCommand_Cmd(), ecorePackage.getEString(), "cmd", null, 1, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(importedTaskEClass, ImportedTask.class, "ImportedTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getImportedTask_Task(), this.getTask(), null, "task", null, 1, 1, ImportedTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

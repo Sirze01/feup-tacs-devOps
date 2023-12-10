@@ -5,9 +5,8 @@ package devOps.impl;
 import devOps.Conditional;
 import devOps.DevOpsPackage;
 import devOps.Step;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -23,14 +22,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link devOps.impl.StepImpl#getConditional <em>Conditional</em>}</li>
- *   <li>{@link devOps.impl.StepImpl#getCmd <em>Cmd</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StepImpl extends MinimalEObjectImpl.Container implements Step {
+public abstract class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	/**
-	 * The cached value of the '{@link #getConditional() <em>Conditional</em>}' reference.
+	 * The cached value of the '{@link #getConditional() <em>Conditional</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConditional()
@@ -38,26 +36,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * @ordered
 	 */
 	protected Conditional conditional;
-
-	/**
-	 * The default value of the '{@link #getCmd() <em>Cmd</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCmd()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CMD_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCmd() <em>Cmd</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCmd()
-	 * @generated
-	 * @ordered
-	 */
-	protected String cmd = CMD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -85,14 +63,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 */
 	@Override
 	public Conditional getConditional() {
-		if (conditional != null && conditional.eIsProxy()) {
-			InternalEObject oldConditional = (InternalEObject)conditional;
-			conditional = (Conditional)eResolveProxy(oldConditional);
-			if (conditional != oldConditional) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DevOpsPackage.STEP__CONDITIONAL, oldConditional, conditional));
-			}
-		}
 		return conditional;
 	}
 
@@ -101,8 +71,14 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Conditional basicGetConditional() {
-		return conditional;
+	public NotificationChain basicSetConditional(Conditional newConditional, NotificationChain msgs) {
+		Conditional oldConditional = conditional;
+		conditional = newConditional;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DevOpsPackage.STEP__CONDITIONAL, oldConditional, newConditional);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -112,10 +88,17 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 */
 	@Override
 	public void setConditional(Conditional newConditional) {
-		Conditional oldConditional = conditional;
-		conditional = newConditional;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DevOpsPackage.STEP__CONDITIONAL, oldConditional, conditional));
+		if (newConditional != conditional) {
+			NotificationChain msgs = null;
+			if (conditional != null)
+				msgs = ((InternalEObject)conditional).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DevOpsPackage.STEP__CONDITIONAL, null, msgs);
+			if (newConditional != null)
+				msgs = ((InternalEObject)newConditional).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DevOpsPackage.STEP__CONDITIONAL, null, msgs);
+			msgs = basicSetConditional(newConditional, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DevOpsPackage.STEP__CONDITIONAL, newConditional, newConditional));
 	}
 
 	/**
@@ -124,21 +107,12 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * @generated
 	 */
 	@Override
-	public String getCmd() {
-		return cmd;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setCmd(String newCmd) {
-		String oldCmd = cmd;
-		cmd = newCmd;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DevOpsPackage.STEP__CMD, oldCmd, cmd));
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DevOpsPackage.STEP__CONDITIONAL:
+				return basicSetConditional(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -150,10 +124,7 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case DevOpsPackage.STEP__CONDITIONAL:
-				if (resolve) return getConditional();
-				return basicGetConditional();
-			case DevOpsPackage.STEP__CMD:
-				return getCmd();
+				return getConditional();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,9 +139,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		switch (featureID) {
 			case DevOpsPackage.STEP__CONDITIONAL:
 				setConditional((Conditional)newValue);
-				return;
-			case DevOpsPackage.STEP__CMD:
-				setCmd((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,9 +155,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			case DevOpsPackage.STEP__CONDITIONAL:
 				setConditional((Conditional)null);
 				return;
-			case DevOpsPackage.STEP__CMD:
-				setCmd(CMD_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -204,26 +169,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		switch (featureID) {
 			case DevOpsPackage.STEP__CONDITIONAL:
 				return conditional != null;
-			case DevOpsPackage.STEP__CMD:
-				return CMD_EDEFAULT == null ? cmd != null : !CMD_EDEFAULT.equals(cmd);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (cmd: ");
-		result.append(cmd);
-		result.append(')');
-		return result.toString();
 	}
 
 } //StepImpl

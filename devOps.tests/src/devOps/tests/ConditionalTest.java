@@ -5,6 +5,8 @@ package devOps.tests;
 import devOps.Conditional;
 import devOps.DevOpsFactory;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConditionalTest extends OperandTest {
+public class ConditionalTest extends TestCase {
+
+	/**
+	 * The fixture for this Conditional test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Conditional fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class ConditionalTest extends OperandTest {
 	}
 
 	/**
+	 * Sets the fixture for this Conditional test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Conditional fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Conditional test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Conditional getFixture() {
-		return (Conditional)fixture;
+		return fixture;
 	}
 
 	/**

@@ -5,8 +5,6 @@ package devOps.tests;
 import devOps.DevOpsFactory;
 import devOps.Task;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TaskTest extends TestCase {
-
-	/**
-	 * The fixture for this Task test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Task fixture = null;
+public class TaskTest extends DevOpsTaskTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class TaskTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Task test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Task fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Task test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Task getFixture() {
-		return fixture;
+		return (Task)fixture;
 	}
 
 	/**

@@ -2,9 +2,7 @@
  */
 package devOps;
 
-import java.util.Map;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -28,39 +26,42 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Environment extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Variables</b></em>' reference list.
-	 * The list contents are of type {@link java.util.Map.Entry}<code>&lt;java.lang.String, java.lang.String&gt;</code>.
+	 * Returns the value of the '<em><b>Variables</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.String},
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variables</em>' reference list.
+	 * @return the value of the '<em>Variables</em>' map.
 	 * @see devOps.DevOpsPackage#getEnvironment_Variables()
 	 * @model mapType="devOps.StringToStringMapEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
 	 * @generated
 	 */
-	EList<Map.Entry<String, String>> getVariables();
+	EMap<String, String> getVariables();
 
 	/**
-	 * Returns the value of the '<em><b>Artifacts</b></em>' reference list.
-	 * The list contents are of type {@link java.util.Map.Entry}<code>&lt;java.lang.String, java.lang.String&gt;</code>.
+	 * Returns the value of the '<em><b>Artifacts</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.String},
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Artifacts</em>' reference list.
+	 * @return the value of the '<em>Artifacts</em>' map.
 	 * @see devOps.DevOpsPackage#getEnvironment_Artifacts()
 	 * @model mapType="devOps.StringToStringMapEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
 	 * @generated
 	 */
-	EList<Map.Entry<String, String>> getArtifacts();
+	EMap<String, String> getArtifacts();
 
 	/**
-	 * Returns the value of the '<em><b>Secrets</b></em>' reference list.
-	 * The list contents are of type {@link java.util.Map.Entry}<code>&lt;java.lang.String, java.lang.String&gt;</code>.
+	 * Returns the value of the '<em><b>Secrets</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.String},
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Secrets</em>' reference list.
+	 * @return the value of the '<em>Secrets</em>' map.
 	 * @see devOps.DevOpsPackage#getEnvironment_Secrets()
 	 * @model mapType="devOps.StringToStringMapEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
 	 * @generated
 	 */
-	EList<Map.Entry<String, String>> getSecrets();
+	EMap<String, String> getSecrets();
 
 } // Environment

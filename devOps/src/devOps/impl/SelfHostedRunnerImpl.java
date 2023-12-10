@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class SelfHostedRunnerImpl extends RunnerImpl implements SelfHostedRunner {
+public abstract class SelfHostedRunnerImpl extends RunnerImpl implements SelfHostedRunner {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

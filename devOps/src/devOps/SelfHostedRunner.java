@@ -10,7 +10,7 @@ package devOps;
  *
  *
  * @see devOps.DevOpsPackage#getSelfHostedRunner()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface SelfHostedRunner extends Runner {

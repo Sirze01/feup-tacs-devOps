@@ -5,18 +5,18 @@ package devOps.impl;
 import devOps.DevOpsPackage;
 import devOps.Environment;
 
-import java.util.Collection;
-import java.util.Map;
+import org.eclipse.emf.common.notify.NotificationChain;
 
-import java.util.Map.Entry;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,34 +35,34 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Environment {
 	/**
-	 * The cached value of the '{@link #getVariables() <em>Variables</em>}' reference list.
+	 * The cached value of the '{@link #getVariables() <em>Variables</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVariables()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Map.Entry<String, String>> variables;
+	protected EMap<String, String> variables;
 
 	/**
-	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' reference list.
+	 * The cached value of the '{@link #getArtifacts() <em>Artifacts</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getArtifacts()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Map.Entry<String, String>> artifacts;
+	protected EMap<String, String> artifacts;
 
 	/**
-	 * The cached value of the '{@link #getSecrets() <em>Secrets</em>}' reference list.
+	 * The cached value of the '{@link #getSecrets() <em>Secrets</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSecrets()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Map.Entry<String, String>> secrets;
+	protected EMap<String, String> secrets;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -89,9 +89,9 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 	 * @generated
 	 */
 	@Override
-	public EList<Map.Entry<String, String>> getVariables() {
+	public EMap<String, String> getVariables() {
 		if (variables == null) {
-			variables = new EObjectResolvingEList<Map.Entry<String, String>>(Entry.class, this, DevOpsPackage.ENVIRONMENT__VARIABLES);
+			variables = new EcoreEMap<String,String>(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY, StringToStringMapEntryImpl.class, this, DevOpsPackage.ENVIRONMENT__VARIABLES);
 		}
 		return variables;
 	}
@@ -102,9 +102,9 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 	 * @generated
 	 */
 	@Override
-	public EList<Map.Entry<String, String>> getArtifacts() {
+	public EMap<String, String> getArtifacts() {
 		if (artifacts == null) {
-			artifacts = new EObjectResolvingEList<Map.Entry<String, String>>(Entry.class, this, DevOpsPackage.ENVIRONMENT__ARTIFACTS);
+			artifacts = new EcoreEMap<String,String>(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY, StringToStringMapEntryImpl.class, this, DevOpsPackage.ENVIRONMENT__ARTIFACTS);
 		}
 		return artifacts;
 	}
@@ -115,11 +115,29 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 	 * @generated
 	 */
 	@Override
-	public EList<Map.Entry<String, String>> getSecrets() {
+	public EMap<String, String> getSecrets() {
 		if (secrets == null) {
-			secrets = new EObjectResolvingEList<Map.Entry<String, String>>(Entry.class, this, DevOpsPackage.ENVIRONMENT__SECRETS);
+			secrets = new EcoreEMap<String,String>(DevOpsPackage.Literals.STRING_TO_STRING_MAP_ENTRY, StringToStringMapEntryImpl.class, this, DevOpsPackage.ENVIRONMENT__SECRETS);
 		}
 		return secrets;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DevOpsPackage.ENVIRONMENT__VARIABLES:
+				return ((InternalEList<?>)getVariables()).basicRemove(otherEnd, msgs);
+			case DevOpsPackage.ENVIRONMENT__ARTIFACTS:
+				return ((InternalEList<?>)getArtifacts()).basicRemove(otherEnd, msgs);
+			case DevOpsPackage.ENVIRONMENT__SECRETS:
+				return ((InternalEList<?>)getSecrets()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -131,11 +149,14 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case DevOpsPackage.ENVIRONMENT__VARIABLES:
-				return getVariables();
+				if (coreType) return getVariables();
+				else return getVariables().map();
 			case DevOpsPackage.ENVIRONMENT__ARTIFACTS:
-				return getArtifacts();
+				if (coreType) return getArtifacts();
+				else return getArtifacts().map();
 			case DevOpsPackage.ENVIRONMENT__SECRETS:
-				return getSecrets();
+				if (coreType) return getSecrets();
+				else return getSecrets().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -145,21 +166,17 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case DevOpsPackage.ENVIRONMENT__VARIABLES:
-				getVariables().clear();
-				getVariables().addAll((Collection<? extends Map.Entry<String, String>>)newValue);
+				((EStructuralFeature.Setting)getVariables()).set(newValue);
 				return;
 			case DevOpsPackage.ENVIRONMENT__ARTIFACTS:
-				getArtifacts().clear();
-				getArtifacts().addAll((Collection<? extends Map.Entry<String, String>>)newValue);
+				((EStructuralFeature.Setting)getArtifacts()).set(newValue);
 				return;
 			case DevOpsPackage.ENVIRONMENT__SECRETS:
-				getSecrets().clear();
-				getSecrets().addAll((Collection<? extends Map.Entry<String, String>>)newValue);
+				((EStructuralFeature.Setting)getSecrets()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

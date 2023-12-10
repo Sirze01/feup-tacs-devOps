@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see devOps.DevOpsPackage#getRunner()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Runner extends EObject {

@@ -13,19 +13,9 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -34,14 +24,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TaskItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class TaskItemProvider extends DevOpsTaskItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -63,123 +46,8 @@ public class TaskItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAllowFailurePropertyDescriptor(object);
-			addTaskImportsPropertyDescriptor(object);
-			addRunnerPropertyDescriptor(object);
-			addConditionalPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Allow Failure feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAllowFailurePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_allowFailure_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_allowFailure_feature", "_UI_Task_type"),
-				 DevOpsPackage.Literals.TASK__ALLOW_FAILURE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Task Imports feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTaskImportsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_taskImports_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_taskImports_feature", "_UI_Task_type"),
-				 DevOpsPackage.Literals.TASK__TASK_IMPORTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Runner feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRunnerPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_runner_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_runner_feature", "_UI_Task_type"),
-				 DevOpsPackage.Literals.TASK__RUNNER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Conditional feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConditionalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_conditional_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_conditional_feature", "_UI_Task_type"),
-				 DevOpsPackage.Literals.TASK__CONDITIONAL,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_name_feature", "_UI_Task_type"),
-				 DevOpsPackage.Literals.TASK__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -196,6 +64,7 @@ public class TaskItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(DevOpsPackage.Literals.TASK__STEPS);
 			childrenFeatures.add(DevOpsPackage.Literals.TASK__ENVIRONMENT);
+			childrenFeatures.add(DevOpsPackage.Literals.TASK__RUNNER);
 		}
 		return childrenFeatures;
 	}
@@ -251,12 +120,9 @@ public class TaskItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Task.class)) {
-			case DevOpsPackage.TASK__ALLOW_FAILURE:
-			case DevOpsPackage.TASK__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case DevOpsPackage.TASK__STEPS:
 			case DevOpsPackage.TASK__ENVIRONMENT:
+			case DevOpsPackage.TASK__RUNNER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -277,23 +143,42 @@ public class TaskItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(DevOpsPackage.Literals.TASK__STEPS,
-				 DevOpsFactory.eINSTANCE.createStep()));
+				 DevOpsFactory.eINSTANCE.createRegistryTask()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.TASK__STEPS,
+				 DevOpsFactory.eINSTANCE.createCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.TASK__STEPS,
+				 DevOpsFactory.eINSTANCE.createImportedTask()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(DevOpsPackage.Literals.TASK__ENVIRONMENT,
 				 DevOpsFactory.eINSTANCE.createEnvironment()));
-	}
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return DevOpsEditPlugin.INSTANCE;
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.TASK__RUNNER,
+				 DevOpsFactory.eINSTANCE.createContainerEngine()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.TASK__RUNNER,
+				 DevOpsFactory.eINSTANCE.createOperatingSystem()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.TASK__RUNNER,
+				 DevOpsFactory.eINSTANCE.createSSHRunner()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DevOpsPackage.Literals.TASK__RUNNER,
+				 DevOpsFactory.eINSTANCE.createPhoneHomeRunner()));
 	}
 
 }

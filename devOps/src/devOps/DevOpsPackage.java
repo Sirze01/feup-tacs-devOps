@@ -96,7 +96,7 @@ public interface DevOpsPackage extends EPackage {
 	int PIPELINE__STAGES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Triggers</b></em>' reference list.
+	 * The feature id for the '<em><b>Triggers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -105,7 +105,7 @@ public interface DevOpsPackage extends EPackage {
 	int PIPELINE__TRIGGERS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Runner</b></em>' reference.
+	 * The feature id for the '<em><b>Runner</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -169,7 +169,7 @@ public interface DevOpsPackage extends EPackage {
 	int STAGE__TASKS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Conditional</b></em>' reference.
+	 * The feature id for the '<em><b>Conditional</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -252,7 +252,7 @@ public interface DevOpsPackage extends EPackage {
 	int ENVIRONMENT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Variables</b></em>' reference list.
+	 * The feature id for the '<em><b>Variables</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -261,7 +261,7 @@ public interface DevOpsPackage extends EPackage {
 	int ENVIRONMENT__VARIABLES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Artifacts</b></em>' reference list.
+	 * The feature id for the '<em><b>Artifacts</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -270,7 +270,7 @@ public interface DevOpsPackage extends EPackage {
 	int ENVIRONMENT__ARTIFACTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Secrets</b></em>' reference list.
+	 * The feature id for the '<em><b>Secrets</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -297,6 +297,16 @@ public interface DevOpsPackage extends EPackage {
 	int ENVIRONMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link devOps.impl.DevOpsTaskImpl <em>Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see devOps.impl.DevOpsTaskImpl
+	 * @see devOps.impl.DevOpsPackageImpl#getDevOpsTask()
+	 * @generated
+	 */
+	int DEV_OPS_TASK = 22;
+
+	/**
 	 * The meta object id for the '{@link devOps.impl.TaskImpl <em>Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -305,87 +315,6 @@ public interface DevOpsPackage extends EPackage {
 	 * @generated
 	 */
 	int TASK = 4;
-
-	/**
-	 * The feature id for the '<em><b>Steps</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__STEPS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__ENVIRONMENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Allow Failure</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__ALLOW_FAILURE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Task Imports</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__TASK_IMPORTS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Runner</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__RUNNER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Conditional</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__CONDITIONAL = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__NAME = 6;
-
-	/**
-	 * The number of structural features of the '<em>Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_FEATURE_COUNT = 7;
-
-	/**
-	 * The number of operations of the '<em>Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link devOps.impl.StepImpl <em>Step</em>}' class.
@@ -398,7 +327,106 @@ public interface DevOpsPackage extends EPackage {
 	int STEP = 5;
 
 	/**
-	 * The feature id for the '<em><b>Conditional</b></em>' reference.
+	 * The feature id for the '<em><b>Allow Failure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEV_OPS_TASK__ALLOW_FAILURE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEV_OPS_TASK__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEV_OPS_TASK_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEV_OPS_TASK_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Allow Failure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__ALLOW_FAILURE = DEV_OPS_TASK__ALLOW_FAILURE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__NAME = DEV_OPS_TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Steps</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__STEPS = DEV_OPS_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__ENVIRONMENT = DEV_OPS_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Runner</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__RUNNER = DEV_OPS_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FEATURE_COUNT = DEV_OPS_TASK_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_OPERATION_COUNT = DEV_OPS_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Conditional</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -407,22 +435,13 @@ public interface DevOpsPackage extends EPackage {
 	int STEP__CONDITIONAL = 0;
 
 	/**
-	 * The feature id for the '<em><b>Cmd</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STEP__CMD = 1;
-
-	/**
 	 * The number of structural features of the '<em>Step</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STEP_FEATURE_COUNT = 2;
+	int STEP_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Step</em>' class.
@@ -648,7 +667,7 @@ public interface DevOpsPackage extends EPackage {
 	int CONTAINER_ENGINE__IMAGE = IAA_S_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' reference list.
+	 * The feature id for the '<em><b>Arguments</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -712,13 +731,22 @@ public interface DevOpsPackage extends EPackage {
 	int OPERATING_SYSTEM__SHELL = IAA_S_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Os Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM__OS_NAME = IAA_S_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Operating System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATING_SYSTEM_FEATURE_COUNT = IAA_S_FEATURE_COUNT + 1;
+	int OPERATING_SYSTEM_FEATURE_COUNT = IAA_S_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Operating System</em>' class.
@@ -832,34 +860,6 @@ public interface DevOpsPackage extends EPackage {
 	int PHONE_HOME_RUNNER_OPERATION_COUNT = SELF_HOSTED_RUNNER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link devOps.impl.OperandImpl <em>Operand</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see devOps.impl.OperandImpl
-	 * @see devOps.impl.DevOpsPackageImpl#getOperand()
-	 * @generated
-	 */
-	int OPERAND = 20;
-
-	/**
-	 * The number of structural features of the '<em>Operand</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERAND_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Operand</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERAND_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link devOps.impl.ConditionalImpl <em>Conditional</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -870,13 +870,22 @@ public interface DevOpsPackage extends EPackage {
 	int CONDITIONAL = 17;
 
 	/**
+	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL__CONDITION = 0;
+
+	/**
 	 * The number of structural features of the '<em>Conditional</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITIONAL_FEATURE_COUNT = OPERAND_FEATURE_COUNT + 0;
+	int CONDITIONAL_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Conditional</em>' class.
@@ -885,127 +894,7 @@ public interface DevOpsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITIONAL_OPERATION_COUNT = OPERAND_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link devOps.impl.UnaryConditionalImpl <em>Unary Conditional</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see devOps.impl.UnaryConditionalImpl
-	 * @see devOps.impl.DevOpsPackageImpl#getUnaryConditional()
-	 * @generated
-	 */
-	int UNARY_CONDITIONAL = 18;
-
-	/**
-	 * The feature id for the '<em><b>Operand</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNARY_CONDITIONAL__OPERAND = CONDITIONAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Negated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNARY_CONDITIONAL__NEGATED = CONDITIONAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Unary Conditional</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNARY_CONDITIONAL_FEATURE_COUNT = CONDITIONAL_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Unary Conditional</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNARY_CONDITIONAL_OPERATION_COUNT = CONDITIONAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link devOps.impl.BinaryConditionalImpl <em>Binary Conditional</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see devOps.impl.BinaryConditionalImpl
-	 * @see devOps.impl.DevOpsPackageImpl#getBinaryConditional()
-	 * @generated
-	 */
-	int BINARY_CONDITIONAL = 19;
-
-	/**
-	 * The feature id for the '<em><b>Operand</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BINARY_CONDITIONAL__OPERAND = CONDITIONAL_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Logic Operator</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BINARY_CONDITIONAL__LOGIC_OPERATOR = CONDITIONAL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Binary Conditional</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BINARY_CONDITIONAL_FEATURE_COUNT = CONDITIONAL_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Binary Conditional</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BINARY_CONDITIONAL_OPERATION_COUNT = CONDITIONAL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link devOps.impl.LogicOperatorImpl <em>Logic Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see devOps.impl.LogicOperatorImpl
-	 * @see devOps.impl.DevOpsPackageImpl#getLogicOperator()
-	 * @generated
-	 */
-	int LOGIC_OPERATOR = 21;
-
-	/**
-	 * The number of structural features of the '<em>Logic Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIC_OPERATOR_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Logic Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIC_OPERATOR_OPERATION_COUNT = 0;
+	int CONDITIONAL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link devOps.impl.CronTriggerImpl <em>Cron Trigger</em>}' class.
@@ -1015,7 +904,7 @@ public interface DevOpsPackage extends EPackage {
 	 * @see devOps.impl.DevOpsPackageImpl#getCronTrigger()
 	 * @generated
 	 */
-	int CRON_TRIGGER = 22;
+	int CRON_TRIGGER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Hours</b></em>' attribute.
@@ -1079,7 +968,7 @@ public interface DevOpsPackage extends EPackage {
 	 * @see devOps.impl.DevOpsPackageImpl#getMergeRequest()
 	 * @generated
 	 */
-	int MERGE_REQUEST = 23;
+	int MERGE_REQUEST = 19;
 
 	/**
 	 * The feature id for the '<em><b>Repository</b></em>' attribute.
@@ -1125,7 +1014,7 @@ public interface DevOpsPackage extends EPackage {
 	 * @see devOps.impl.DevOpsPackageImpl#getPush()
 	 * @generated
 	 */
-	int PUSH = 24;
+	int PUSH = 20;
 
 	/**
 	 * The feature id for the '<em><b>Repository</b></em>' attribute.
@@ -1162,6 +1051,173 @@ public interface DevOpsPackage extends EPackage {
 	 * @ordered
 	 */
 	int PUSH_OPERATION_COUNT = REPOSITORY_EVENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link devOps.impl.RegistryTaskImpl <em>Registry Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see devOps.impl.RegistryTaskImpl
+	 * @see devOps.impl.DevOpsPackageImpl#getRegistryTask()
+	 * @generated
+	 */
+	int REGISTRY_TASK = 21;
+
+	/**
+	 * The feature id for the '<em><b>Allow Failure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRY_TASK__ALLOW_FAILURE = DEV_OPS_TASK__ALLOW_FAILURE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRY_TASK__NAME = DEV_OPS_TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRY_TASK__CONDITIONAL = DEV_OPS_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Cmd</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRY_TASK__CMD = DEV_OPS_TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Arguments</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRY_TASK__ARGUMENTS = DEV_OPS_TASK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Registry Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRY_TASK_FEATURE_COUNT = DEV_OPS_TASK_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Registry Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRY_TASK_OPERATION_COUNT = DEV_OPS_TASK_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link devOps.impl.CommandImpl <em>Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see devOps.impl.CommandImpl
+	 * @see devOps.impl.DevOpsPackageImpl#getCommand()
+	 * @generated
+	 */
+	int COMMAND = 23;
+
+	/**
+	 * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMAND__CONDITIONAL = STEP__CONDITIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Cmd</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMAND__CMD = STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMAND_FEATURE_COUNT = STEP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMAND_OPERATION_COUNT = STEP_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link devOps.impl.ImportedTaskImpl <em>Imported Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see devOps.impl.ImportedTaskImpl
+	 * @see devOps.impl.DevOpsPackageImpl#getImportedTask()
+	 * @generated
+	 */
+	int IMPORTED_TASK = 24;
+
+	/**
+	 * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_TASK__CONDITIONAL = STEP__CONDITIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_TASK__TASK = STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Imported Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_TASK_FEATURE_COUNT = STEP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Imported Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORTED_TASK_OPERATION_COUNT = STEP_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1208,10 +1264,10 @@ public interface DevOpsPackage extends EPackage {
 	EReference getPipeline_Stages();
 
 	/**
-	 * Returns the meta object for the reference list '{@link devOps.Pipeline#getTriggers <em>Triggers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link devOps.Pipeline#getTriggers <em>Triggers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Triggers</em>'.
+	 * @return the meta object for the containment reference list '<em>Triggers</em>'.
 	 * @see devOps.Pipeline#getTriggers()
 	 * @see #getPipeline()
 	 * @generated
@@ -1219,10 +1275,10 @@ public interface DevOpsPackage extends EPackage {
 	EReference getPipeline_Triggers();
 
 	/**
-	 * Returns the meta object for the reference '{@link devOps.Pipeline#getRunner <em>Runner</em>}'.
+	 * Returns the meta object for the containment reference '{@link devOps.Pipeline#getRunner <em>Runner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Runner</em>'.
+	 * @return the meta object for the containment reference '<em>Runner</em>'.
 	 * @see devOps.Pipeline#getRunner()
 	 * @see #getPipeline()
 	 * @generated
@@ -1271,10 +1327,10 @@ public interface DevOpsPackage extends EPackage {
 	EReference getStage_Tasks();
 
 	/**
-	 * Returns the meta object for the reference '{@link devOps.Stage#getConditional <em>Conditional</em>}'.
+	 * Returns the meta object for the containment reference '{@link devOps.Stage#getConditional <em>Conditional</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Conditional</em>'.
+	 * @return the meta object for the containment reference '<em>Conditional</em>'.
 	 * @see devOps.Stage#getConditional()
 	 * @see #getStage()
 	 * @generated
@@ -1326,10 +1382,10 @@ public interface DevOpsPackage extends EPackage {
 	EClass getEnvironment();
 
 	/**
-	 * Returns the meta object for the reference list '{@link devOps.Environment#getVariables <em>Variables</em>}'.
+	 * Returns the meta object for the map '{@link devOps.Environment#getVariables <em>Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Variables</em>'.
+	 * @return the meta object for the map '<em>Variables</em>'.
 	 * @see devOps.Environment#getVariables()
 	 * @see #getEnvironment()
 	 * @generated
@@ -1337,10 +1393,10 @@ public interface DevOpsPackage extends EPackage {
 	EReference getEnvironment_Variables();
 
 	/**
-	 * Returns the meta object for the reference list '{@link devOps.Environment#getArtifacts <em>Artifacts</em>}'.
+	 * Returns the meta object for the map '{@link devOps.Environment#getArtifacts <em>Artifacts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Artifacts</em>'.
+	 * @return the meta object for the map '<em>Artifacts</em>'.
 	 * @see devOps.Environment#getArtifacts()
 	 * @see #getEnvironment()
 	 * @generated
@@ -1348,10 +1404,10 @@ public interface DevOpsPackage extends EPackage {
 	EReference getEnvironment_Artifacts();
 
 	/**
-	 * Returns the meta object for the reference list '{@link devOps.Environment#getSecrets <em>Secrets</em>}'.
+	 * Returns the meta object for the map '{@link devOps.Environment#getSecrets <em>Secrets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Secrets</em>'.
+	 * @return the meta object for the map '<em>Secrets</em>'.
 	 * @see devOps.Environment#getSecrets()
 	 * @see #getEnvironment()
 	 * @generated
@@ -1391,59 +1447,15 @@ public interface DevOpsPackage extends EPackage {
 	EReference getTask_Environment();
 
 	/**
-	 * Returns the meta object for the attribute '{@link devOps.Task#isAllowFailure <em>Allow Failure</em>}'.
+	 * Returns the meta object for the containment reference '{@link devOps.Task#getRunner <em>Runner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Allow Failure</em>'.
-	 * @see devOps.Task#isAllowFailure()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EAttribute getTask_AllowFailure();
-
-	/**
-	 * Returns the meta object for the reference list '{@link devOps.Task#getTaskImports <em>Task Imports</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Task Imports</em>'.
-	 * @see devOps.Task#getTaskImports()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_TaskImports();
-
-	/**
-	 * Returns the meta object for the reference '{@link devOps.Task#getRunner <em>Runner</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Runner</em>'.
+	 * @return the meta object for the containment reference '<em>Runner</em>'.
 	 * @see devOps.Task#getRunner()
 	 * @see #getTask()
 	 * @generated
 	 */
 	EReference getTask_Runner();
-
-	/**
-	 * Returns the meta object for the reference '{@link devOps.Task#getConditional <em>Conditional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Conditional</em>'.
-	 * @see devOps.Task#getConditional()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_Conditional();
-
-	/**
-	 * Returns the meta object for the attribute '{@link devOps.Task#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see devOps.Task#getName()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EAttribute getTask_Name();
 
 	/**
 	 * Returns the meta object for class '{@link devOps.Step <em>Step</em>}'.
@@ -1456,26 +1468,15 @@ public interface DevOpsPackage extends EPackage {
 	EClass getStep();
 
 	/**
-	 * Returns the meta object for the reference '{@link devOps.Step#getConditional <em>Conditional</em>}'.
+	 * Returns the meta object for the containment reference '{@link devOps.Step#getConditional <em>Conditional</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Conditional</em>'.
+	 * @return the meta object for the containment reference '<em>Conditional</em>'.
 	 * @see devOps.Step#getConditional()
 	 * @see #getStep()
 	 * @generated
 	 */
 	EReference getStep_Conditional();
-
-	/**
-	 * Returns the meta object for the attribute '{@link devOps.Step#getCmd <em>Cmd</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cmd</em>'.
-	 * @see devOps.Step#getCmd()
-	 * @see #getStep()
-	 * @generated
-	 */
-	EAttribute getStep_Cmd();
 
 	/**
 	 * Returns the meta object for class '{@link devOps.Trigger <em>Trigger</em>}'.
@@ -1592,10 +1593,10 @@ public interface DevOpsPackage extends EPackage {
 	EAttribute getContainerEngine_Image();
 
 	/**
-	 * Returns the meta object for the reference list '{@link devOps.ContainerEngine#getArguments <em>Arguments</em>}'.
+	 * Returns the meta object for the map '{@link devOps.ContainerEngine#getArguments <em>Arguments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Arguments</em>'.
+	 * @return the meta object for the map '<em>Arguments</em>'.
 	 * @see devOps.ContainerEngine#getArguments()
 	 * @see #getContainerEngine()
 	 * @generated
@@ -1644,6 +1645,17 @@ public interface DevOpsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOperatingSystem_Shell();
+
+	/**
+	 * Returns the meta object for the attribute '{@link devOps.OperatingSystem#getOsName <em>Os Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Os Name</em>'.
+	 * @see devOps.OperatingSystem#getOsName()
+	 * @see #getOperatingSystem()
+	 * @generated
+	 */
+	EAttribute getOperatingSystem_OsName();
 
 	/**
 	 * Returns the meta object for class '{@link devOps.SelfHostedRunner <em>Self Hosted Runner</em>}'.
@@ -1708,88 +1720,15 @@ public interface DevOpsPackage extends EPackage {
 	EClass getConditional();
 
 	/**
-	 * Returns the meta object for class '{@link devOps.UnaryConditional <em>Unary Conditional</em>}'.
+	 * Returns the meta object for the attribute '{@link devOps.Conditional#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Unary Conditional</em>'.
-	 * @see devOps.UnaryConditional
+	 * @return the meta object for the attribute '<em>Condition</em>'.
+	 * @see devOps.Conditional#getCondition()
+	 * @see #getConditional()
 	 * @generated
 	 */
-	EClass getUnaryConditional();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link devOps.UnaryConditional#getOperand <em>Operand</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Operand</em>'.
-	 * @see devOps.UnaryConditional#getOperand()
-	 * @see #getUnaryConditional()
-	 * @generated
-	 */
-	EReference getUnaryConditional_Operand();
-
-	/**
-	 * Returns the meta object for the attribute '{@link devOps.UnaryConditional#isNegated <em>Negated</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Negated</em>'.
-	 * @see devOps.UnaryConditional#isNegated()
-	 * @see #getUnaryConditional()
-	 * @generated
-	 */
-	EAttribute getUnaryConditional_Negated();
-
-	/**
-	 * Returns the meta object for class '{@link devOps.BinaryConditional <em>Binary Conditional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Binary Conditional</em>'.
-	 * @see devOps.BinaryConditional
-	 * @generated
-	 */
-	EClass getBinaryConditional();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link devOps.BinaryConditional#getOperand <em>Operand</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Operand</em>'.
-	 * @see devOps.BinaryConditional#getOperand()
-	 * @see #getBinaryConditional()
-	 * @generated
-	 */
-	EReference getBinaryConditional_Operand();
-
-	/**
-	 * Returns the meta object for the reference '{@link devOps.BinaryConditional#getLogicOperator <em>Logic Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Logic Operator</em>'.
-	 * @see devOps.BinaryConditional#getLogicOperator()
-	 * @see #getBinaryConditional()
-	 * @generated
-	 */
-	EReference getBinaryConditional_LogicOperator();
-
-	/**
-	 * Returns the meta object for class '{@link devOps.Operand <em>Operand</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Operand</em>'.
-	 * @see devOps.Operand
-	 * @generated
-	 */
-	EClass getOperand();
-
-	/**
-	 * Returns the meta object for class '{@link devOps.LogicOperator <em>Logic Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Logic Operator</em>'.
-	 * @see devOps.LogicOperator
-	 * @generated
-	 */
-	EClass getLogicOperator();
+	EAttribute getConditional_Condition();
 
 	/**
 	 * Returns the meta object for class '{@link devOps.CronTrigger <em>Cron Trigger</em>}'.
@@ -1865,6 +1804,112 @@ public interface DevOpsPackage extends EPackage {
 	EClass getPush();
 
 	/**
+	 * Returns the meta object for class '{@link devOps.RegistryTask <em>Registry Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Registry Task</em>'.
+	 * @see devOps.RegistryTask
+	 * @generated
+	 */
+	EClass getRegistryTask();
+
+	/**
+	 * Returns the meta object for the attribute '{@link devOps.RegistryTask#getCmd <em>Cmd</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cmd</em>'.
+	 * @see devOps.RegistryTask#getCmd()
+	 * @see #getRegistryTask()
+	 * @generated
+	 */
+	EAttribute getRegistryTask_Cmd();
+
+	/**
+	 * Returns the meta object for the map '{@link devOps.RegistryTask#getArguments <em>Arguments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Arguments</em>'.
+	 * @see devOps.RegistryTask#getArguments()
+	 * @see #getRegistryTask()
+	 * @generated
+	 */
+	EReference getRegistryTask_Arguments();
+
+	/**
+	 * Returns the meta object for class '{@link devOps.DevOpsTask <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task</em>'.
+	 * @see devOps.DevOpsTask
+	 * @generated
+	 */
+	EClass getDevOpsTask();
+
+	/**
+	 * Returns the meta object for the attribute '{@link devOps.DevOpsTask#isAllowFailure <em>Allow Failure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Allow Failure</em>'.
+	 * @see devOps.DevOpsTask#isAllowFailure()
+	 * @see #getDevOpsTask()
+	 * @generated
+	 */
+	EAttribute getDevOpsTask_AllowFailure();
+
+	/**
+	 * Returns the meta object for the attribute '{@link devOps.DevOpsTask#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see devOps.DevOpsTask#getName()
+	 * @see #getDevOpsTask()
+	 * @generated
+	 */
+	EAttribute getDevOpsTask_Name();
+
+	/**
+	 * Returns the meta object for class '{@link devOps.Command <em>Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Command</em>'.
+	 * @see devOps.Command
+	 * @generated
+	 */
+	EClass getCommand();
+
+	/**
+	 * Returns the meta object for the attribute '{@link devOps.Command#getCmd <em>Cmd</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cmd</em>'.
+	 * @see devOps.Command#getCmd()
+	 * @see #getCommand()
+	 * @generated
+	 */
+	EAttribute getCommand_Cmd();
+
+	/**
+	 * Returns the meta object for class '{@link devOps.ImportedTask <em>Imported Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Imported Task</em>'.
+	 * @see devOps.ImportedTask
+	 * @generated
+	 */
+	EClass getImportedTask();
+
+	/**
+	 * Returns the meta object for the reference '{@link devOps.ImportedTask#getTask <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Task</em>'.
+	 * @see devOps.ImportedTask#getTask()
+	 * @see #getImportedTask()
+	 * @generated
+	 */
+	EReference getImportedTask_Task();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1922,7 +1967,7 @@ public interface DevOpsPackage extends EPackage {
 		EReference PIPELINE__STAGES = eINSTANCE.getPipeline_Stages();
 
 		/**
-		 * The meta object literal for the '<em><b>Triggers</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Triggers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1930,7 +1975,7 @@ public interface DevOpsPackage extends EPackage {
 		EReference PIPELINE__TRIGGERS = eINSTANCE.getPipeline_Triggers();
 
 		/**
-		 * The meta object literal for the '<em><b>Runner</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Runner</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1972,7 +2017,7 @@ public interface DevOpsPackage extends EPackage {
 		EReference STAGE__TASKS = eINSTANCE.getStage_Tasks();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditional</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Conditional</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2016,7 +2061,7 @@ public interface DevOpsPackage extends EPackage {
 		EClass ENVIRONMENT = eINSTANCE.getEnvironment();
 
 		/**
-		 * The meta object literal for the '<em><b>Variables</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Variables</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2024,7 +2069,7 @@ public interface DevOpsPackage extends EPackage {
 		EReference ENVIRONMENT__VARIABLES = eINSTANCE.getEnvironment_Variables();
 
 		/**
-		 * The meta object literal for the '<em><b>Artifacts</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Artifacts</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2032,7 +2077,7 @@ public interface DevOpsPackage extends EPackage {
 		EReference ENVIRONMENT__ARTIFACTS = eINSTANCE.getEnvironment_Artifacts();
 
 		/**
-		 * The meta object literal for the '<em><b>Secrets</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Secrets</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2066,44 +2111,12 @@ public interface DevOpsPackage extends EPackage {
 		EReference TASK__ENVIRONMENT = eINSTANCE.getTask_Environment();
 
 		/**
-		 * The meta object literal for the '<em><b>Allow Failure</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TASK__ALLOW_FAILURE = eINSTANCE.getTask_AllowFailure();
-
-		/**
-		 * The meta object literal for the '<em><b>Task Imports</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__TASK_IMPORTS = eINSTANCE.getTask_TaskImports();
-
-		/**
-		 * The meta object literal for the '<em><b>Runner</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Runner</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TASK__RUNNER = eINSTANCE.getTask_Runner();
-
-		/**
-		 * The meta object literal for the '<em><b>Conditional</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__CONDITIONAL = eINSTANCE.getTask_Conditional();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TASK__NAME = eINSTANCE.getTask_Name();
 
 		/**
 		 * The meta object literal for the '{@link devOps.impl.StepImpl <em>Step</em>}' class.
@@ -2116,20 +2129,12 @@ public interface DevOpsPackage extends EPackage {
 		EClass STEP = eINSTANCE.getStep();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditional</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Conditional</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference STEP__CONDITIONAL = eINSTANCE.getStep_Conditional();
-
-		/**
-		 * The meta object literal for the '<em><b>Cmd</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STEP__CMD = eINSTANCE.getStep_Cmd();
 
 		/**
 		 * The meta object literal for the '{@link devOps.impl.TriggerImpl <em>Trigger</em>}' class.
@@ -2234,7 +2239,7 @@ public interface DevOpsPackage extends EPackage {
 		EAttribute CONTAINER_ENGINE__IMAGE = eINSTANCE.getContainerEngine_Image();
 
 		/**
-		 * The meta object literal for the '<em><b>Arguments</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Arguments</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2274,6 +2279,14 @@ public interface DevOpsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OPERATING_SYSTEM__SHELL = eINSTANCE.getOperatingSystem_Shell();
+
+		/**
+		 * The meta object literal for the '<em><b>Os Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERATING_SYSTEM__OS_NAME = eINSTANCE.getOperatingSystem_OsName();
 
 		/**
 		 * The meta object literal for the '{@link devOps.impl.SelfHostedRunnerImpl <em>Self Hosted Runner</em>}' class.
@@ -2332,76 +2345,12 @@ public interface DevOpsPackage extends EPackage {
 		EClass CONDITIONAL = eINSTANCE.getConditional();
 
 		/**
-		 * The meta object literal for the '{@link devOps.impl.UnaryConditionalImpl <em>Unary Conditional</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see devOps.impl.UnaryConditionalImpl
-		 * @see devOps.impl.DevOpsPackageImpl#getUnaryConditional()
-		 * @generated
-		 */
-		EClass UNARY_CONDITIONAL = eINSTANCE.getUnaryConditional();
-
-		/**
-		 * The meta object literal for the '<em><b>Operand</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference UNARY_CONDITIONAL__OPERAND = eINSTANCE.getUnaryConditional_Operand();
-
-		/**
-		 * The meta object literal for the '<em><b>Negated</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNARY_CONDITIONAL__NEGATED = eINSTANCE.getUnaryConditional_Negated();
-
-		/**
-		 * The meta object literal for the '{@link devOps.impl.BinaryConditionalImpl <em>Binary Conditional</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see devOps.impl.BinaryConditionalImpl
-		 * @see devOps.impl.DevOpsPackageImpl#getBinaryConditional()
-		 * @generated
-		 */
-		EClass BINARY_CONDITIONAL = eINSTANCE.getBinaryConditional();
-
-		/**
-		 * The meta object literal for the '<em><b>Operand</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BINARY_CONDITIONAL__OPERAND = eINSTANCE.getBinaryConditional_Operand();
-
-		/**
-		 * The meta object literal for the '<em><b>Logic Operator</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BINARY_CONDITIONAL__LOGIC_OPERATOR = eINSTANCE.getBinaryConditional_LogicOperator();
-
-		/**
-		 * The meta object literal for the '{@link devOps.impl.OperandImpl <em>Operand</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see devOps.impl.OperandImpl
-		 * @see devOps.impl.DevOpsPackageImpl#getOperand()
-		 * @generated
-		 */
-		EClass OPERAND = eINSTANCE.getOperand();
-
-		/**
-		 * The meta object literal for the '{@link devOps.impl.LogicOperatorImpl <em>Logic Operator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see devOps.impl.LogicOperatorImpl
-		 * @see devOps.impl.DevOpsPackageImpl#getLogicOperator()
-		 * @generated
-		 */
-		EClass LOGIC_OPERATOR = eINSTANCE.getLogicOperator();
+		EAttribute CONDITIONAL__CONDITION = eINSTANCE.getConditional_Condition();
 
 		/**
 		 * The meta object literal for the '{@link devOps.impl.CronTriggerImpl <em>Cron Trigger</em>}' class.
@@ -2464,6 +2413,94 @@ public interface DevOpsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PUSH = eINSTANCE.getPush();
+
+		/**
+		 * The meta object literal for the '{@link devOps.impl.RegistryTaskImpl <em>Registry Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see devOps.impl.RegistryTaskImpl
+		 * @see devOps.impl.DevOpsPackageImpl#getRegistryTask()
+		 * @generated
+		 */
+		EClass REGISTRY_TASK = eINSTANCE.getRegistryTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Cmd</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGISTRY_TASK__CMD = eINSTANCE.getRegistryTask_Cmd();
+
+		/**
+		 * The meta object literal for the '<em><b>Arguments</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REGISTRY_TASK__ARGUMENTS = eINSTANCE.getRegistryTask_Arguments();
+
+		/**
+		 * The meta object literal for the '{@link devOps.impl.DevOpsTaskImpl <em>Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see devOps.impl.DevOpsTaskImpl
+		 * @see devOps.impl.DevOpsPackageImpl#getDevOpsTask()
+		 * @generated
+		 */
+		EClass DEV_OPS_TASK = eINSTANCE.getDevOpsTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Allow Failure</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEV_OPS_TASK__ALLOW_FAILURE = eINSTANCE.getDevOpsTask_AllowFailure();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEV_OPS_TASK__NAME = eINSTANCE.getDevOpsTask_Name();
+
+		/**
+		 * The meta object literal for the '{@link devOps.impl.CommandImpl <em>Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see devOps.impl.CommandImpl
+		 * @see devOps.impl.DevOpsPackageImpl#getCommand()
+		 * @generated
+		 */
+		EClass COMMAND = eINSTANCE.getCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Cmd</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMMAND__CMD = eINSTANCE.getCommand_Cmd();
+
+		/**
+		 * The meta object literal for the '{@link devOps.impl.ImportedTaskImpl <em>Imported Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see devOps.impl.ImportedTaskImpl
+		 * @see devOps.impl.DevOpsPackageImpl#getImportedTask()
+		 * @generated
+		 */
+		EClass IMPORTED_TASK = eINSTANCE.getImportedTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPORTED_TASK__TASK = eINSTANCE.getImportedTask_Task();
 
 	}
 
