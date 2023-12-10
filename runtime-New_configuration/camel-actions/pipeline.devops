@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<devOps:Pipeline xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:devOps="http://www.example.org/examples/devops.ecore" name="Camel actions">
+<devOps:Pipeline xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:devOps="http://www.example.org/examples/devops.ecore" name="ci">
   <environment>
     <variables key="CARGO_TERM_COLOR" value="always"/>
+    <variables key="FORMAT" value="true"/>
   </environment>
   <stages>
     <tasks href="format.devops#/"/>
+    <conditional condition="{{env.FORMAT == true}}"/>
   </stages>
   <stages>
     <tasks href="lint.devops#/"/>
