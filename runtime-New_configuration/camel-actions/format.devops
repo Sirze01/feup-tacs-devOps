@@ -3,4 +3,7 @@
   <steps xsi:type="devOps:RegistryTask" name="actions/checkout@v3"/>
   <steps xsi:type="devOps:Command" cmd="cargo fmt --check"/>
   <steps xsi:type="devOps:Command" cmd="sudo apt-get install shfmt; shfmt -i 4 -d ."/>
+  <environment>
+    <variables key="SHFMT_RULESET" value="1"/>
+  </environment>
 </devOps:Task>

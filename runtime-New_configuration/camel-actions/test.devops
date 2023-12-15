@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <devOps:Task xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:devOps="http://www.example.org/examples/devops.ecore" name="test">
-  <steps xsi:type="devOps:RegistryTask" name="actions/checkout@v3"/>
+  <steps xsi:type="devOps:RegistryTask" name="actions/checkout@v3">
+    <arguments key="submodules" value="true"/>
+  </steps>
   <steps xsi:type="devOps:RegistryTask" name="taiki-e/install-action@cargo-llvm-cov"/>
   <steps xsi:type="devOps:Command" cmd="cargo llvm-cov --all-features --workspace --codecov --output-path codecov.json"/>
   <steps xsi:type="devOps:RegistryTask" name="codecov/codecov-action@v3">
