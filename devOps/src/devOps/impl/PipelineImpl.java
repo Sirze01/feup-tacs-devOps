@@ -314,13 +314,13 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
 			 *     endif
 			 */
-			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
 			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
 			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, DevOpsPackage.Literals.PIPELINE___UNIQUE_TASK_NAMES__DIAGNOSTICCHAIN_MAP);
 			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, DevOpsTables.INT_0).booleanValue();
-			/*@NonInvalid*/ boolean IF_le;
+			/*@NonInvalid*/ boolean local_0;
 			if (le) {
-				IF_le = true;
+				local_0 = true;
 			}
 			else {
 				final /*@NonInvalid*/ List<Stage> stages = this.getStages();
@@ -367,9 +367,9 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 					}
 				}
 				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, DevOpsTables.INT_0).booleanValue();
-				IF_le = logDiagnostic;
+				local_0 = logDiagnostic;
 			}
-			return IF_le;
+			return local_0;
 		}
 		catch (Throwable e) {
 			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
@@ -398,13 +398,13 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
 			 *     endif
 			 */
-			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
 			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
 			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, DevOpsPackage.Literals.PIPELINE___UNIQUE_NAME__DIAGNOSTICCHAIN_MAP);
 			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, DevOpsTables.INT_0).booleanValue();
-			/*@NonInvalid*/ boolean IF_le;
+			/*@NonInvalid*/ boolean local_0;
 			if (le) {
-				IF_le = true;
+				local_0 = true;
 			}
 			else {
 				final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_devOps_c_c_Pipeline = idResolver.getClass(DevOpsTables.CLSSid_Pipeline, null);
@@ -432,9 +432,9 @@ public class PipelineImpl extends MinimalEObjectImpl.Container implements Pipeli
 					}
 				}
 				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, DevOpsTables.INT_0).booleanValue();
-				IF_le = logDiagnostic;
+				local_0 = logDiagnostic;
 			}
-			return IF_le;
+			return local_0;
 		}
 		catch (Throwable e) {
 			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);

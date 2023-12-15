@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:devOps="http://www.example.org/examples/devops.ecore" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_eBCDUJg5Ee6eaZTP4seLMA" selectedViews="_gS6mYJg5Ee6eaZTP4seLMA" version="15.2.0.202303281325">
+    <semanticResources>pipeline.devops</semanticResources>
+    <semanticResources>gauntlet.devops</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_gS6mYJg5Ee6eaZTP4seLMA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_gpIuAJg5Ee6eaZTP4seLMA" name="new Pipeline diagram" repPath="#_gpIG8Jg5Ee6eaZTP4seLMA" changeId="1702312790969">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']"/>
+        <target xmi:type="devOps:Pipeline" href="gauntlet.devops#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BB3TYJg7Ee6eaZTP4seLMA" name="new Pipeline diagram" repPath="#_BB2sUJg7Ee6eaZTP4seLMA" changeId="1702315874909">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']"/>
+        <target xmi:type="devOps:Pipeline" href="pipeline.devops#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="__gdVkJg7Ee6eaZTP4seLMA" name="new Task diagram" repPath="#__gcugJg7Ee6eaZTP4seLMA" changeId="1702316108518">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']"/>
+        <target xmi:type="devOps:Task" href="gauntlet.devops#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_gpIG8Jg5Ee6eaZTP4seLMA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_gpJ8IJg5Ee6eaZTP4seLMA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_gpJ8IZg5Ee6eaZTP4seLMA" type="Sirius" element="_gpIG8Jg5Ee6eaZTP4seLMA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_gpM_cZg5Ee6eaZTP4seLMA" type="2003" element="_gpLxUJg5Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_gpNmgJg5Ee6eaZTP4seLMA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_gpNmgZg5Ee6eaZTP4seLMA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_7EOswJg5Ee6eaZTP4seLMA" type="3010" element="_7EEUsJg5Ee6eaZTP4seLMA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_7EOswZg5Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_7EOswpg5Ee6eaZTP4seLMA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_JDD_IJg6Ee6eaZTP4seLMA" type="3010" element="_JC-fkJg6Ee6eaZTP4seLMA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_JDD_IZg6Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JDD_Ipg6Ee6eaZTP4seLMA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_gpNmgpg5Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_gpNmg5g5Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_gpM_cpg5Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gpM_c5g5Ee6eaZTP4seLMA" width="231" height="75"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_PqfmIJg6Ee6eaZTP4seLMA" type="2003" element="_PqatoJg6Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_PqfmI5g6Ee6eaZTP4seLMA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_PqfmJJg6Ee6eaZTP4seLMA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_TEuRUJg6Ee6eaZTP4seLMA" type="3010" element="_TEtDNpg6Ee6eaZTP4seLMA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_TEuRUZg6Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_TEuRUpg6Ee6eaZTP4seLMA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_PqfmJZg6Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_PqfmJpg6Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_PqfmIZg6Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PqfmIpg6Ee6eaZTP4seLMA" x="312" width="219" height="63"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_aESrgJg6Ee6eaZTP4seLMA" type="2002" element="_aD-icJg6Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_aETSkpg6Ee6eaZTP4seLMA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_aETSk5g6Ee6eaZTP4seLMA" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_aETSlJg6Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_aETSlZg6Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_aETSkJg6Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aETSkZg6Ee6eaZTP4seLMA" y="108" width="159" height="75"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_gpJ8Ipg5Ee6eaZTP4seLMA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_gpMYYJg5Ee6eaZTP4seLMA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_gpM_cJg5Ee6eaZTP4seLMA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_gpLxUJg5Ee6eaZTP4seLMA" name="gauntlet">
+      <target xmi:type="devOps:Pipeline" href="gauntlet.devops#/"/>
+      <semanticElements xmi:type="devOps:Pipeline" href="gauntlet.devops#/"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_gpLxUZg5Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_7EEUsJg5Ee6eaZTP4seLMA" name="Trigger: MergeRequest">
+        <target xmi:type="devOps:MergeRequest" href="gauntlet.devops#//@triggers.0"/>
+        <semanticElements xmi:type="devOps:MergeRequest" href="gauntlet.devops#//@triggers.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_7EFi0Jg5Ee6eaZTP4seLMA" labelSize="12" labelAlignment="LEFT" labelPosition="node" color="204,242,166">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='TriggerNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='TriggerNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_JC-fkJg6Ee6eaZTP4seLMA" name="Runner: OperatingSystem">
+        <target xmi:type="devOps:OperatingSystem" href="gauntlet.devops#//@runner"/>
+        <semanticElements xmi:type="devOps:OperatingSystem" href="gauntlet.devops#//@runner"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_JC_GoJg6Ee6eaZTP4seLMA" labelSize="12" labelAlignment="LEFT" labelPosition="node" width="30" height="5">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RunnerNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='PipelineRunnerNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_PqatoJg6Ee6eaZTP4seLMA" name="Environment">
+      <target xmi:type="devOps:Environment" href="gauntlet.devops#//@environment"/>
+      <semanticElements xmi:type="devOps:Environment" href="gauntlet.devops#//@environment"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_PqatoZg6Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,233,79">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_TEtDNpg6Ee6eaZTP4seLMA" name="CARGO_TERM_COLOR">
+        <target xmi:type="devOps:StringToStringMapEntry" href="gauntlet.devops#//@environment/@variables.0"/>
+        <semanticElements xmi:type="devOps:StringToStringMapEntry" href="gauntlet.devops#//@environment/@variables.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_TEtqQJg6Ee6eaZTP4seLMA" labelSize="12" labelPosition="node" color="194,239,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@subNodeMappings[name='EnvVariable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']/@subNodeMappings[name='PipelineVariables']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_aD-icJg6Ee6eaZTP4seLMA" name="Stage">
+      <target xmi:type="devOps:Stage" href="gauntlet.devops#//@stages.0"/>
+      <semanticElements xmi:type="devOps:Stage" href="gauntlet.devops#//@stages.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_aD_JgJg6Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_gpIG8Zg5Ee6eaZTP4seLMA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer"/>
+    <target xmi:type="devOps:Pipeline" href="gauntlet.devops#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_BB2sUJg7Ee6eaZTP4seLMA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_BB3TYpg7Ee6eaZTP4seLMA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_BB3TY5g7Ee6eaZTP4seLMA" type="Sirius" element="_BB2sUJg7Ee6eaZTP4seLMA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_BB6WsJg7Ee6eaZTP4seLMA" type="2003" element="_BB5IkJg7Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_BB6Ws5g7Ee6eaZTP4seLMA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_BB6WtJg7Ee6eaZTP4seLMA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_c9-Y8Jg7Ee6eaZTP4seLMA" type="3010" element="_c92dIZg7Ee6eaZTP4seLMA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_c9-Y8Zg7Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_c9-Y8pg7Ee6eaZTP4seLMA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_dgLHEJg7Ee6eaZTP4seLMA" type="3010" element="_dgIDw5g7Ee6eaZTP4seLMA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_dgLHEZg7Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_dgLHEpg7Ee6eaZTP4seLMA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_BB6WtZg7Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_BB6Wtpg7Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_BB6WsZg7Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BB6Wspg7Ee6eaZTP4seLMA" x="96" y="116" width="230" height="74"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Yoe_YJg7Ee6eaZTP4seLMA" type="2003" element="_YobVAJg7Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_YofmcJg7Ee6eaZTP4seLMA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_YofmcZg7Ee6eaZTP4seLMA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_YofmdJg7Ee6eaZTP4seLMA" type="3010" element="_YobVA5g7Ee6eaZTP4seLMA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_YofmdZg7Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Yofmdpg7Ee6eaZTP4seLMA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_Yofmcpg7Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_Yofmc5g7Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Yoe_YZg7Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yoe_Ypg7Ee6eaZTP4seLMA" x="480" y="130"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_GqodQJg8Ee6eaZTP4seLMA" type="2002" element="_Gqaa0Jg8Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_GqpEUJg8Ee6eaZTP4seLMA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_GqpEUZg8Ee6eaZTP4seLMA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_JT8o4Jg8Ee6eaZTP4seLMA" type="3007" element="_JT5llJg8Ee6eaZTP4seLMA">
+              <children xmi:type="notation:Node" xmi:id="_JT8o45g8Ee6eaZTP4seLMA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_JT8o5Jg8Ee6eaZTP4seLMA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_JT9P8Jg8Ee6eaZTP4seLMA" type="3003" element="_JT6MoJg8Ee6eaZTP4seLMA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_JT9P8Zg8Ee6eaZTP4seLMA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JT9P8pg8Ee6eaZTP4seLMA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_JT8o4Zg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JT8o4pg8Ee6eaZTP4seLMA" x="19" y="30" width="145" height="49"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_GqpEUpg8Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_GqpEU5g8Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_GqodQZg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GqodQpg8Ee6eaZTP4seLMA" x="312" y="216" width="183" height="99"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_BB3TZJg7Ee6eaZTP4seLMA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_BB5vopg7Ee6eaZTP4seLMA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_BB5vo5g7Ee6eaZTP4seLMA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_BB5IkJg7Ee6eaZTP4seLMA" name="gauntlet">
+      <target xmi:type="devOps:Pipeline" href="pipeline.devops#/"/>
+      <semanticElements xmi:type="devOps:Pipeline" href="pipeline.devops#/"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_BB5IkZg7Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_c92dIZg7Ee6eaZTP4seLMA" name="Trigger: MergeRequest">
+        <target xmi:type="devOps:MergeRequest" href="pipeline.devops#//@triggers.0"/>
+        <semanticElements xmi:type="devOps:MergeRequest" href="pipeline.devops#//@triggers.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_c93EMJg7Ee6eaZTP4seLMA" labelSize="12" labelAlignment="LEFT" labelPosition="node" color="204,242,166">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='TriggerNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='TriggerNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_dgIDw5g7Ee6eaZTP4seLMA" name="Runner: OperatingSystem">
+        <target xmi:type="devOps:OperatingSystem" href="pipeline.devops#//@runner"/>
+        <semanticElements xmi:type="devOps:OperatingSystem" href="pipeline.devops#//@runner"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_dgIDxJg7Ee6eaZTP4seLMA" labelSize="12" labelAlignment="LEFT" labelPosition="node" width="30" height="5">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RunnerNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='PipelineRunnerNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_YobVAJg7Ee6eaZTP4seLMA" name="Environment">
+      <target xmi:type="devOps:Environment" href="pipeline.devops#//@environment"/>
+      <semanticElements xmi:type="devOps:Environment" href="pipeline.devops#//@environment"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_YobVAZg7Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,233,79">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_YobVA5g7Ee6eaZTP4seLMA" name="CARGO_TERM_COLOR">
+        <target xmi:type="devOps:StringToStringMapEntry" href="pipeline.devops#//@environment/@variables.0"/>
+        <semanticElements xmi:type="devOps:StringToStringMapEntry" href="pipeline.devops#//@environment/@variables.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_YobVBJg7Ee6eaZTP4seLMA" labelSize="12" labelPosition="node" color="194,239,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@subNodeMappings[name='EnvVariable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']/@subNodeMappings[name='PipelineVariables']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Gqaa0Jg8Ee6eaZTP4seLMA" name="Stage">
+      <target xmi:type="devOps:Stage" href="pipeline.devops#//@stages.0"/>
+      <semanticElements xmi:type="devOps:Stage" href="pipeline.devops#//@stages.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_GqbB4Jg8Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_JT5llJg8Ee6eaZTP4seLMA" name="gauntlet" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:Task" href="gauntlet.devops#/"/>
+        <semanticElements xmi:type="devOps:Task" href="gauntlet.devops#/"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_JT6MoJg8Ee6eaZTP4seLMA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@nodeMappings[name='TaskNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@subNodeMappings[name='TaskNode']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_BB2sUZg7Ee6eaZTP4seLMA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer"/>
+    <target xmi:type="devOps:Pipeline" href="pipeline.devops#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="__gcugJg7Ee6eaZTP4seLMA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="__gd8oJg7Ee6eaZTP4seLMA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="__gd8oZg7Ee6eaZTP4seLMA" type="Sirius" element="__gcugJg7Ee6eaZTP4seLMA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_jYPRMJg8Ee6eaZTP4seLMA" type="2002" element="_jYM08Jg8Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_jYPRM5g8Ee6eaZTP4seLMA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_jYPRNJg8Ee6eaZTP4seLMA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_jYP4QJg8Ee6eaZTP4seLMA" type="3007" element="_jYNcAZg8Ee6eaZTP4seLMA">
+              <children xmi:type="notation:Node" xmi:id="_jYP4Q5g8Ee6eaZTP4seLMA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_jYP4RJg8Ee6eaZTP4seLMA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_jYP4RZg8Ee6eaZTP4seLMA" type="3003" element="_jYNcApg8Ee6eaZTP4seLMA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_jYP4Rpg8Ee6eaZTP4seLMA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jYP4R5g8Ee6eaZTP4seLMA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_jYP4QZg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jYP4Qpg8Ee6eaZTP4seLMA" x="7" y="30" width="193" height="67"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_jYPRNZg8Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_jYPRNpg8Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_jYPRMZg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jYPRMpg8Ee6eaZTP4seLMA" x="36" y="24" width="219" height="123"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yVkzMJg8Ee6eaZTP4seLMA" type="2002" element="_yVi-Apg8Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_yVkzM5g8Ee6eaZTP4seLMA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_yVlaQJg8Ee6eaZTP4seLMA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_yVlaQ5g8Ee6eaZTP4seLMA" type="3007" element="_yVi-BZg8Ee6eaZTP4seLMA">
+              <children xmi:type="notation:Node" xmi:id="_yVlaRpg8Ee6eaZTP4seLMA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_yVlaR5g8Ee6eaZTP4seLMA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_yVlaSJg8Ee6eaZTP4seLMA" type="3003" element="_yVjlEJg8Ee6eaZTP4seLMA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_yVlaSZg8Ee6eaZTP4seLMA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yVlaSpg8Ee6eaZTP4seLMA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_yVlaRJg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yVlaRZg8Ee6eaZTP4seLMA" x="7" y="30" width="193" height="49"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_yVlaQZg8Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_yVlaQpg8Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yVkzMZg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yVkzMpg8Ee6eaZTP4seLMA" x="36" y="168" width="219" height="99"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_19IvwJg8Ee6eaZTP4seLMA" type="2002" element="_19FsdJg8Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_19JW0Jg8Ee6eaZTP4seLMA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_19JW0Zg8Ee6eaZTP4seLMA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_19JW1Jg8Ee6eaZTP4seLMA" type="3007" element="_19GTgJg8Ee6eaZTP4seLMA">
+              <children xmi:type="notation:Node" xmi:id="_19J94Jg8Ee6eaZTP4seLMA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_19J94Zg8Ee6eaZTP4seLMA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_19J94pg8Ee6eaZTP4seLMA" type="3003" element="_19GTgZg8Ee6eaZTP4seLMA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_19J945g8Ee6eaZTP4seLMA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_19J95Jg8Ee6eaZTP4seLMA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_19JW1Zg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_19JW1pg8Ee6eaZTP4seLMA" x="7" y="24" width="193" height="67"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_19JW0pg8Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_19JW05g8Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_19IvwZg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_19Ivwpg8Ee6eaZTP4seLMA" x="36" y="300" width="219" height="106"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_A2p3AJg9Ee6eaZTP4seLMA" type="2002" element="_A2llkZg9Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_A2p3A5g9Ee6eaZTP4seLMA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_A2p3BJg9Ee6eaZTP4seLMA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_A2qeEJg9Ee6eaZTP4seLMA" type="3007" element="_A2mMoJg9Ee6eaZTP4seLMA">
+              <children xmi:type="notation:Node" xmi:id="_A2qeE5g9Ee6eaZTP4seLMA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_A2qeFJg9Ee6eaZTP4seLMA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_A2qeFZg9Ee6eaZTP4seLMA" type="3003" element="_A2mMoZg9Ee6eaZTP4seLMA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_A2qeFpg9Ee6eaZTP4seLMA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2qeF5g9Ee6eaZTP4seLMA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_A2qeEZg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2qeEpg9Ee6eaZTP4seLMA" x="7" y="30" width="205" height="61"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_A2p3BZg9Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_A2p3Bpg9Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_A2p3AZg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2p3Apg9Ee6eaZTP4seLMA" x="300" y="300" width="231" height="106"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_GHgFkJg9Ee6eaZTP4seLMA" type="2003" element="_GHT4UJg9Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_GHgFk5g9Ee6eaZTP4seLMA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_GHgFlJg9Ee6eaZTP4seLMA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_KXt9kJg9Ee6eaZTP4seLMA" type="3010" element="_KXrhUJg9Ee6eaZTP4seLMA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_KXt9kZg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_KXt9kpg9Ee6eaZTP4seLMA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_GHgFlZg9Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_GHgFlpg9Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_GHgFkZg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GHgFkpg9Ee6eaZTP4seLMA" x="600" y="186" width="183" height="63"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_XbkOYJg9Ee6eaZTP4seLMA" type="2002" element="_XbhyKpg9Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_XbkOY5g9Ee6eaZTP4seLMA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_XbkOZJg9Ee6eaZTP4seLMA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_XbkOZ5g9Ee6eaZTP4seLMA" type="3007" element="_XbiZMJg9Ee6eaZTP4seLMA">
+              <children xmi:type="notation:Node" xmi:id="_XbkOapg9Ee6eaZTP4seLMA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_XbkOa5g9Ee6eaZTP4seLMA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_Xbk1cJg9Ee6eaZTP4seLMA" type="3003" element="_XbiZMZg9Ee6eaZTP4seLMA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_Xbk1cZg9Ee6eaZTP4seLMA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xbk1cpg9Ee6eaZTP4seLMA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_XbkOaJg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XbkOaZg9Ee6eaZTP4seLMA" x="7" y="24" width="193" height="55"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_XbkOZZg9Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_XbkOZpg9Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_XbkOYZg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XbkOYpg9Ee6eaZTP4seLMA" x="300" y="168" width="231" height="99"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iZnQUJg9Ee6eaZTP4seLMA" type="2002" element="_iZjl_Jg9Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_iZn3YJg9Ee6eaZTP4seLMA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_iZn3YZg9Ee6eaZTP4seLMA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_iZoecJg9Ee6eaZTP4seLMA" type="3007" element="_iZkNAJg9Ee6eaZTP4seLMA">
+              <children xmi:type="notation:Node" xmi:id="_iZoec5g9Ee6eaZTP4seLMA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_iZoedJg9Ee6eaZTP4seLMA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_iZoedZg9Ee6eaZTP4seLMA" type="3003" element="_iZkNAZg9Ee6eaZTP4seLMA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_iZoedpg9Ee6eaZTP4seLMA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iZoed5g9Ee6eaZTP4seLMA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_iZoecZg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iZoecpg9Ee6eaZTP4seLMA" x="7" y="30" width="205" height="65"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_iZn3Ypg9Ee6eaZTP4seLMA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_iZn3Y5g9Ee6eaZTP4seLMA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iZnQUZg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iZnQUpg9Ee6eaZTP4seLMA" x="300" y="24" width="231" height="123"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="__gd8opg7Ee6eaZTP4seLMA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_yVlaS5g8Ee6eaZTP4seLMA" type="4001" element="_yVjlFJg8Ee6eaZTP4seLMA" source="_jYPRMJg8Ee6eaZTP4seLMA" target="_yVkzMJg8Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_yVlaT5g8Ee6eaZTP4seLMA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yVlaUJg8Ee6eaZTP4seLMA" x="-2" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yVmBUJg8Ee6eaZTP4seLMA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yVmBUZg8Ee6eaZTP4seLMA" x="1" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yVmBUpg8Ee6eaZTP4seLMA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yVmBU5g8Ee6eaZTP4seLMA" x="1" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_yVlaTJg8Ee6eaZTP4seLMA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_yVlaTZg8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yVlaTpg8Ee6eaZTP4seLMA" points="[0, 61, -1, -57]$[0, 84, -1, -34]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yVmBVJg8Ee6eaZTP4seLMA" id="(0.47235023041474655,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yVmBVZg8Ee6eaZTP4seLMA" id="(0.47465437788018433,0.35051546391752575)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_19J95Zg8Ee6eaZTP4seLMA" type="4001" element="_19Hho5g8Ee6eaZTP4seLMA" source="_yVkzMJg8Ee6eaZTP4seLMA" target="_19IvwJg8Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_19J96Zg8Ee6eaZTP4seLMA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_19J96pg8Ee6eaZTP4seLMA" x="20" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_19J965g8Ee6eaZTP4seLMA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_19J97Jg8Ee6eaZTP4seLMA" x="19"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_19J97Zg8Ee6eaZTP4seLMA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_19J97pg8Ee6eaZTP4seLMA" x="-1" y="1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_19J95pg8Ee6eaZTP4seLMA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_19J955g8Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_19J96Jg8Ee6eaZTP4seLMA" points="[2, 63, -4, -69]$[4, 98, -2, -34]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_19Kk8Jg8Ee6eaZTP4seLMA" id="(0.47465437788018433,0.35051546391752575)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_19Kk8Zg8Ee6eaZTP4seLMA" id="(0.5023041474654378,0.3269230769230769)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_A2rFIJg9Ee6eaZTP4seLMA" type="4001" element="_A2oB0Jg9Ee6eaZTP4seLMA" source="_19IvwJg8Ee6eaZTP4seLMA" target="_A2p3AJg9Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_A2rFJJg9Ee6eaZTP4seLMA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2rFJZg9Ee6eaZTP4seLMA" x="-27"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_A2rFJpg9Ee6eaZTP4seLMA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2rFJ5g9Ee6eaZTP4seLMA" x="17"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_A2rFKJg9Ee6eaZTP4seLMA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2rFKZg9Ee6eaZTP4seLMA" x="-1" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2rFIZg9Ee6eaZTP4seLMA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_A2rFIpg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2rFI5g9Ee6eaZTP4seLMA" points="[108, 0, -121, 0]$[155, 0, -74, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A2rFKpg9Ee6eaZTP4seLMA" id="(0.5023041474654378,0.3269230769230769)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A2rFK5g9Ee6eaZTP4seLMA" id="(0.3231441048034934,0.3269230769230769)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Xbk1c5g9Ee6eaZTP4seLMA" type="4001" element="_XbjATpg9Ee6eaZTP4seLMA" source="_A2p3AJg9Ee6eaZTP4seLMA" target="_XbkOYJg9Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_Xbk1d5g9Ee6eaZTP4seLMA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xbk1eJg9Ee6eaZTP4seLMA" x="-8" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Xbk1eZg9Ee6eaZTP4seLMA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xbk1epg9Ee6eaZTP4seLMA" x="-10" y="1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Xbk1e5g9Ee6eaZTP4seLMA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xbk1fJg9Ee6eaZTP4seLMA" x="-10" y="1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Xbk1dJg9Ee6eaZTP4seLMA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Xbk1dZg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Xbk1dpg9Ee6eaZTP4seLMA" points="[3, -34, -9, 98]$[8, -98, -4, 34]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XblcgJg9Ee6eaZTP4seLMA" id="(0.3231441048034934,0.3269230769230769)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XblcgZg9Ee6eaZTP4seLMA" id="(0.37554585152838427,0.35051546391752575)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iZoeeJg9Ee6eaZTP4seLMA" type="4001" element="_iZlbLJg9Ee6eaZTP4seLMA" source="_XbkOYJg9Ee6eaZTP4seLMA" target="_iZnQUJg9Ee6eaZTP4seLMA">
+          <children xmi:type="notation:Node" xmi:id="_iZpFgJg9Ee6eaZTP4seLMA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iZpFgZg9Ee6eaZTP4seLMA" x="-13" y="2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iZpFgpg9Ee6eaZTP4seLMA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iZpFg5g9Ee6eaZTP4seLMA" x="-7" y="-2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iZpFhJg9Ee6eaZTP4seLMA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iZpFhZg9Ee6eaZTP4seLMA" x="-31" y="-3"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iZoeeZg9Ee6eaZTP4seLMA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iZoeepg9Ee6eaZTP4seLMA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iZoee5g9Ee6eaZTP4seLMA" points="[0, -34, 0, 69]$[0, -69, 0, 34]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iZpskJg9Ee6eaZTP4seLMA" id="(0.37554585152838427,0.35051546391752575)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iZpskZg9Ee6eaZTP4seLMA" id="(0.37554585152838427,0.6198347107438017)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="__gejsJg7Ee6eaZTP4seLMA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="__gejsZg7Ee6eaZTP4seLMA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_jYM08Jg8Ee6eaZTP4seLMA" name="Step" outgoingEdges="_yVjlFJg8Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.0"/>
+      <semanticElements xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_jYM08Zg8Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_jYNcAZg8Ee6eaZTP4seLMA" name="actions/checkout@v3" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.0"/>
+        <semanticElements xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_jYNcApg8Ee6eaZTP4seLMA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RegistryTaskNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='RegistrySub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_yVi-Apg8Ee6eaZTP4seLMA" name="Step" outgoingEdges="_19Hho5g8Ee6eaZTP4seLMA" incomingEdges="_yVjlFJg8Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.1"/>
+      <semanticElements xmi:type="devOps:Command" href="gauntlet.devops#//@steps.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_yVi-A5g8Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_yVi-BZg8Ee6eaZTP4seLMA" name="chmod +x ./gauntlet.sh" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.1"/>
+        <semanticElements xmi:type="devOps:Command" href="gauntlet.devops#//@steps.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_yVjlEJg8Ee6eaZTP4seLMA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='CommandNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='CommandSub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_yVjlFJg8Ee6eaZTP4seLMA" sourceNode="_jYM08Jg8Ee6eaZTP4seLMA" targetNode="_yVi-Apg8Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_yVkMIJg8Ee6eaZTP4seLMA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_yVkMIZg8Ee6eaZTP4seLMA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_19FsdJg8Ee6eaZTP4seLMA" name="Step" outgoingEdges="_A2oB0Jg9Ee6eaZTP4seLMA" incomingEdges="_19Hho5g8Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.2"/>
+      <semanticElements xmi:type="devOps:Command" href="gauntlet.devops#//@steps.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_19FsdZg8Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_19GTgJg8Ee6eaZTP4seLMA" name="git fetch origin master:master" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.2"/>
+        <semanticElements xmi:type="devOps:Command" href="gauntlet.devops#//@steps.2"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_19GTgZg8Ee6eaZTP4seLMA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='CommandNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='CommandSub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_19Hho5g8Ee6eaZTP4seLMA" sourceNode="_yVi-Apg8Ee6eaZTP4seLMA" targetNode="_19FsdJg8Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_19HhpJg8Ee6eaZTP4seLMA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_19HhpZg8Ee6eaZTP4seLMA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_A2llkZg9Ee6eaZTP4seLMA" name="Step" outgoingEdges="_XbjATpg9Ee6eaZTP4seLMA" incomingEdges="_A2oB0Jg9Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.3"/>
+      <semanticElements xmi:type="devOps:Command" href="gauntlet.devops#//@steps.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_A2llkpg9Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_A2mMoJg9Ee6eaZTP4seLMA" name="./gauntlet.sh || echo &quot;GAUNTLET_FAILED=1&quot; >> $GITHUB_ENV" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.3"/>
+        <semanticElements xmi:type="devOps:Command" href="gauntlet.devops#//@steps.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_A2mMoZg9Ee6eaZTP4seLMA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='CommandNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='CommandSub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_A2oB0Jg9Ee6eaZTP4seLMA" sourceNode="_19FsdJg8Ee6eaZTP4seLMA" targetNode="_A2llkZg9Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_A2oB0Zg9Ee6eaZTP4seLMA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_A2oB0pg9Ee6eaZTP4seLMA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_GHT4UJg9Ee6eaZTP4seLMA" name="Environment">
+      <target xmi:type="devOps:Environment" href="gauntlet.devops#//@environment"/>
+      <semanticElements xmi:type="devOps:Environment" href="gauntlet.devops#//@environment"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_GHUfYJg9Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_KXrhUJg9Ee6eaZTP4seLMA" name="CURRENT_BRANCH">
+        <target xmi:type="devOps:StringToStringMapEntry" href="gauntlet.devops#//@environment/@variables.0"/>
+        <semanticElements xmi:type="devOps:StringToStringMapEntry" href="gauntlet.devops#//@environment/@variables.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_KXrhUZg9Ee6eaZTP4seLMA" labelSize="12" labelPosition="node" color="194,239,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@subNodeMappings[name='EnvVariable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@subNodeMappings[name='EnvVariable']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_XbhyKpg9Ee6eaZTP4seLMA" name="Step" outgoingEdges="_iZlbLJg9Ee6eaZTP4seLMA" incomingEdges="_XbjATpg9Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.4"/>
+      <semanticElements xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.4"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_XbhyK5g9Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_XbiZMJg9Ee6eaZTP4seLMA" name="mshick/add-pr-comment@v2" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.4"/>
+        <semanticElements xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.4"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_XbiZMZg9Ee6eaZTP4seLMA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RegistryTaskNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='RegistrySub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XbjATpg9Ee6eaZTP4seLMA" sourceNode="_A2llkZg9Ee6eaZTP4seLMA" targetNode="_XbhyKpg9Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_XbjAT5g9Ee6eaZTP4seLMA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_XbjAUJg9Ee6eaZTP4seLMA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_iZjl_Jg9Ee6eaZTP4seLMA" name="Step" incomingEdges="_iZlbLJg9Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.5"/>
+      <semanticElements xmi:type="devOps:Command" href="gauntlet.devops#//@steps.5"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_iZjl_Zg9Ee6eaZTP4seLMA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_iZkNAJg9Ee6eaZTP4seLMA" name="if [ -n &quot;$GAUNTLET_FAILED&quot; ]; then exit 1; fi" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:Command" href="gauntlet.devops#//@steps.5"/>
+        <semanticElements xmi:type="devOps:Command" href="gauntlet.devops#//@steps.5"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_iZkNAZg9Ee6eaZTP4seLMA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='CommandNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='CommandSub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iZlbLJg9Ee6eaZTP4seLMA" sourceNode="_XbhyKpg9Ee6eaZTP4seLMA" targetNode="_iZjl_Jg9Ee6eaZTP4seLMA">
+      <target xmi:type="devOps:RegistryTask" href="gauntlet.devops#//@steps.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iZlbLZg9Ee6eaZTP4seLMA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iZlbLpg9Ee6eaZTP4seLMA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="__gcugZg7Ee6eaZTP4seLMA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer"/>
+    <target xmi:type="devOps:Task" href="gauntlet.devops#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devOps:Pipeline xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:devOps="http://www.example.org/examples/devops.ecore" name="gauntlet">
+  <environment>
+    <variables key="CARGO_TERM_COLOR" value="always"/>
+  </environment>
+  <stages>
+    <tasks href="gauntlet.devops#/"/>
+  </stages>
+  <triggers xsi:type="devOps:MergeRequest" repository="camel" branch="master"/>
+  <runner xsi:type="devOps:OperatingSystem" shell="bash" osName="ubuntu-latest"/>
+</devOps:Pipeline>
