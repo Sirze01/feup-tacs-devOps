@@ -1,4 +1,4 @@
-# DevOps Equalizer - Concrete Graphical Syntax and Model to Text
+# DevOps Equalizer - Concrete graphical syntax and model to text
 
 ## Table of contents
 
@@ -24,7 +24,7 @@
 
 This projects aims to model DevOps CI/CD pipelines in an agnostic way, compatible with multiple plaftforms (such as GitHub Actions or Travis CI). The idea is that the user does not need to worry about the concrete syntax of the CI system they intend to deploy their pipelines to, but instead focus on the model of the pipelines themselves; also, they can later switch to a different CI system without having to rewrite their pipelines.
 
-To achieve this, we implemented a graphical syntax to our "DevOps" language with *Sirius*, and a model to text transformation with *Acceleo*.
+To achieve this, we implemented a graphical syntax to our "DevOps" language with [*Sirius*](https://eclipse.dev/sirius/), and a model to text transformation with [*Acceleo*](https://eclipse.dev/acceleo/).
 
 ## Metamodel
 
@@ -39,43 +39,37 @@ A *Pipeline* is composed of a series of *Stage*s, which are executed sequentiall
 A *Pipeline* or a *Task* may contain environment variables, which are then accessible inside its *Command*'s shells.
 
 ## Concrete Graphical Syntax
+A concrete syntax enables the user to describe the specific model representations using a more intuitive input method. As such, a concrete graphical syntax was implemented using [*Sirius*](https://eclipse.dev/sirius/), an Eclipse project that provides a block based editor for EMF models with relatively low effort.
 
-<!-- @sirze -->
+*Sirius* allows the definition of nodes, containers and edges, used to represent the model entities and relationships. Tools can also be defined to provide additional functionality to the editor, such as the ability to create new elements or to edit existing ones, even leveraging other parts of the Eclipse ecosystem such as dialog editors for data input.
 
 ### Pipeline Diagram
+In the following table the graphical elements of the pipeline diagram are described. Element properties are shown in the properties view when the element is selected.
 
-| Pipeline Diagram | Description |
-| ------- | ----------- |
-| TaskNode |  |
-| StageEdge |  |
-| PipelineContainer |  |
-| TriggerNode |  |
-| PipelineRunnerNode |  |
-| StagesContainer |  |
-| ConditionalStageNode |  |
-| PipelineEnvironmentContainer |  |
-| PipelineVariables |  |
-| PipelineSecrets |  |
-| PipelineArtifacts |  |
+| Name | Description | Representation |
+| ------- | ----------- | ----- |
+| Pipeline container | Holds the pipeline name, triggers and runner | ![PipelineContainer](./resources/graphical-syntax/pipeline.png) |
+| Trigger | Representation of the event that triggers the pipeline. Multiple triggers can be defined | ![PipelineTrigger](./resources/graphical-syntax/trigger.png) |
+| Runner | Representation of the environment where the pipeline will run, A single runner can be defined at the pipeline level | ![PipelineRunner](./resources/graphical-syntax/runner.png) |
+| Environment | Holds the environment variables, artifacts and secrets at the Pipeline scope | ![PipelineEnvironmentContainer](./resources/graphical-syntax/environment.png) |
+| Variable \| Artifact \| Secret | Key-value pair for usage in the pipeline | ![PipelineVariable](./resources/graphical-syntax/variable.png) |
+|StageContainer | Defines a set of parallel tasks | ![StageContainer](./resources/graphical-syntax/stageContainer.png) |
+| Task | Task representation inside a stage (double-click opens task model editor) | ![TaskNode](./resources/graphical-syntax/task.png) | 
+| (Stage) Conditional | Represents conditions for the stage to run | ![ConditionalStageNode](./resources/graphical-syntax/stage-conditional.png) |
+| Stage edge | Directed edge between stages representing execution order  | ![StageEdge](./resources/graphical-syntax/stage-edge.png) |
+
 
 ### Task Diagram
+In the following table the graphical elements of the task diagram are described. Element properties are shown in the properties view when the element is selected.
 
-| Task Diagram | Description |
-| ------- | ----------- |
-| RunnerNode |  |
-| RegestryTaskNode |  |
-| CommandNode |  |
-| ImportedTaskNode |  |
-| StepsEdge |  |
-| EnvironmentContainer |  |
-| EnvVariable |  |
-| EnvSecret |  |
-| EnvArtifacts |  |
-| StepContainer |  |
-| BorderedConditionalNode |  |
-| RegistrySub |  |
-| CommandSub |  |
-| ImportedSub |  |
+| Task Diagram | Description | Representation |
+| ------- | ----------- | --- |
+| Runner | Representation of the environment where the pipeline will run, A single runner can be defined at the pipeline level | ![PipelineRunner](./resources/graphical-syntax/task-runner.png) |
+| CommandTask \| RegistryTask \| ImportedTask  | Representation of the action to be executed inside a step. A step can only have a single action. | ![TaskNode](./resources/graphical-syntax/step.png) |
+| Environment |  Holds the environment variables, artifacts and secrets at the Task scope | ![PipelineEnvironmentContainer](./resources/graphical-syntax/task-environment.png) |
+| Variable \| Artifact \| Secret | Key-value pair for usage in the task | ![PipelineVariable](./resources/graphical-syntax/task-variable.png) |
+| (Step) conditional |  Represents conditions for the step to run | ![ConditionalStageNode](./resources/graphical-syntax/task-conditional.png) |
+| Step edge | Directed edge between steps representing execution order  | ![StageEdge](./resources/graphical-syntax/task-edge.png) |
 
 ## Model to Text
 
@@ -211,7 +205,7 @@ We used *Camel*, an open-source chess engine, as a case study. We modelled its t
 
 ### Format, Lint and Test
 
-This action is based on https://github.com/bdmendes/camel/blob/master/.github/workflows/ci.yml. It is a very common task in software repositories, as it checks the format and style of the code and runs unit and integration tests.
+This action is based on the [continuous integration (ci) action](https://github.com/bdmendes/camel/blob/a4b9083abaa0f171d51276e5dce06626c8efecbb/.github/workflows/ci.yml). It is a very common task in software repositories, as it checks the format and style of the code and runs unit and integration tests.
 
 Note that contrary to the original action, we intend each job (in our system, *Task*) to run sequentially, so we encapsulated each job in a stage. In the output text, this is translated to a dependency (needs) between the jobs.
 
@@ -290,7 +284,7 @@ jobs:
 
 ### Gauntlet
 
-This action is based on https://github.com/bdmendes/camel/blob/master/.github/workflows/gauntlet.yml. It is a very niche action that matches a feature branch version against the upstream in a series of blitz and rapid chess games. It does so by calling an orchestration script that runs the games and then writes the results to a file, which is then parsed by the action and commented on the pull request. This way, the user can see the results of the games directly on the pull request and decide whether to merge the feature branch or not (if the engine is stronger than the upstream, it is a good candidate for merging).
+This action is based on the [Gauntlet action](https://github.com/bdmendes/camel/blob/a4b9083abaa0f171d51276e5dce06626c8efecbb/.github/workflows/gauntlet.yml). It is a very niche action that matches a feature branch version against the upstream in a series of blitz and rapid chess games. It does so by calling an orchestration script that runs the games and then writes the results to a file, which is then parsed by the action and commented on the pull request. This way, the user can see the results of the games directly on the pull request and decide whether to merge the feature branch or not (if the engine is stronger than the upstream, it is a good candidate for merging).
 
 We did not model the concept of "concurrency" (that GitHub uses to stop a running version of the pipeline when a new version is pushed) because we do not consider it a core concept of a CI/CD pipeline. The same go for job permissions.
 
