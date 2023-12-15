@@ -52,13 +52,7 @@
           </style>
         </containerMappings>
         <containerMappings name="StagesContainer" domainClass="devOps::Stage">
-          <subNodeMappings name="ConditionalStageNode" semanticCandidatesExpression="feature:eAllContents" domainClass="devOps::Conditional">
-            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:condition" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            </style>
-          </subNodeMappings>
+          <borderedNodeMappings xsi:type="description_1:NodeMappingImport" name="StageConditional" semanticCandidatesExpression="feature:conditional" domainClass="devOps::Conditional" importedMapping="//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@borderedNodeMappings[name='ConditionalNode']"/>
           <subNodeMappings xsi:type="description_1:NodeMappingImport" name="TaskNode" semanticCandidatesExpression="feature:tasks" doubleClickDescription="//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TaskDoubleClick']" domainClass="devOps::Task" importedMapping="//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@nodeMappings[name='TaskNode']"/>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="Stage">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

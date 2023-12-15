@@ -15,9 +15,13 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']"/>
         <target xmi:type="devOps:Task" href="lint.devops#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_v70MIpLOEe6ent5DIIJ2yw" name="new Pipeline diagram" repPath="#_v70MIJLOEe6ent5DIIJ2yw" changeId="1701717461133">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="__HfV8JruEe6bwrfFtpyCfQ" name="new Pipeline diagram" repPath="#__Heu4JruEe6bwrfFtpyCfQ" changeId="1702610012096">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']"/>
         <target xmi:type="devOps:Pipeline" href="pipeline.devops#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_yWIG0JrvEe6bwrfFtpyCfQ" name="Task diagram" repPath="#_yWHfwJrvEe6bwrfFtpyCfQ" changeId="1702610208399">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']"/>
+        <target xmi:type="devOps:Task" href="test.devops#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
@@ -512,244 +516,565 @@
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer"/>
     <target xmi:type="devOps:Task" href="lint.devops#/"/>
   </diagram:DSemanticDiagram>
-  <diagram:DSemanticDiagram uid="_v70MIJLOEe6ent5DIIJ2yw">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_v70zMJLOEe6ent5DIIJ2yw" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_v70zMZLOEe6ent5DIIJ2yw" type="Sirius" element="_v70MIJLOEe6ent5DIIJ2yw" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_v79WEJLOEe6ent5DIIJ2yw" type="2003" element="_v72oYJLOEe6ent5DIIJ2yw">
-          <children xmi:type="notation:Node" xmi:id="_v799IJLOEe6ent5DIIJ2yw" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_v7-kMJLOEe6ent5DIIJ2yw" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_v7_LVZLOEe6ent5DIIJ2yw" type="3010" element="_v73PcZLOEe6ent5DIIJ2yw">
-              <styles xmi:type="notation:FontStyle" xmi:id="_v7_LVpLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_v7_LV5LOEe6ent5DIIJ2yw"/>
+  <diagram:DSemanticDiagram uid="__Heu4JruEe6bwrfFtpyCfQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="__HgkEJruEe6bwrfFtpyCfQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="__HgkEZruEe6bwrfFtpyCfQ" type="Sirius" element="__Heu4JruEe6bwrfFtpyCfQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="__H0tIJruEe6bwrfFtpyCfQ" type="2003" element="__HjnYJruEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="__H1UMJruEe6bwrfFtpyCfQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="__H1UMZruEe6bwrfFtpyCfQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="__H3JY5ruEe6bwrfFtpyCfQ" type="3010" element="__Hk1gJruEe6bwrfFtpyCfQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="__H3JZJruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="__H3JZZruEe6bwrfFtpyCfQ"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_v7_LWJLOEe6ent5DIIJ2yw" type="3010" element="_v732gJLOEe6ent5DIIJ2yw">
-              <styles xmi:type="notation:FontStyle" xmi:id="_v7_LWZLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_v7_LWpLOEe6ent5DIIJ2yw"/>
+            <children xmi:type="notation:Node" xmi:id="__H3JZpruEe6bwrfFtpyCfQ" type="3010" element="__HlckJruEe6bwrfFtpyCfQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="__H3JZ5ruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="__H3JaJruEe6bwrfFtpyCfQ"/>
             </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_v7-kMZLOEe6ent5DIIJ2yw"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_v7-kMpLOEe6ent5DIIJ2yw"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="__H1UMpruEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="__H1UM5ruEe6bwrfFtpyCfQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_v79WEZLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v79WEpLOEe6ent5DIIJ2yw"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__H0tIZruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H0tIpruEe6bwrfFtpyCfQ"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_v7-kM5LOEe6ent5DIIJ2yw" type="2002" element="_v732gpLOEe6ent5DIIJ2yw">
-          <children xmi:type="notation:Node" xmi:id="_v7-kNpLOEe6ent5DIIJ2yw" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_v7-kN5LOEe6ent5DIIJ2yw" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_DXmkhpLREe6ent5DIIJ2yw" type="3007" element="_DXl9cJLREe6ent5DIIJ2yw">
-              <children xmi:type="notation:Node" xmi:id="_DXmkiZLREe6ent5DIIJ2yw" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_DXmkipLREe6ent5DIIJ2yw" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="__H1UNJruEe6bwrfFtpyCfQ" type="2002" element="__HnRwJruEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="__H1UN5ruEe6bwrfFtpyCfQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="__H1UOJruEe6bwrfFtpyCfQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="__H3wcJruEe6bwrfFtpyCfQ" type="3007" element="__HpG8ZruEe6bwrfFtpyCfQ">
+              <children xmi:type="notation:Node" xmi:id="__H3wc5ruEe6bwrfFtpyCfQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__H3wdJruEe6bwrfFtpyCfQ" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_DXmki5LREe6ent5DIIJ2yw" type="3003" element="_DXl9cZLREe6ent5DIIJ2yw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_DXmkjJLREe6ent5DIIJ2yw" fontName="Noto Sans"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DXmkjZLREe6ent5DIIJ2yw"/>
+              <children xmi:type="notation:Node" xmi:id="__H3wdZruEe6bwrfFtpyCfQ" type="3003" element="__HpuAJruEe6bwrfFtpyCfQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__H3wdpruEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H3wd5ruEe6bwrfFtpyCfQ"/>
               </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_DXmkh5LREe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DXmkiJLREe6ent5DIIJ2yw" x="30" y="29" width="30" height="30"/>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__H3wcZruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H3wcpruEe6bwrfFtpyCfQ" x="25" y="29" width="91" height="30"/>
             </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_v7-kOJLOEe6ent5DIIJ2yw"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_v7-kOZLOEe6ent5DIIJ2yw"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="__H17QJruEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="__H17QZruEe6bwrfFtpyCfQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_v7-kNJLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v7-kNZLOEe6ent5DIIJ2yw" x="510" y="260"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__H1UNZruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H1UNpruEe6bwrfFtpyCfQ" x="510" y="260"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_v7_LQJLOEe6ent5DIIJ2yw" type="2002" element="_v732hZLOEe6ent5DIIJ2yw">
-          <children xmi:type="notation:Node" xmi:id="_v7_LQ5LOEe6ent5DIIJ2yw" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_v7_LRJLOEe6ent5DIIJ2yw" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_v7_yWJLOEe6ent5DIIJ2yw" type="3007" element="_v74dlpLOEe6ent5DIIJ2yw">
-              <children xmi:type="notation:Node" xmi:id="_v7_yW5LOEe6ent5DIIJ2yw" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_v7_yXJLOEe6ent5DIIJ2yw" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="__H17QpruEe6bwrfFtpyCfQ" type="2002" element="__Hn40pruEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="__H17RZruEe6bwrfFtpyCfQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="__H17RpruEe6bwrfFtpyCfQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="__H3weJruEe6bwrfFtpyCfQ" type="3007" element="__HqVEJruEe6bwrfFtpyCfQ">
+              <children xmi:type="notation:Node" xmi:id="__H4XgJruEe6bwrfFtpyCfQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__H4XgZruEe6bwrfFtpyCfQ" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_v7_yXZLOEe6ent5DIIJ2yw" type="3003" element="_v74dl5LOEe6ent5DIIJ2yw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_v7_yXpLOEe6ent5DIIJ2yw" fontName="Noto Sans"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v7_yX5LOEe6ent5DIIJ2yw"/>
+              <children xmi:type="notation:Node" xmi:id="__H4Xh5ruEe6bwrfFtpyCfQ" type="3003" element="__HqVEZruEe6bwrfFtpyCfQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__H4XiJruEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H4XiZruEe6bwrfFtpyCfQ"/>
               </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_v7_yWZLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v7_yWpLOEe6ent5DIIJ2yw" x="30" y="29" width="30" height="30"/>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__H3weZruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H3wepruEe6bwrfFtpyCfQ" x="40" y="29" width="61" height="30"/>
             </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_v7_LRZLOEe6ent5DIIJ2yw"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_v7_LRpLOEe6ent5DIIJ2yw"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="__H17R5ruEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="__H17SJruEe6bwrfFtpyCfQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_v7_LQZLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v7_LQpLOEe6ent5DIIJ2yw" x="510" y="130"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__H17Q5ruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H17RJruEe6bwrfFtpyCfQ" x="510" y="130"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_v7_LR5LOEe6ent5DIIJ2yw" type="2002" element="_v74dkJLOEe6ent5DIIJ2yw">
-          <children xmi:type="notation:Node" xmi:id="_v7_LSpLOEe6ent5DIIJ2yw" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_v7_LS5LOEe6ent5DIIJ2yw" type="7001">
-            <children xmi:type="notation:Node" xmi:id="_v8AZYJLOEe6ent5DIIJ2yw" type="3007" element="_v75EoZLOEe6ent5DIIJ2yw">
-              <children xmi:type="notation:Node" xmi:id="_v8AZY5LOEe6ent5DIIJ2yw" type="5003">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_v8AZZJLOEe6ent5DIIJ2yw" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="__H17SZruEe6bwrfFtpyCfQ" type="2002" element="__Hof4pruEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="__H2iUJruEe6bwrfFtpyCfQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="__H2iUZruEe6bwrfFtpyCfQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="__ICIgJruEe6bwrfFtpyCfQ" type="3007" element="__HsKQZruEe6bwrfFtpyCfQ">
+              <children xmi:type="notation:Node" xmi:id="__ICIg5ruEe6bwrfFtpyCfQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__ICIhJruEe6bwrfFtpyCfQ" y="5"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_v8AZZZLOEe6ent5DIIJ2yw" type="3003" element="_v75EopLOEe6ent5DIIJ2yw">
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_v8AZZpLOEe6ent5DIIJ2yw" fontName="Noto Sans"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8AZZ5LOEe6ent5DIIJ2yw"/>
+              <children xmi:type="notation:Node" xmi:id="__ICvkJruEe6bwrfFtpyCfQ" type="3003" element="__HsxUJruEe6bwrfFtpyCfQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__ICvkZruEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ICvkpruEe6bwrfFtpyCfQ"/>
               </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_v8AZYZLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8AZYpLOEe6ent5DIIJ2yw" x="30" y="29" width="30" height="30"/>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__ICIgZruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ICIgpruEe6bwrfFtpyCfQ" x="30" y="29" width="81" height="30"/>
             </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_v7_LTJLOEe6ent5DIIJ2yw"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_v7_LTZLOEe6ent5DIIJ2yw"/>
+            <styles xmi:type="notation:SortingStyle" xmi:id="__H2iUpruEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="__H2iU5ruEe6bwrfFtpyCfQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_v7_LSJLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v7_LSZLOEe6ent5DIIJ2yw" x="510"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_v7_LTpLOEe6ent5DIIJ2yw" type="2003" element="_v75EpJLOEe6ent5DIIJ2yw">
-          <children xmi:type="notation:Node" xmi:id="_v7_LUZLOEe6ent5DIIJ2yw" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_v7_LUpLOEe6ent5DIIJ2yw" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_v8AZaJLOEe6ent5DIIJ2yw" type="3010" element="_v75rsZLOEe6ent5DIIJ2yw">
-              <styles xmi:type="notation:FontStyle" xmi:id="_v8AZaZLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_v8AZapLOEe6ent5DIIJ2yw"/>
+          <children xmi:type="notation:Node" xmi:id="__H4-k5ruEe6bwrfFtpyCfQ" type="3012" element="__HrjMJruEe6bwrfFtpyCfQ">
+            <children xmi:type="notation:Node" xmi:id="__H4-lpruEe6bwrfFtpyCfQ" type="5010">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="__H4-l5ruEe6bwrfFtpyCfQ" y="5"/>
             </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_v7_LU5LOEe6ent5DIIJ2yw"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_v7_LVJLOEe6ent5DIIJ2yw"/>
+            <children xmi:type="notation:Node" xmi:id="__ICvk5ruEe6bwrfFtpyCfQ" type="3003" element="__HrjMZruEe6bwrfFtpyCfQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__ICvlJruEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ICvlZruEe6bwrfFtpyCfQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__H4-lJruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H4-lZruEe6bwrfFtpyCfQ" x="-160" width="168" height="30"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_v7_LT5LOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v7_LUJLOEe6ent5DIIJ2yw" x="285" y="4"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__H17SpruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H17S5ruEe6bwrfFtpyCfQ" x="510"/>
         </children>
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_v70zMpLOEe6ent5DIIJ2yw"/>
-        <edges xmi:type="notation:Edge" xmi:id="_v8BAcJLOEe6ent5DIIJ2yw" type="4001" element="_v7650JLOEe6ent5DIIJ2yw" source="_v7-kM5LOEe6ent5DIIJ2yw" target="_v7_LQJLOEe6ent5DIIJ2yw">
-          <children xmi:type="notation:Node" xmi:id="_v8BngJLOEe6ent5DIIJ2yw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8BngZLOEe6ent5DIIJ2yw" y="-10"/>
+        <children xmi:type="notation:Node" xmi:id="__H2iVJruEe6bwrfFtpyCfQ" type="2003" element="__HtYYJruEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="__H2iV5ruEe6bwrfFtpyCfQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="__H3JYJruEe6bwrfFtpyCfQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="__ICvlpruEe6bwrfFtpyCfQ" type="3010" element="__Ht_cJruEe6bwrfFtpyCfQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="__ICvl5ruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="__ICvmJruEe6bwrfFtpyCfQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__IDWoJruEe6bwrfFtpyCfQ" type="3010" element="__HumgJruEe6bwrfFtpyCfQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="__IDWoZruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="__IDWopruEe6bwrfFtpyCfQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="__H3JYZruEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="__H3JYpruEe6bwrfFtpyCfQ"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_v8BngpLOEe6ent5DIIJ2yw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8Bng5LOEe6ent5DIIJ2yw" y="10"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__H2iVZruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__H2iVpruEe6bwrfFtpyCfQ" x="805" y="-155"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="__HgkEpruEe6bwrfFtpyCfQ"/>
+        <edges xmi:type="notation:Edge" xmi:id="__IFy4JruEe6bwrfFtpyCfQ" type="4001" element="__HwbsJruEe6bwrfFtpyCfQ" source="__H1UNJruEe6bwrfFtpyCfQ" target="__H17QpruEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="__IHBAJruEe6bwrfFtpyCfQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__IHBAZruEe6bwrfFtpyCfQ" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_v8BnhJLOEe6ent5DIIJ2yw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8BnhZLOEe6ent5DIIJ2yw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="__IIPIJruEe6bwrfFtpyCfQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__IIPIZruEe6bwrfFtpyCfQ" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_v8BAcZLOEe6ent5DIIJ2yw"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_v8BAcpLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_v8BAc5LOEe6ent5DIIJ2yw" points="[-1, 0, -1, 60]$[-1, -60, -1, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_v8COkJLOEe6ent5DIIJ2yw" id="(0.5067567567567568,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_v8COkZLOEe6ent5DIIJ2yw" id="(0.5067567567567568,1.0)"/>
+          <children xmi:type="notation:Node" xmi:id="__IIPIpruEe6bwrfFtpyCfQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__IIPI5ruEe6bwrfFtpyCfQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="__IFy4ZruEe6bwrfFtpyCfQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="__IFy4pruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__IFy45ruEe6bwrfFtpyCfQ" points="[-1, 0, -1, 60]$[-1, -60, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__IQyAJruEe6bwrfFtpyCfQ" id="(0.5067567567567568,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__IRZEJruEe6bwrfFtpyCfQ" id="(0.5067567567567568,1.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_v8COkpLOEe6ent5DIIJ2yw" type="4001" element="_v77g5JLOEe6ent5DIIJ2yw" source="_v7_LQJLOEe6ent5DIIJ2yw" target="_v7_LR5LOEe6ent5DIIJ2yw">
-          <children xmi:type="notation:Node" xmi:id="_v8COlpLOEe6ent5DIIJ2yw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8COl5LOEe6ent5DIIJ2yw" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="__IRZEZruEe6bwrfFtpyCfQ" type="4001" element="__HxCwpruEe6bwrfFtpyCfQ" source="__H17QpruEe6bwrfFtpyCfQ" target="__H17SZruEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="__ISAIJruEe6bwrfFtpyCfQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ISAIZruEe6bwrfFtpyCfQ" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_v8COmJLOEe6ent5DIIJ2yw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8COmZLOEe6ent5DIIJ2yw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="__ISAIpruEe6bwrfFtpyCfQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ISAI5ruEe6bwrfFtpyCfQ" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_v8COmpLOEe6ent5DIIJ2yw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v8COm5LOEe6ent5DIIJ2yw" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="__ISAJJruEe6bwrfFtpyCfQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ISAJZruEe6bwrfFtpyCfQ" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_v8COk5LOEe6ent5DIIJ2yw"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_v8COlJLOEe6ent5DIIJ2yw" fontName="Noto Sans" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_v8COlZLOEe6ent5DIIJ2yw" points="[-1, 0, -1, 60]$[-1, -60, -1, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_v8COnJLOEe6ent5DIIJ2yw" id="(0.5067567567567568,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_v8COnZLOEe6ent5DIIJ2yw" id="(0.5067567567567568,1.0)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="__IRZEpruEe6bwrfFtpyCfQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="__IRZE5ruEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__IRZFJruEe6bwrfFtpyCfQ" points="[-1, 0, -1, 60]$[-1, -60, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__ISnMJruEe6bwrfFtpyCfQ" id="(0.5067567567567568,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__ISnMZruEe6bwrfFtpyCfQ" id="(0.5067567567567568,1.0)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_v78H8JLOEe6ent5DIIJ2yw" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_v78H8ZLOEe6ent5DIIJ2yw"/>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="__HyQ4JruEe6bwrfFtpyCfQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="__HyQ4ZruEe6bwrfFtpyCfQ"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_v72oYJLOEe6ent5DIIJ2yw" name="Camel actions">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="__HjnYJruEe6bwrfFtpyCfQ" name="ci">
       <target xmi:type="devOps:Pipeline" href="pipeline.devops#/"/>
       <semanticElements xmi:type="devOps:Pipeline" href="pipeline.devops#/"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_v72oYZLOEe6ent5DIIJ2yw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__HjnYZruEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_v73PcZLOEe6ent5DIIJ2yw" name="Trigger: MergeRequest">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="__Hk1gJruEe6bwrfFtpyCfQ" name="Trigger: MergeRequest">
         <target xmi:type="devOps:MergeRequest" href="pipeline.devops#//@triggers.0"/>
         <semanticElements xmi:type="devOps:MergeRequest" href="pipeline.devops#//@triggers.0"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_v73PcpLOEe6ent5DIIJ2yw" labelSize="12" labelAlignment="LEFT" labelPosition="node" color="204,242,166">
+        <ownedStyle xmi:type="diagram:Square" uid="__Hk1gZruEe6bwrfFtpyCfQ" labelSize="12" labelAlignment="LEFT" labelPosition="node" color="204,242,166">
           <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='TriggerNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='TriggerNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_v732gJLOEe6ent5DIIJ2yw" name="Runner: OperatingSystem">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="__HlckJruEe6bwrfFtpyCfQ" name="Runner: OperatingSystem">
         <target xmi:type="devOps:OperatingSystem" href="pipeline.devops#//@runner"/>
         <semanticElements xmi:type="devOps:OperatingSystem" href="pipeline.devops#//@runner"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_v732gZLOEe6ent5DIIJ2yw" labelSize="12" labelAlignment="LEFT" labelPosition="node" width="30" height="5">
+        <ownedStyle xmi:type="diagram:Square" uid="__HmqsJruEe6bwrfFtpyCfQ" labelSize="12" labelAlignment="LEFT" labelPosition="node" width="30" height="5">
           <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RunnerNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineContainer']/@subNodeMappings[name='PipelineRunnerNode']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_v732gpLOEe6ent5DIIJ2yw" name="Stage" outgoingEdges="_v7650JLOEe6ent5DIIJ2yw">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__HnRwJruEe6bwrfFtpyCfQ" name="Stage" outgoingEdges="__HwbsJruEe6bwrfFtpyCfQ">
       <target xmi:type="devOps:Stage" href="pipeline.devops#//@stages.0"/>
       <semanticElements xmi:type="devOps:Stage" href="pipeline.devops#//@stages.0"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_v732g5LOEe6ent5DIIJ2yw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__Hn40JruEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_DXl9cJLREe6ent5DIIJ2yw" name="format" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="__HpG8ZruEe6bwrfFtpyCfQ" name="format" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="devOps:Task" href="format.devops#/"/>
         <semanticElements xmi:type="devOps:Task" href="format.devops#/"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_DXl9cZLREe6ent5DIIJ2yw" labelSize="12" labelPosition="node">
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="__HpuAJruEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node">
           <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@nodeMappings[name='TaskNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@subNodeMappings[name='TaskNode']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_v732hZLOEe6ent5DIIJ2yw" name="Stage" outgoingEdges="_v77g5JLOEe6ent5DIIJ2yw" incomingEdges="_v7650JLOEe6ent5DIIJ2yw">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__Hn40pruEe6bwrfFtpyCfQ" name="Stage" outgoingEdges="__HxCwpruEe6bwrfFtpyCfQ" incomingEdges="__HwbsJruEe6bwrfFtpyCfQ">
       <target xmi:type="devOps:Stage" href="pipeline.devops#//@stages.1"/>
       <semanticElements xmi:type="devOps:Stage" href="pipeline.devops#//@stages.1"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_v732hpLOEe6ent5DIIJ2yw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__Hof4JruEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_v74dlpLOEe6ent5DIIJ2yw" name="lint" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="__HqVEJruEe6bwrfFtpyCfQ" name="lint" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="devOps:Task" href="lint.devops#/"/>
         <semanticElements xmi:type="devOps:Task" href="lint.devops#/"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_v74dl5LOEe6ent5DIIJ2yw" labelSize="12" labelPosition="node">
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="__HqVEZruEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node">
           <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@nodeMappings[name='TaskNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@subNodeMappings[name='TaskNode']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_v74dkJLOEe6ent5DIIJ2yw" name="Stage" incomingEdges="_v77g5JLOEe6ent5DIIJ2yw">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="__Hof4pruEe6bwrfFtpyCfQ" name="Stage" incomingEdges="__HxCwpruEe6bwrfFtpyCfQ">
       <target xmi:type="devOps:Stage" href="pipeline.devops#//@stages.2"/>
       <semanticElements xmi:type="devOps:Stage" href="pipeline.devops#//@stages.2"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_v74dkZLOEe6ent5DIIJ2yw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="__HrjMJruEe6bwrfFtpyCfQ" name="branch == master" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:Conditional" href="pipeline.devops#//@stages.2/@conditional"/>
+        <semanticElements xmi:type="devOps:Conditional" href="pipeline.devops#//@stages.2/@conditional"/>
+        <ownedStyle xmi:type="diagram:Square" uid="__HrjMZruEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@borderedNodeMappings[name='ConditionalNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@borderedNodeMappings[name='StageConditional']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__Hof45ruEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_v75EoZLOEe6ent5DIIJ2yw" name="test" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="__HsKQZruEe6bwrfFtpyCfQ" name="test" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="devOps:Task" href="test.devops#/"/>
         <semanticElements xmi:type="devOps:Task" href="test.devops#/"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_v75EopLOEe6ent5DIIJ2yw" labelSize="12" labelPosition="node">
+        <ownedStyle xmi:type="diagram:Square" uid="__HsxUJruEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node">
           <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@nodeMappings[name='TaskNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='StagesContainer']/@subNodeMappings[name='TaskNode']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_v75EpJLOEe6ent5DIIJ2yw" name="Environment">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="__HtYYJruEe6bwrfFtpyCfQ" name="Environment">
       <target xmi:type="devOps:Environment" href="pipeline.devops#//@environment"/>
       <semanticElements xmi:type="devOps:Environment" href="pipeline.devops#//@environment"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_v75EpZLOEe6ent5DIIJ2yw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,233,79">
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__HtYYZruEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,233,79">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_v75rsZLOEe6ent5DIIJ2yw" name="CARGO_TERM_COLOR">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="__Ht_cJruEe6bwrfFtpyCfQ" name="CARGO_TERM_COLOR">
         <target xmi:type="devOps:StringToStringMapEntry" href="pipeline.devops#//@environment/@variables.0"/>
         <semanticElements xmi:type="devOps:StringToStringMapEntry" href="pipeline.devops#//@environment/@variables.0"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_v75rspLOEe6ent5DIIJ2yw" labelSize="12" labelPosition="node" color="194,239,255">
+        <ownedStyle xmi:type="diagram:Square" uid="__Ht_cZruEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node" color="194,239,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@subNodeMappings[name='EnvVariable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']/@subNodeMappings[name='PipelineVariables']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="__HumgJruEe6bwrfFtpyCfQ" name="FORMAT">
+        <target xmi:type="devOps:StringToStringMapEntry" href="pipeline.devops#//@environment/@variables.1"/>
+        <semanticElements xmi:type="devOps:StringToStringMapEntry" href="pipeline.devops#//@environment/@variables.1"/>
+        <ownedStyle xmi:type="diagram:Square" uid="__HumgZruEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node" color="194,239,255">
           <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@subNodeMappings[name='EnvVariable']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@containerMappings[name='PipelineEnvironmentContainer']/@subNodeMappings[name='PipelineVariables']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_v7650JLOEe6ent5DIIJ2yw" sourceNode="_v732gpLOEe6ent5DIIJ2yw" targetNode="_v732hZLOEe6ent5DIIJ2yw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="__HwbsJruEe6bwrfFtpyCfQ" sourceNode="__HnRwJruEe6bwrfFtpyCfQ" targetNode="__Hn40pruEe6bwrfFtpyCfQ">
       <target xmi:type="devOps:Stage" href="pipeline.devops#//@stages.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_v77g4JLOEe6ent5DIIJ2yw" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="__HwbsZruEe6bwrfFtpyCfQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@edgeMappings[name='StageEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_v77g4ZLOEe6ent5DIIJ2yw" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="__HwbspruEe6bwrfFtpyCfQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@edgeMappings[name='StageEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_v77g5JLOEe6ent5DIIJ2yw" sourceNode="_v732hZLOEe6ent5DIIJ2yw" targetNode="_v74dkJLOEe6ent5DIIJ2yw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="__HxCwpruEe6bwrfFtpyCfQ" sourceNode="__Hn40pruEe6bwrfFtpyCfQ" targetNode="__Hof4pruEe6bwrfFtpyCfQ">
       <target xmi:type="devOps:Stage" href="pipeline.devops#//@stages.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_v77g5ZLOEe6ent5DIIJ2yw" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="__Hxp0JruEe6bwrfFtpyCfQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@edgeMappings[name='StageEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_v77g5pLOEe6ent5DIIJ2yw" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="__Hxp0ZruEe6bwrfFtpyCfQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer/@edgeMappings[name='StageEdge']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_v70MIZLOEe6ent5DIIJ2yw"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="__Heu4ZruEe6bwrfFtpyCfQ"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Pipeline%20diagram']/@defaultLayer"/>
     <target xmi:type="devOps:Pipeline" href="pipeline.devops#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_yWHfwJrvEe6bwrfFtpyCfQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_yWMYQJrvEe6bwrfFtpyCfQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_yWMYQZrvEe6bwrfFtpyCfQ" type="Sirius" element="_yWHfwJrvEe6bwrfFtpyCfQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_yWR30JrvEe6bwrfFtpyCfQ" type="2002" element="_yWONcJrvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_yWR305rvEe6bwrfFtpyCfQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_yWR31JrvEe6bwrfFtpyCfQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_yWSe8ZrvEe6bwrfFtpyCfQ" type="3007" element="_yWPbkJrvEe6bwrfFtpyCfQ">
+              <children xmi:type="notation:Node" xmi:id="_yWSe9JrvEe6bwrfFtpyCfQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_yWSe9ZrvEe6bwrfFtpyCfQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_yWTF8JrvEe6bwrfFtpyCfQ" type="3003" element="_yWPbkZrvEe6bwrfFtpyCfQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_yWTF8ZrvEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWTF8prvEe6bwrfFtpyCfQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_yWSe8prvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWSe85rvEe6bwrfFtpyCfQ" x="30" y="29" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_yWR31ZrvEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_yWR31prvEe6bwrfFtpyCfQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yWR30ZrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWR30prvEe6bwrfFtpyCfQ" y="390"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yWR315rvEe6bwrfFtpyCfQ" type="2002" element="_yWONc5rvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_yWR32prvEe6bwrfFtpyCfQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_yWSe4JrvEe6bwrfFtpyCfQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_yWTF85rvEe6bwrfFtpyCfQ" type="3007" element="_yWPbk5rvEe6bwrfFtpyCfQ">
+              <children xmi:type="notation:Node" xmi:id="_yWTF9prvEe6bwrfFtpyCfQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_yWTF95rvEe6bwrfFtpyCfQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_yWTF-JrvEe6bwrfFtpyCfQ" type="3003" element="_yWPblJrvEe6bwrfFtpyCfQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_yWTF-ZrvEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWTF-prvEe6bwrfFtpyCfQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_yWTF9JrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWTF9ZrvEe6bwrfFtpyCfQ" x="30" y="29" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_yWSe4ZrvEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_yWSe4prvEe6bwrfFtpyCfQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yWR32JrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWR32ZrvEe6bwrfFtpyCfQ" y="260"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yWSe45rvEe6bwrfFtpyCfQ" type="2002" element="_yWO0gZrvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_yWSe5prvEe6bwrfFtpyCfQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_yWSe55rvEe6bwrfFtpyCfQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_yWTtAJrvEe6bwrfFtpyCfQ" type="3007" element="_yWQCoZrvEe6bwrfFtpyCfQ">
+              <children xmi:type="notation:Node" xmi:id="_yWTtA5rvEe6bwrfFtpyCfQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_yWTtBJrvEe6bwrfFtpyCfQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_yWTtBZrvEe6bwrfFtpyCfQ" type="3003" element="_yWQCoprvEe6bwrfFtpyCfQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_yWTtBprvEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWTtB5rvEe6bwrfFtpyCfQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_yWTtAZrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWTtAprvEe6bwrfFtpyCfQ" x="30" y="29" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_yWSe6JrvEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_yWSe6ZrvEe6bwrfFtpyCfQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yWSe5JrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWSe5ZrvEe6bwrfFtpyCfQ" y="130"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yWSe6prvEe6bwrfFtpyCfQ" type="2002" element="_yWO0hJrvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_yWSe7ZrvEe6bwrfFtpyCfQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_yWSe7prvEe6bwrfFtpyCfQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_yWTtCJrvEe6bwrfFtpyCfQ" type="3007" element="_yWQCpJrvEe6bwrfFtpyCfQ">
+              <children xmi:type="notation:Node" xmi:id="_yWTtC5rvEe6bwrfFtpyCfQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_yWTtDJrvEe6bwrfFtpyCfQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_yWUUEJrvEe6bwrfFtpyCfQ" type="3003" element="_yWQCpZrvEe6bwrfFtpyCfQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_yWUUEZrvEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWUUEprvEe6bwrfFtpyCfQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_yWTtCZrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWTtCprvEe6bwrfFtpyCfQ" x="30" y="29" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_yWSe75rvEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_yWSe8JrvEe6bwrfFtpyCfQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yWSe65rvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWSe7JrvEe6bwrfFtpyCfQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_4oFNEJrvEe6bwrfFtpyCfQ" type="2001" element="_4n3KoJrvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_4oFNE5rvEe6bwrfFtpyCfQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_4oFNFJrvEe6bwrfFtpyCfQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4oF0IJrvEe6bwrfFtpyCfQ" type="3003" element="_4n3KoZrvEe6bwrfFtpyCfQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_4oF0IZrvEe6bwrfFtpyCfQ" fontName="Noto Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4oF0IprvEe6bwrfFtpyCfQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_4oFNEZrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4oFNEprvEe6bwrfFtpyCfQ" x="300" y="40" width="300" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_7MBwgprvEe6bwrfFtpyCfQ" type="2003" element="_7L0VIJrvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_7MCXkJrvEe6bwrfFtpyCfQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_7MCXkZrvEe6bwrfFtpyCfQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_-_2ncJrvEe6bwrfFtpyCfQ" type="3010" element="_-_zkIprvEe6bwrfFtpyCfQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_-_2ncZrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_-_2ncprvEe6bwrfFtpyCfQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_7MCXkprvEe6bwrfFtpyCfQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_7MCXk5rvEe6bwrfFtpyCfQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_7MBwg5rvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7MBwhJrvEe6bwrfFtpyCfQ" x="310" y="145" width="133" height="58"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_yWMYQprvEe6bwrfFtpyCfQ"/>
+        <edges xmi:type="notation:Edge" xmi:id="_yWUUE5rvEe6bwrfFtpyCfQ" type="4001" element="_yWQpsJrvEe6bwrfFtpyCfQ" source="_yWR30JrvEe6bwrfFtpyCfQ" target="_yWR315rvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_yWUUF5rvEe6bwrfFtpyCfQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWUUGJrvEe6bwrfFtpyCfQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yWUUGZrvEe6bwrfFtpyCfQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWUUGprvEe6bwrfFtpyCfQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yWUUG5rvEe6bwrfFtpyCfQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWUUHJrvEe6bwrfFtpyCfQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_yWUUFJrvEe6bwrfFtpyCfQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_yWUUFZrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yWUUFprvEe6bwrfFtpyCfQ" points="[-1, 0, -1, 60]$[-1, -60, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yWViMJrvEe6bwrfFtpyCfQ" id="(0.5067567567567568,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yWViMZrvEe6bwrfFtpyCfQ" id="(0.5067567567567568,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_yWViMprvEe6bwrfFtpyCfQ" type="4001" element="_yWQptZrvEe6bwrfFtpyCfQ" source="_yWR315rvEe6bwrfFtpyCfQ" target="_yWSe45rvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_yWViNprvEe6bwrfFtpyCfQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWViN5rvEe6bwrfFtpyCfQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yWViOJrvEe6bwrfFtpyCfQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWViOZrvEe6bwrfFtpyCfQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yWViOprvEe6bwrfFtpyCfQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWViO5rvEe6bwrfFtpyCfQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_yWViM5rvEe6bwrfFtpyCfQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_yWViNJrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yWViNZrvEe6bwrfFtpyCfQ" points="[-1, 0, -1, 60]$[-1, -60, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yWWJQJrvEe6bwrfFtpyCfQ" id="(0.5067567567567568,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yWWJQZrvEe6bwrfFtpyCfQ" id="(0.5067567567567568,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_yWWJQprvEe6bwrfFtpyCfQ" type="4001" element="_yWRQwJrvEe6bwrfFtpyCfQ" source="_yWSe45rvEe6bwrfFtpyCfQ" target="_yWSe6prvEe6bwrfFtpyCfQ">
+          <children xmi:type="notation:Node" xmi:id="_yWWJRprvEe6bwrfFtpyCfQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWWJR5rvEe6bwrfFtpyCfQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yWWJSJrvEe6bwrfFtpyCfQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWWJSZrvEe6bwrfFtpyCfQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yWWJSprvEe6bwrfFtpyCfQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yWWJS5rvEe6bwrfFtpyCfQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_yWWJQ5rvEe6bwrfFtpyCfQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_yWWJRJrvEe6bwrfFtpyCfQ" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yWWJRZrvEe6bwrfFtpyCfQ" points="[-1, 0, -1, 60]$[-1, -60, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yWWwUJrvEe6bwrfFtpyCfQ" id="(0.5067567567567568,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yWWwUZrvEe6bwrfFtpyCfQ" id="(0.5067567567567568,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_yWRQxZrvEe6bwrfFtpyCfQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_yWRQxprvEe6bwrfFtpyCfQ"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_yWONcJrvEe6bwrfFtpyCfQ" name="Step" outgoingEdges="_yWQpsJrvEe6bwrfFtpyCfQ">
+      <target xmi:type="devOps:RegistryTask" href="test.devops#//@steps.0"/>
+      <semanticElements xmi:type="devOps:RegistryTask" href="test.devops#//@steps.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_yWONcZrvEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_yWPbkJrvEe6bwrfFtpyCfQ" name="actions/checkout@v3" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:RegistryTask" href="test.devops#//@steps.0"/>
+        <semanticElements xmi:type="devOps:RegistryTask" href="test.devops#//@steps.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_yWPbkZrvEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RegistryTaskNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='RegistrySub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_yWONc5rvEe6bwrfFtpyCfQ" name="Step" outgoingEdges="_yWQptZrvEe6bwrfFtpyCfQ" incomingEdges="_yWQpsJrvEe6bwrfFtpyCfQ">
+      <target xmi:type="devOps:RegistryTask" href="test.devops#//@steps.1"/>
+      <semanticElements xmi:type="devOps:RegistryTask" href="test.devops#//@steps.1"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_yWONdJrvEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_yWPbk5rvEe6bwrfFtpyCfQ" name="taiki-e/install-action@cargo-llvm-cov" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:RegistryTask" href="test.devops#//@steps.1"/>
+        <semanticElements xmi:type="devOps:RegistryTask" href="test.devops#//@steps.1"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_yWPblJrvEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RegistryTaskNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='RegistrySub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_yWO0gZrvEe6bwrfFtpyCfQ" name="Step" outgoingEdges="_yWRQwJrvEe6bwrfFtpyCfQ" incomingEdges="_yWQptZrvEe6bwrfFtpyCfQ">
+      <target xmi:type="devOps:Command" href="test.devops#//@steps.2"/>
+      <semanticElements xmi:type="devOps:Command" href="test.devops#//@steps.2"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_yWO0gprvEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_yWQCoZrvEe6bwrfFtpyCfQ" name="cargo llvm-cov --all-features --workspace --codecov --output-path codecov.json" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:Command" href="test.devops#//@steps.2"/>
+        <semanticElements xmi:type="devOps:Command" href="test.devops#//@steps.2"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_yWQCoprvEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='CommandNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='CommandSub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_yWO0hJrvEe6bwrfFtpyCfQ" name="Step" incomingEdges="_yWRQwJrvEe6bwrfFtpyCfQ">
+      <target xmi:type="devOps:RegistryTask" href="test.devops#//@steps.3"/>
+      <semanticElements xmi:type="devOps:RegistryTask" href="test.devops#//@steps.3"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_yWO0hZrvEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_yWQCpJrvEe6bwrfFtpyCfQ" name="codecov/codecov-action@v3" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="devOps:RegistryTask" href="test.devops#//@steps.3"/>
+        <semanticElements xmi:type="devOps:RegistryTask" href="test.devops#//@steps.3"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_yWQCpZrvEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RegistryTaskNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='StepContainer']/@subNodeMappings[name='RegistrySub']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_yWQpsJrvEe6bwrfFtpyCfQ" sourceNode="_yWONcJrvEe6bwrfFtpyCfQ" targetNode="_yWONc5rvEe6bwrfFtpyCfQ">
+      <target xmi:type="devOps:RegistryTask" href="test.devops#//@steps.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_yWQpsZrvEe6bwrfFtpyCfQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_yWQpsprvEe6bwrfFtpyCfQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_yWQptZrvEe6bwrfFtpyCfQ" sourceNode="_yWONc5rvEe6bwrfFtpyCfQ" targetNode="_yWO0gZrvEe6bwrfFtpyCfQ">
+      <target xmi:type="devOps:RegistryTask" href="test.devops#//@steps.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_yWQptprvEe6bwrfFtpyCfQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_yWQpt5rvEe6bwrfFtpyCfQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_yWRQwJrvEe6bwrfFtpyCfQ" sourceNode="_yWO0gZrvEe6bwrfFtpyCfQ" targetNode="_yWO0hJrvEe6bwrfFtpyCfQ">
+      <target xmi:type="devOps:Command" href="test.devops#//@steps.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_yWRQwZrvEe6bwrfFtpyCfQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_yWRQwprvEe6bwrfFtpyCfQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@edgeMappings[name='StepsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_4n3KoJrvEe6bwrfFtpyCfQ" name="Runner: OperatingSystem" width="30" height="5" resizeKind="NSEW">
+      <target xmi:type="devOps:OperatingSystem" href="test.devops#//@runner"/>
+      <semanticElements xmi:type="devOps:OperatingSystem" href="test.devops#//@runner"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_4n3KoZrvEe6bwrfFtpyCfQ" labelSize="12" labelAlignment="LEFT" labelPosition="node" width="30" height="5">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RunnerNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@nodeMappings[name='RunnerNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_7L0VIJrvEe6bwrfFtpyCfQ" name="Environment">
+      <target xmi:type="devOps:Environment" href="test.devops#//@environment"/>
+      <semanticElements xmi:type="devOps:Environment" href="test.devops#//@environment"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_7L08MJrvEe6bwrfFtpyCfQ" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_-_zkIprvEe6bwrfFtpyCfQ" name="USER">
+        <target xmi:type="devOps:StringToStringMapEntry" href="test.devops#//@environment/@variables.0"/>
+        <semanticElements xmi:type="devOps:StringToStringMapEntry" href="test.devops#//@environment/@variables.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_-_0LMJrvEe6bwrfFtpyCfQ" labelSize="12" labelPosition="node" color="194,239,255">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@subNodeMappings[name='EnvVariable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer/@containerMappings[name='EnvironmentContainer']/@subNodeMappings[name='EnvVariable']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_yWHfwZrvEe6bwrfFtpyCfQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/devOps.design/description/devOps.odesign#//@ownedViewpoints[name='devOps']/@ownedRepresentations[name='Task%20diagram']/@defaultLayer"/>
+    <target xmi:type="devOps:Task" href="test.devops#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>
