@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devOps:Task xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:devOps="http://www.example.org/examples/devops.ecore" name="gauntlet">
+  <steps xsi:type="devOps:RegistryTask" name="actions/checkout@v3" cmd="">
+    <arguments key="fetch-depth" value="0"/>
+  </steps>
+  <steps xsi:type="devOps:Command" cmd="chmod +x ./gauntlet.sh"/>
+  <steps xsi:type="devOps:Command" cmd="git fetch origin master:master"/>
+  <steps xsi:type="devOps:Command" cmd="./gauntlet.sh || echo &quot;GAUNTLET_FAILED=1&quot; >> $GITHUB_ENV"/>
+  <steps xsi:type="devOps:RegistryTask" name="mshick/add-pr-comment@v2">
+    <arguments key="message-path" value="fast-chess/message.txt"/>
+  </steps>
+  <steps xsi:type="devOps:Command" cmd="if [ -n &quot;$GAUNTLET_FAILED&quot; ]; then exit 1; fi"/>
+  <environment>
+    <variables key="CURRENT_BRANCH" value="${{ github.head_ref }}"/>
+  </environment>
+</devOps:Task>

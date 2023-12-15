@@ -1,0 +1,33 @@
+name: gauntlet
+
+on:
+    pull_request:
+        branches:
+            - master
+    
+env:
+    CARGO_TERM_COLOR: always
+
+jobs:
+    gauntlet:
+        env:
+            CURRENT_BRANCH: ${{ github.head_ref }}
+        
+        runs-on: ubuntu-latest
+        
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                fetch-depth: 0
+            - run: |
+                chmod +x ./gauntlet.sh
+            - run: |
+                git fetch origin master:master
+            - run: |
+                ./gauntlet.sh || echo "GAUNTLET_FAILED=1" >> $GITHUB_ENV
+            - uses: mshick/add-pr-comment@v2
+              with:
+                message-path: fast-chess/message.txt
+            - run: |
+                if [ -n "$GAUNTLET_FAILED" ]; then exit 1; fi
+    

@@ -316,7 +316,7 @@ env:
     CARGO_TERM_COLOR: always
 
 jobs:
-    :
+    gauntlet:
         env:
             CURRENT_BRANCH: ${{ github.head_ref }}
         
